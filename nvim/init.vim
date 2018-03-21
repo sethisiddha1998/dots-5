@@ -3,20 +3,8 @@ set clipboard+=unnamedplus
 set tabstop=4
 set shiftwidth=4
 
-" Load plugins
-execute pathogen#infect()
-execute pathogen#infect('bundle/{}', '~/.config/nvim/bundle/{}')
-syntax on
-filetype plugin indent on
-
-" Autocompletion
-let g:jedi#completions_command = "<Tab>"
-" hide docstring window
-autocmd FileType python setlocal completeopt-=preview
-" disable python2 missing error
-let g:jedi#force_py_version = 3
-" disable jedi
-let g:jedi#auto_initialization = 0
+" Notify on file save
+autocmd BufWritePost * silent ! notify-send '% saved'
 
 " Enable true color for neovim
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 0

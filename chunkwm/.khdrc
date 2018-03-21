@@ -2,8 +2,16 @@
 cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "t" using command down'
 
 # wal
-cmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -b 141414 -q -e
-cmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -b 141414 -q -e
+lcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -b 141414 -q -e -o wal-set
+lcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -b 141414 -q -e -o wal-set
+lcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -b 141414 -q -e -o wal-set
+lcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -b 141414 -q -e -o wal-set
+rcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -l -b f7f7f7 -q -e -o wal-set
+rcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -b f7f7f7 -l -q -e -o wal-set
+rcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -b f7f7f7 -l -q -e -o wal-set
+rcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -b f7f7f7 -l -q -e -o wal-set
+cmd + shift - 0 : wallpaper 2
+cmd - 0 : wallpaper 8
 
 # reload config
 cmd + shift - r : khd -e "reload"
@@ -46,4 +54,5 @@ cmd - 0x32 : khd -p "ctrl - left"
 #cmd - tab : chunkc tiling::window --focus next
 
 # Screenshot
-cmd - p : screencapture ~/Pictures/Screenshots/scr.png; and scr
+cmd + shift - p : scr
+cmd - p : screencapture ~/Pictures/Screenshots/scr.png; and upscr
