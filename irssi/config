@@ -154,11 +154,11 @@ chatnets = {
   };
   Rizon = {
     type = "IRC";
-    autosendcmd = "/^msg nickserv identify Xylophone01;wait 2000";
+    autosendcmd = "/^msg nickserv identify password;wait 2000";
   };
   Snoonet = {
     type = "IRC";
-    autosendcmd = "/^msg nickserv identify Xylophone01;wait 2000";
+    autosendcmd = "/^msg nickserv identify password;wait 2000";
     nick = "zzzeyez";
     username = "zzzeyez";
     realname = "zzzeyez";
