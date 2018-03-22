@@ -35,10 +35,10 @@ cmd + shift - 3 : chunkc tiling::window --send-to-desktop 3
 cmd + shift - 4 : chunkc tiling::window --send-to-desktop 4
 
 # increase padding size
-cmd + shift - 0x1B : chunkc tiling::desktop -g inc
-cmd - 0x1B : chunkc tiling::desktop -p inc
-cmd - 0x18 : chunkc tiling::desktop -p dec
-cmd + shift - 0x18 : chunkc tiling::desktop -g dec
+#cmd - 0x18 : chunkc tiling::desktop -g inc
+cmd + shift - 0x1B : chunkc tiling::desktop -p inc
+cmd + shift - 0x18 : chunkc tiling::desktop -p dec
+#cmd + shift - 0x1B : chunkc tiling::desktop -g dec
 
 # toggle window native fullscreen
 cmd + shift - f : chunkc tiling::window --toggle native-fullscreen
@@ -52,6 +52,10 @@ cmd + shift - space : chunkc tiling::window --toggle float;\
 cmd - tab : khd -p "ctrl - right"
 cmd - 0x32 : khd -p "ctrl - left"
 #cmd - tab : chunkc tiling::window --focus next
+
+# volume
+cmd - f12 : vol +3
+cmd - f11 : vol -3
 
 # Screenshot
 cmd + shift - p : scr

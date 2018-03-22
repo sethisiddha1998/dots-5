@@ -6,3 +6,5 @@ cat ~/.cache/wal/sequences &
 # Set PATH for scripts i make
 set PATH /Users/zzzeyez/scripts/bin $PATH
 set PATH /Users/zzzeyez/.bin $PATH
+# And also for Homebrew
+set PATH /usr/local/sbin $PATH
