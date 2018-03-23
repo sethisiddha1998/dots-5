@@ -59,4 +59,4 @@ cmd - f11 : vol -3
 
 # Screenshot
 cmd + shift - p : scr
-cmd - p : screencapture ~/Pictures/Screenshots/scr.png; and upscr
+cmd - p : scr -un
