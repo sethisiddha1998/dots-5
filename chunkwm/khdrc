@@ -58,5 +58,5 @@ cmd - f12 : vol +3
 cmd - f11 : vol -3
 
 # Screenshot
-cmd + shift - p : scr
+cmd + shift - p : scr -n
 cmd - p : scr -un
