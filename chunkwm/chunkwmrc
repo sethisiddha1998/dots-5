@@ -22,11 +22,11 @@ chunkc core::hotload 1
 chunkc set global_desktop_mode           bsp
 #chunkc set 2_desktop_mode                float
 
-chunkc set global_desktop_offset_top     47
-chunkc set global_desktop_offset_bottom  10
-chunkc set global_desktop_offset_left    10
-chunkc set global_desktop_offset_right   10
-chunkc set global_desktop_offset_gap     10
+chunkc set global_desktop_offset_top     33
+chunkc set global_desktop_offset_bottom  6
+chunkc set global_desktop_offset_left    6
+chunkc set global_desktop_offset_right   6
+chunkc set global_desktop_offset_gap     6
 
 chunkc set 2_desktop_offset_top          155
 chunkc set 2_desktop_offset_bottom       110
@@ -97,5 +97,3 @@ chunkc core::load tiling.so
 
 chunkc tiling::rule --owner Finder --name Copy --state float
 chunkc tiling::rule --owner \"App Store\" --state float
-#chunkc tiling::rule --owner Wine --state float
-#chunkc tiling::rule --owner \"THUG Pro\" --state float

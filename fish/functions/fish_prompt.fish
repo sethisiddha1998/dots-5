@@ -23,10 +23,10 @@ function fish_prompt --description 'Write out the prompt'
     end
 
     if not set -q __fish_git_prompt_char_stagedstate
-        set -g __fish_git_prompt_char_stagedstate "●"
+        set -g __fish_git_prompt_char_stagedstate "∙"
     end
     if not set -q __fish_git_prompt_char_dirtystate
-        set -g __fish_git_prompt_char_dirtystate "✚"
+        set -g __fish_git_prompt_char_dirtystate "+"
     end
     if not set -q __fish_git_prompt_char_untrackedfiles
         set -g __fish_git_prompt_char_untrackedfiles "…"
