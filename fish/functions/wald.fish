@@ -1,3 +1,3 @@
 function wald
-	wal -i $argv -b 141414 -e -o wal-set
+	wal -i $argv -e -o wal-set --backend colorz --backend haishoku
 end

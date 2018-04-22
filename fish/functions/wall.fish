@@ -1,3 +1,3 @@
 function wall
-	wal -i $argv -b f7f7f7 -l -e -o wal-set
+	wal -i $argv -l -e -o wal-set --backend haishoku
 end
