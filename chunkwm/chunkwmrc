@@ -19,8 +19,8 @@ chunkc core::hotload 1
 #
 # modes: bsp, monocle, float
 
-chunkc set global_desktop_mode           bsp
-#chunkc set 2_desktop_mode                float
+chunkc set global_desktop_mode           float
+#chunkc set 2_desktop_mode                bsp
 
 chunkc set global_desktop_offset_top     116
 chunkc set global_desktop_offset_bottom  80
@@ -86,7 +86,7 @@ chunkc set focused_border_skip_floating  1
 #       if chunkc plugin_dir is not set, the absolutepath is necessary.
 #
 
-chunkc core::load border.so
+#chunkc core::load border.so
 chunkc core::load tiling.so
 #chunkc core::load ffm.so
 

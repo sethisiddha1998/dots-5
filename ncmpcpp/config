@@ -24,7 +24,7 @@ song_window_title_format = "%a - %t"
 # now playing
 #now_playing_prefix = "$4»"
 now_playing_suffix = "$4«"
-execute_on_song_change = "notify-send "♫ $(mpc current)""
+#execute_on_song_change = "notify-send "♫ $(mpc current)""
 
 # playlist
 browser_playlist_prefix = "$3 ♥ $3 "
