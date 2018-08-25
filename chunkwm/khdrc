@@ -60,3 +60,6 @@ cmd - f11 : vol -3
 # Screenshot
 cmd + shift - p : scr -n
 cmd - p : scr -un
+
+# dots
+cmd + shift - z : dots
