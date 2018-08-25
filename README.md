@@ -1,3 +1,3 @@
 # MacOS Dots
-![screenshot1](/screenshots/screenshot1.jpg)
+![screenshot](screenshot.jpg)
 
