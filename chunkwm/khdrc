@@ -6,10 +6,10 @@ rcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -q -e -o wal-set
 rcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -q -e -o wal-set
 rcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -q -e -o wal-set
 rcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -q -e -o wal-set
-lcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -l -q -e -o wal-set --backend haishoku
-lcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -l -q -e -o wal-set --backend haishoku
-lcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -l -q -e -o wal-set --backend haishoku
-lcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -l -q -e -o wal-set --backend haishoku
+lcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -l -q -e -o wal-set
+lcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -l -q -e -o wal-set
+lcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -l -q -e -o wal-set
+lcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -l -q -e -o wal-set
 cmd + shift - 0 : wallpaper 8
 cmd - 0 : wallpaper 0
 
