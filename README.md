@@ -1,3 +1,3 @@
 ![screenshot](screenshot.jpg)
 
-![wallpaper][wallpaper.jpg]
+![wallpaper](wallpaper.jpg)
