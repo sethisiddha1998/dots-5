@@ -20,19 +20,20 @@ chunkc core::hotload 1
 # modes: bsp, monocle, float
 
 chunkc set global_desktop_mode           bsp
-chunkc set 4_desktop_mode                float
+chunkc set 2_desktop_mode                bsp
+chunkc set 3_desktop_mode                bsp
 
-chunkc set global_desktop_offset_top     90
-chunkc set global_desktop_offset_bottom  167
-chunkc set global_desktop_offset_left    90
-chunkc set global_desktop_offset_right   90
+chunkc set global_desktop_offset_top     131
+chunkc set global_desktop_offset_bottom  100
+chunkc set global_desktop_offset_left    100
+chunkc set global_desktop_offset_right   100
 chunkc set global_desktop_offset_gap     12
 
-chunkc set 1_desktop_offset_top          90
-chunkc set 1_desktop_offset_bottom       167
-chunkc set 1_desktop_offset_left         90
-chunkc set 1_desktop_offset_right        90
-chunkc set 1_desktop_offset_gap          12
+chunkc set 1_desktop_offset_top          31
+chunkc set 1_desktop_offset_bottom       0
+chunkc set 1_desktop_offset_left         0
+chunkc set 1_desktop_offset_right        0
+chunkc set 1_desktop_offset_gap          0
 
 chunkc set desktop_padding_step_size     5.0
 chunkc set desktop_gap_step_size         1.0
@@ -76,8 +77,8 @@ chunkc set window_use_cgs_move           0
 # NOTE: the following are config variables for the chunkwm-border plugin.
 #
 
-chunkc set focused_border_color          0xaa000000
-chunkc set focused_border_width          8
+chunkc set focused_border_color          0xaaffffff
+chunkc set focused_border_width          5
 chunkc set focused_border_radius         5
 chunkc set focused_border_skip_floating  1
 
