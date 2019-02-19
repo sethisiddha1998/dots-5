@@ -47,10 +47,10 @@ set incsearch
 set ignorecase
 set smartcase
 
-"Backspace over anything
+" Backspace over anything
 set backspace=indent,eol,start
 
-" Fuck swapfiles
+" No swapfiles
 set noswapfile
 
 colorscheme wal
