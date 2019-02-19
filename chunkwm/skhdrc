@@ -2,16 +2,19 @@
 cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "t" using command down'
 
 # wal
-rcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -q -e -o wal-set --saturate 0.4
-rcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -q -e -o wal-set --saturate 0.4
-rcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -q -e -o wal-set --saturate 0.4
-rcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -q -e -o wal-set --saturate 0.4
-lcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -l -q -e -o wal-set
-lcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -l -q -e -o wal-set
-lcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -l -q -e -o wal-set
-lcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -l -q -e -o wal-set
+lcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -q -e -o wal-set --saturate 0.1 --backend colorz
+lcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -q -e -o wal-set --saturate 0.1 --backend colorz
+lcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -q -e -o wal-set --saturate 0.1 --backend colorz
+lcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -q -e -o wal-set --saturate 0.1 --backend colorz
+rcmd + shift - w : wal -i ~/Pictures/Wallpapers/Vivid -l -q -e -o wal-set --saturate 0.4
+rcmd + shift - e : wal -i ~/Pictures/Wallpapers/Space -l -q -e -o wal-set --saturate 0.4
+rcmd + shift - s : wal -i ~/Pictures/Wallpapers/JackVanzet -l -q -e -o wal-set --saturate 0.4
+rcmd + shift - d : wal -i ~/Pictures/Wallpapers/Film -l -q -e -o wal-set --saturate -0.4
 cmd + shift - 0 : wallpaper 8
 cmd - 0 : wallpaper 0
+
+# reload chunkwm
+cmd + shift - r : brew services restart chunkwm
 
 # focus window
 cmd - left : chunkc tiling::window --focus west
@@ -57,3 +60,6 @@ cmd - f11 : vol -3
 # Screenshot
 cmd + shift - p : scr -n
 cmd - p : scr -un
+
+# Dots
+cmd + shift - z : dots
