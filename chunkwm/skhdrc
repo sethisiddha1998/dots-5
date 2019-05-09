@@ -2,15 +2,16 @@
 cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "t" using command down'
 
 # wal
-rcmd + shift - w : wal -i ~/Pictures/Wallpapers -q -e -o wal-set --saturate 0.3 --backend wal
-rcmd + shift - e : wal -i ~/Pictures/Wallpapers -q -e -o wal-set --saturate 0.3 --backend colorz
-lcmd + shift - w : wal -i ~/Pictures/Wallpapers -l -q -e -o wal-set --saturate 0.3 --backend wal
-lcmd + shift - e : wal -i ~/Pictures/Wallpapers -l -q -e -o wal-set --saturate -0.3 --backend colorz
-cmd + shift - 0 : wallpaper 8
-cmd - 0 : wallpaper 0
+rcmd + shift - e : wal -i ~/Pictures/Wallpapers -q -e -o wal-set --saturate 0.3 --backend wal & darkmode true
+lcmd + shift - e : new-roses -cq && darkmode true
+rcmd + shift - w : wal -i ~/Pictures/Wallpapers -l -q -e -o wal-set --saturate 0.4 --backend wal & darkmode false
+lcmd + shift - w : new-roses -qcl && darkmode false
+cmd + shift - s : new-roses -nq -d ~/Pictures/Wallpapers
+cmd + shift - 0 : new-roses -wq
+cmd - 0 : wallpaper 8
 
 # reload chunkwm
-cmd + shift - r : brew services restart chunkwm
+cmd + shift - r : wal-set & chunkc core::unload tiling.so && chunkc core::load tiling.so
 
 # focus window
 cmd - left : chunkc tiling::window --focus west
@@ -42,20 +43,19 @@ cmd + shift - f : chunkc tiling::window --toggle native-fullscreen
 
 # float / unfloat window and center on screen
 cmd + shift - space : chunkc tiling::window --toggle float;\
-          chunkc tiling::window --grid-layout 4:4:1:1:2:2
+chunkc tiling::window --grid-layout 4:4:1:1:2:2
 
 # alt tab
 cmd - tab : skhd -k "ctrl - right"
 cmd - 0x32 : skhd -k "ctrl - left"
 #cmd - tab : chunkc tiling::window --focus next
 
-# volume
-cmd - f12 : vol +3
-cmd - f11 : vol -3
-
 # Screenshot
 cmd + shift - p : scr -n
-cmd - p : scr -un
+cmd - p : scr -u -n
 
 # Dots
 cmd + shift - z : dots
+
+# toggle bar
+cmd + shift - h : togglebar
