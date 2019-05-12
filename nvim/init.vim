@@ -12,6 +12,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR = 0
 " Enables cursor similar to gui programs
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 
+" enable mouse wheel (iterm2)
+:set mouse=a 
+
 " Change window title to filename
 set title
 set titlestring=%t

@@ -1,0 +1,1530 @@
+2018-02-23 14:33:43	-->	zzzeyez (~zzzeyez@2001:5b0:49c9:6a68:b49e:c5ca:61aa:3aa7) has joined #weechat
+2018-02-23 14:33:43	--	Topic for #weechat is "https://weechat.org/ | Latest stable version: 2.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2018-02-23 14:33:43	--	Topic set by nils_2 (~nils_2@unaffiliated/nils-2/x-2480262) on Tue, 06 Feb 2018 13:53:42
+2018-02-23 14:33:43	--	Channel #weechat: 851 nicks (4 ops, 1 voice, 846 normals)
+2018-02-23 14:33:43	--	PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2018-02-23 14:33:43	--	URL for #weechat: https://weechat.org/
+2018-02-23 14:33:46	--	Channel created on Sat, 25 Nov 2006 23:42:51
+2018-02-23 14:34:45	<--	les (znc@fsf/member/les) has quit (Ping timeout: 256 seconds)
+2018-02-23 14:35:31	-->	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has joined #weechat
+2018-02-23 14:35:36	zzzeyez	is it possible to have a bar inside a bar?  for example, i have my buflist at the top and it lists buffers from left to right.  on that same row i would like to align, for example, the time to the right
+2018-02-23 14:35:42	-->	les (znc@fsf/member/les) has joined #weechat
+2018-02-23 14:36:45	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 14:36:58	zzzeyez	for reference, what i'd like to do is mimic the bar that i have (via tmux) on the bottom in this screen: https://0x0.st/sAaX.png
+2018-02-23 14:37:37	@nils_2	bars does not support alignment, yet
+2018-02-23 14:40:45	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 14:40:58	-->	Evropi (~superuser@unaffiliated/evropi) has joined #weechat
+2018-02-23 14:41:05	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-23 14:41:39	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 256 seconds)
+2018-02-23 14:41:51	zzzeyez	would it not be possible to have buflist bar as root, and then create a "title" bar as "window" with alignment = "right" , and then to place "title" inside of "buflist" ?
+2018-02-23 14:42:30	puzzler	hello, i have q re: filters
+2018-02-23 14:42:38	puzzler	I have this filter but after migrated to weechat2.0.1 from 1.2 it doesn't seem to work any longer
+2018-02-23 14:42:41	puzzler	from /filter list
+2018-02-23 14:42:46	puzzler	[joinquithipchat] buffer: irc.bitlbee.* / tags: irc_join,irc_part,irc_quit / regex: *
+2018-02-23 14:43:18	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Ping timeout: 255 seconds)
+2018-02-23 14:44:21	@nils_2	check out if /filter is really enabled, there is a global filter, "/filter toggle" and a filter per buffer "/filter toggle @"
+2018-02-23 14:46:05	@nils_2	zzzeyez: you can use different items in a bar. like the nicklist below the list of buffers, but not a bar inside a bar
+2018-02-23 14:46:32	zzzeyez	thank you
+2018-02-23 14:48:49	<--	Zuccace (~zucca@85-76-19-200-nat.elisa-mobile.fi) has quit (Ping timeout: 248 seconds)
+2018-02-23 14:52:45	<--	zcrayfish (zachary@pdpc/supporter/student/zcrayfish) has quit (Ping timeout: 276 seconds)
+2018-02-23 14:54:10	-->	Valeyard (~Valeyard@191.55.71.139) has joined #weechat
+2018-02-23 14:55:29	<--	jamesaxl (~James_Axl@109.172.62.242) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 14:57:57	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 14:58:44	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 15:00:39	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 15:01:57	<--	choru (~choru@78-62-157-12.static.zebra.lt) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 15:02:28	<--	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-02-23 15:02:52	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-23 15:04:38	<--	maxxe (~maxxe@unaffiliated/maxxe) has quit (Quit: Swirc IRC client)
+2018-02-23 15:05:09	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-23 15:07:33	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2018-02-23 15:08:46	-->	kgrimes (~kgrimes@2600:1700:5881:3740:c584:2d36:c69d:3992) has joined #weechat
+2018-02-23 15:09:00	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-23 15:10:33	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-23 15:14:26	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 15:15:45	<--	DonVlad (~Murii@79.113.205.114) has quit (Quit: WeeChat 1.4)
+2018-02-23 15:15:57	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-23 15:16:45	<--	fujisan (uid4207@gateway/web/irccloud.com/x-szglgsejkxakwvsh) has quit (Quit: Connection closed for inactivity)
+2018-02-23 15:17:18	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-23 15:19:10	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 268 seconds)
+2018-02-23 15:20:53	-->	maxxe (~maxxe@unaffiliated/maxxe) has joined #weechat
+2018-02-23 15:22:58	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 15:23:44	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 15:25:22	-->	zcrayfish (zachary@pdpc/supporter/student/zcrayfish) has joined #weechat
+2018-02-23 15:32:09	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 263 seconds)
+2018-02-23 15:34:08	<--	sjl (~sjl@ec2-52-8-119-239.us-west-1.compute.amazonaws.com) has quit (Quit: WeeChat 1.9)
+2018-02-23 15:35:59	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 15:37:50	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 260 seconds)
+2018-02-23 15:39:05	-->	choki (~weechat@unaffiliated/choki) has joined #weechat
+2018-02-23 15:40:33	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2018-02-23 15:41:21	<--	DMaza (~dm@wikimedia/dmaza-wmf) has quit (Ping timeout: 255 seconds)
+2018-02-23 15:44:50	<--	clemens3 (~clemens@dynamic-adsl-78-13-222-95.clienti.tiscali.it) has quit (Ping timeout: 260 seconds)
+2018-02-23 15:50:04	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 15:52:23	<--	macker (macker@unaffiliated/macker) has quit (Quit: out of beer...)
+2018-02-23 15:54:52	-->	macker (macker@unaffiliated/macker) has joined #weechat
+2018-02-23 15:55:15	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 252 seconds)
+2018-02-23 15:57:07	-->	squigz (~squigz@i3/op/squigzy) has joined #weechat
+2018-02-23 15:59:14	<--	MoziM (~alarm@23.226.133.131) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 16:00:18	<--	squigzy (~squigz@i3/op/squigzy) has quit (Ping timeout: 265 seconds)
+2018-02-23 16:03:41	-->	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has joined #weechat
+2018-02-23 16:03:57	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 16:04:52	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-23 16:08:49	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 16:08:58	<--	eb0t (~eblip@unaffiliated/eblip) has quit (Read error: Connection reset by peer)
+2018-02-23 16:11:50	-->	eb0t (~eblip@2.123.71.87) has joined #weechat
+2018-02-23 16:11:59	-->	eblip (~eblip@unaffiliated/eblip) has joined #weechat
+2018-02-23 16:12:53	<--	eb0t- (~eblip@unaffiliated/eblip) has quit (Ping timeout: 256 seconds)
+2018-02-23 16:14:11	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 16:17:35	<--	Qommand0r (~HENKiE@unaffiliated/schaap137) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 16:18:24	<--	foul_owl (~foul_owl@23.19.87.230) has quit (Ping timeout: 248 seconds)
+2018-02-23 16:19:05	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 16:19:10	<--	SCHAPiE (~schapie@unaffiliated/schaap137) has quit (Read error: Connection reset by peer)
+2018-02-23 16:20:27	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 16:21:14	-->	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has joined #weechat
+2018-02-23 16:22:15	-->	giraffe (skarn@gateway/shell/firrre/x-zzkaxcmdulmzsroa) has joined #weechat
+2018-02-23 16:25:19	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 16:25:34	-->	SCHAPiE (~schapie@unaffiliated/schaap137) has joined #weechat
+2018-02-23 16:25:40	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 16:29:01	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 16:29:15	-->	ynakao (~ynakao@mail.yujinakao.com) has joined #weechat
+2018-02-23 16:29:37	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 16:30:27	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 256 seconds)
+2018-02-23 16:31:24	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 16:31:45	<--	TJ- (~root@yes.iam.tj) has quit (Ping timeout: 248 seconds)
+2018-02-23 16:32:25	-->	MrFantastik (~virc@2001:19f0:6401:d2e:5400:1ff:fe51:d63) has joined #weechat
+2018-02-23 16:33:01	MrFantastik	hey guys is there a built in command to not display the time stamp on the left side?
+2018-02-23 16:33:15	MrFantastik	or like toggle it?
+2018-02-23 16:33:36	-->	foul_owl (~foul_owl@97-113-47-102.tukw.qwest.net) has joined #weechat
+2018-02-23 16:33:39	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 16:33:55	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-23 16:33:57	<--	Lieuwex (~Lieuwex@5ED19C19.cm-7-2c.dynamic.ziggo.nl) has quit (Ping timeout: 264 seconds)
+2018-02-23 16:35:37	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 16:36:21	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2018-02-23 16:38:21	arza	/set weechat.look.buffer_time_format ""
+2018-02-23 16:39:57	arza	https://github.com/weechat/weechat/wiki/Script-aliases
+2018-02-23 16:40:39	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-23 16:42:28	<--	voidead (~voidead@unaffiliated/voidead) has quit (Quit: dead)
+2018-02-23 16:43:29	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 16:45:41	-->	voidead (~voidead@unaffiliated/voidead) has joined #weechat
+2018-02-23 16:47:33	<--	ravndal (~weechat@unaffiliated/ravndal) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 16:48:21	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 16:49:07	-->	ravndal (~weechat@unaffiliated/ravndal) has joined #weechat
+2018-02-23 16:49:21	<--	cottoneyejim (~cottoneye@109.228.86.219) has quit (Ping timeout: 248 seconds)
+2018-02-23 16:52:26	<--	Valeyard (~Valeyard@191.55.71.139) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 16:55:56	<--	choki (~weechat@unaffiliated/choki) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 16:57:48	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 17:00:05	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 17:00:54	-->	Banditoz (~Hayden@c-67-164-192-35.hsd1.ut.comcast.net) has joined #weechat
+2018-02-23 17:02:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 17:03:20	puzzler	@nils_2: /filter toggle FTW!
+2018-02-23 17:03:24	puzzler	thank you very much!
+2018-02-23 17:04:13	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 240 seconds)
+2018-02-23 17:07:33	<--	well_laid_lawn (~Jean-luc@203.87.119.17) has quit (Ping timeout: 264 seconds)
+2018-02-23 17:10:03	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 17:11:15	-->	banditkroot (~bandit@gateway/tor-sasl/banditkroot) has joined #weechat
+2018-02-23 17:12:35	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 17:13:00	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-23 17:13:05	zzzeyez	MrFantastik: you can do /fset to look through all commands
+2018-02-23 17:14:40	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 260 seconds)
+2018-02-23 17:15:18	puzzler	zzzeyez: does fset replace iset?
+2018-02-23 17:15:43	<--	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 17:16:36	<--	Evropi (~superuser@unaffiliated/evropi) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 17:19:34	thurin	puzzler: yes. it was released in 2.0
+2018-02-23 17:20:22	<--	drayer34 (~drayer34@cable-192.222.210.73.electronicbox.net) has quit (Ping timeout: 260 seconds)
+2018-02-23 17:21:21	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 17:21:40	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-23 17:21:57	<--	sim590 (~sim590@cable-192.222.210.73.electronicbox.net) has quit (Ping timeout: 264 seconds)
+2018-02-23 17:23:40	<--	thurin (thurin@thurin.org) has quit (Remote host closed the connection)
+2018-02-23 17:24:06	terminalator	What's the most effective way of ignoring/filtering a nick?
+2018-02-23 17:24:10	-->	thurin (thurin@thurin.org) has joined #weechat
+2018-02-23 17:24:37	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 17:24:41	BrassHopper	 /ignore
+2018-02-23 17:24:51	terminalator	I see
+2018-02-23 17:25:01	terminalator	I'll look up /help ignore then
+2018-02-23 17:25:24	terminalator	Ignore also disables receiving PMs?
+2018-02-23 17:25:41	BrassHopper	Should yes
+2018-02-23 17:25:52	terminalator	Great
+2018-02-23 17:26:56	-->	drayer34 (~drayer34@cable-192.222.210.73.electronicbox.net) has joined #weechat
+2018-02-23 17:27:24	-->	sim590 (~sim590@cable-192.222.210.73.electronicbox.net) has joined #weechat
+2018-02-23 17:27:57	<--	samba_ (~samba_@186.177.31.82) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 17:28:37	-->	banisterfiend (~banister@ruby/staff/banisterfiend) has joined #weechat
+2018-02-23 17:29:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 17:29:24	<--	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has quit (Quit: terminalator)
+2018-02-23 17:30:19	-->	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has joined #weechat
+2018-02-23 17:31:57	<--	DarkDefender (~zed@c-f3acd954.501502032205-0-757473696b74.cust.bredbandsbolaget.se) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 17:33:20	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 17:34:44	terminalator	Hopefully that person won't bother me anymore
+2018-02-23 17:35:07	-->	Zuccace (~zucca@85-76-19-200-nat.elisa-mobile.fi) has joined #weechat
+2018-02-23 17:36:37	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 17:37:01	<--	banisterfiend (~banister@ruby/staff/banisterfiend) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-23 17:37:36	-->	banisterfiend (~banister@ruby/staff/banisterfiend) has joined #weechat
+2018-02-23 17:38:09	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2018-02-23 17:38:22	<--	\void (~void@unaffiliated/ctrlaltdev) has quit (Quit: So long, and thanks for all the fish.)
+2018-02-23 17:39:52	--	\u is now known as matchray
+2018-02-23 17:41:35	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 17:45:57	<--	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has quit (Ping timeout: 264 seconds)
+2018-02-23 17:50:02	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 17:51:10	-->	nucleargrave (~nucleargr@c-73-150-253-137.hsd1.nj.comcast.net) has joined #weechat
+2018-02-23 17:54:47	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 17:56:43	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 17:58:09	-->	tuxmax (~max@bras-vprn-drumpq7715w-lp140-01-184-145-218-224.dsl.bell.ca) has joined #weechat
+2018-02-23 18:01:23	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 18:01:56	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-23 18:03:24	-->	wnereiz (~wnereiz@45.122.156.254) has joined #weechat
+2018-02-23 18:03:34	<--	specing (~specing@unaffiliated/specing) has left #weechat ("WeeChat 1.4")
+2018-02-23 18:03:57	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-23 18:05:05	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 18:09:57	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 18:11:30	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 18:12:28	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 18:13:37	<--	dc` (~dc@unaffiliated/dc/x-2221435) has quit (Ping timeout: 248 seconds)
+2018-02-23 18:15:33	-->	Evoken (Evoken@gateway/shell/suchznc/x-vwkxrnvmkiqpjwqv) has joined #weechat
+2018-02-23 18:16:59	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 256 seconds)
+2018-02-23 18:17:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-23 18:21:10	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 18:21:44	<--	Fats (fats@gateway/vpn/privateinternetaccess/fats) has quit (Remote host closed the connection)
+2018-02-23 18:21:47	<--	maxxe (~maxxe@unaffiliated/maxxe) has quit (Quit: change to release)
+2018-02-23 18:22:14	<--	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has quit (Remote host closed the connection)
+2018-02-23 18:22:57	-->	Fats (fats@gateway/vpn/privateinternetaccess/fats) has joined #weechat
+2018-02-23 18:23:08	-->	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has joined #weechat
+2018-02-23 18:25:14	-->	dc` (~dc@unaffiliated/dc/x-2221435) has joined #weechat
+2018-02-23 18:26:03	<--	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has quit (Ping timeout: 256 seconds)
+2018-02-23 18:26:09	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 18:29:57	-->	DMaza (~dm@wikimedia/dmaza-wmf) has joined #weechat
+2018-02-23 18:32:18	<--	sharktamer (~Shane@ec2-35-176-223-112.eu-west-2.compute.amazonaws.com) has quit (Quit: ZNC 1.6.3+deb1 - http://znc.in)
+2018-02-23 18:33:04	-->	sharktamer (~Shane@ec2-35-176-223-112.eu-west-2.compute.amazonaws.com) has joined #weechat
+2018-02-23 18:33:27	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 18:34:43	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 18:37:43	<--	banditkroot (~bandit@gateway/tor-sasl/banditkroot) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 18:38:21	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 268 seconds)
+2018-02-23 18:38:53	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 240 seconds)
+2018-02-23 18:40:19	-->	puzzled_ (~puzzled@17.236.14.12) has joined #weechat
+2018-02-23 18:43:04	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 18:43:14	<--	indeedwatson (~yama@200.45.94.155) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 18:43:30	<--	puzzler (~puzzled@2620:149:5:1b01:e438:a990:6633:8cd7) has quit (Ping timeout: 276 seconds)
+2018-02-23 18:44:32	<--	puzzled_ (~puzzled@17.236.14.12) has quit (Ping timeout: 248 seconds)
+2018-02-23 18:45:49	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 18:48:49	<--	philosaur (~philosaur@ool-944b46fe.dyn.optonline.net) has quit (Quit: philosaur)
+2018-02-23 18:50:24	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-23 18:50:29	-->	philosaur (~philosaur@ool-944b46fe.dyn.optonline.net) has joined #weechat
+2018-02-23 18:51:57	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2018-02-23 18:52:20	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 18:53:48	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 18:54:21	--	caecias is now known as kaikias
+2018-02-23 18:57:54	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 18:58:10	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-23 18:58:35	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 18:59:09	<--	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has quit (Quit: terminalator)
+2018-02-23 19:00:21	--	kaikias is now known as caecias
+2018-02-23 19:00:37	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 256 seconds)
+2018-02-23 19:00:40	--	caecias is now known as kaikias
+2018-02-23 19:01:04	--	kaikias is now known as caecias
+2018-02-23 19:04:53	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-23 19:07:53	-->	acksys (~acksys@ip72-208-121-9.ph.ph.cox.net) has joined #weechat
+2018-02-23 19:08:32	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 19:13:15	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 19:13:42	<--	Wanderer- (~Wande@93.115.85.147) has quit (Read error: Connection reset by peer)
+2018-02-23 19:13:42	<--	chomwitt (~chomwitt@2a02:587:dc08:a00:c16a:d1e9:169d:6793) has quit (Quit: WeeChat 1.0.1)
+2018-02-23 19:14:31	-->	ni638629 (~u749750@123.136.117.26) has joined #weechat
+2018-02-23 19:14:39	<--	ni638629 (~u749750@123.136.117.26) has left #weechat
+2018-02-23 19:15:00	<--	robin1 (~robinb@2400:2412:6e0:4000:ba27:ebff:fefe:1dac) has quit (Ping timeout: 256 seconds)
+2018-02-23 19:17:36	-->	po||ux2 (~alex@arthur.barton.de) has joined #weechat
+2018-02-23 19:17:45	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2018-02-23 19:19:19	<--	dc` (~dc@unaffiliated/dc/x-2221435) has quit (Ping timeout: 256 seconds)
+2018-02-23 19:21:22	<--	Raku (~raku@2601:2c7:4300:1b00:230:48ff:fe32:d99f) has quit (Ping timeout: 265 seconds)
+2018-02-23 19:21:26	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 19:22:19	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 19:23:01	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 19:24:46	-->	dc` (~dc@unaffiliated/dc/x-2221435) has joined #weechat
+2018-02-23 19:26:45	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 19:29:53	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 19:30:43	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 19:31:56	<--	monokrome (~monokrome@ec2-52-33-44-46.us-west-2.compute.amazonaws.com) has quit (Quit: WeeChat 2.0)
+2018-02-23 19:32:13	-->	brainwash_ (~tuturu@unaffiliated/brainwash) has joined #weechat
+2018-02-23 19:33:08	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 19:33:27	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-23 19:35:09	<--	brainwash (~tuturu@unaffiliated/brainwash) has quit (Ping timeout: 264 seconds)
+2018-02-23 19:35:09	--	brainwash_ is now known as brainwash
+2018-02-23 19:36:23	<--	sylvblck (~sylvblck@sylv.io) has quit (Quit: EOF)
+2018-02-23 19:36:26	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 19:37:36	-->	Raku (~raku@2601:2c7:4300:1b00:230:48ff:fe32:d99f) has joined #weechat
+2018-02-23 19:38:08	-->	sylvblck (~sylvblck@sylv.io) has joined #weechat
+2018-02-23 19:39:35	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 19:40:25	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 19:41:07	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 19:43:41	-->	TheWolf (~TheWolf@pD95D8665.dip0.t-ipconnect.de) has joined #weechat
+2018-02-23 19:44:25	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 19:46:26	--	cottongin is now known as typical
+2018-02-23 19:46:38	--	typical is now known as cottongin
+2018-02-23 19:47:09	<--	TheWolf_ (~TheWolf@pD95D96ED.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2018-02-23 19:49:05	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-23 19:55:13	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 19:55:41	<--	sud0x3 (~sud0x3@79-67-6-182.dynamic.dsl.as9105.com) has quit (Ping timeout: 265 seconds)
+2018-02-23 19:58:54	-->	Kryptron_ (~Kryptron@unaffiliated/kryptron) has joined #weechat
+2018-02-23 20:00:11	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 20:01:30	<--	Kryptron (~Kryptron@unaffiliated/kryptron) has quit (Ping timeout: 255 seconds)
+2018-02-23 20:02:17	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-23 20:03:57	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-23 20:07:26	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 20:07:47	<--	tuxmax (~max@bras-vprn-drumpq7715w-lp140-01-184-145-218-224.dsl.bell.ca) has quit (Quit: Quitte)
+2018-02-23 20:08:16	-->	ironwrk (~irongeeks@cpe-69-207-152-9.rochester.res.rr.com) has joined #weechat
+2018-02-23 20:08:39	<--	irongeeks (~irongeeks@2604:6000:1001:e3:8560:2090:ea44:b434) has quit (Ping timeout: 276 seconds)
+2018-02-23 20:09:21	-->	surfist (~surfist@unaffiliated/surfist) has joined #weechat
+2018-02-23 20:11:45	-->	jason_KR (uid116191@gateway/web/irccloud.com/x-wkvrovrmvwiwryax) has joined #weechat
+2018-02-23 20:12:21	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 20:21:44	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 20:26:35	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 20:28:11	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 20:28:58	<--	dc` (~dc@unaffiliated/dc/x-2221435) has quit (Ping timeout: 240 seconds)
+2018-02-23 20:32:54	-->	parsnip (uid147265@gateway/web/irccloud.com/x-xhvizyviowkeljyg) has joined #weechat
+2018-02-23 20:33:11	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 20:38:36	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 20:39:06	parsnip	someone linked to an image, i thought it was in FAQ or something, that helped to show what the names of things were, to help in changing the names of elements by name.
+2018-02-23 20:39:19	-->	Edu4rdSHL (~Edward@unaffiliated/edu4rdshl) has joined #weechat
+2018-02-23 20:40:54	squigz	https://github.com/weechat/weechat/wiki/Miscellaneous
+2018-02-23 20:42:24	-->	dc` (~dc@unaffiliated/dc/x-2221435) has joined #weechat
+2018-02-23 20:42:40	-->	chandan (~chandan@122.166.91.88) has joined #weechat
+2018-02-23 20:43:29	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-23 20:46:52	parsnip	thank you! ugh, "miscellaneous" is not the same as "faq", horrible memory.
+2018-02-23 20:49:07	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 20:51:10	squigz	I just Google "weechat colors" whenever I can't remember where that is
+2018-02-23 20:51:58	<--	caecias (~caecias@unaffiliated/caecias) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 20:53:49	<--	n000g (~n000g@p5DEC1DBD.dip0.t-ipconnect.de) has quit (Quit: ZNC 1.6.5 - http://znc.in)
+2018-02-23 20:54:05	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 20:54:34	-->	n000g (~n000g@p5DEC1DBD.dip0.t-ipconnect.de) has joined #weechat
+2018-02-23 20:55:39	<--	nucleargrave (~nucleargr@c-73-150-253-137.hsd1.nj.comcast.net) has quit (Ping timeout: 256 seconds)
+2018-02-23 20:57:27	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 20:57:53	<--	dc` (~dc@unaffiliated/dc/x-2221435) has quit (Ping timeout: 248 seconds)
+2018-02-23 20:59:46	-->	dc` (~dc@unaffiliated/dc/x-2221435) has joined #weechat
+2018-02-23 21:00:45	-->	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has joined #weechat
+2018-02-23 21:02:45	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 21:03:06	<--	dt23 (~horst@gateway/tor-sasl/dt23) has quit (Ping timeout: 255 seconds)
+2018-02-23 21:04:33	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 21:05:41	<--	trens (~trens@184.54.196.170) has quit (Read error: Connection reset by peer)
+2018-02-23 21:10:03	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 268 seconds)
+2018-02-23 21:11:59	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 21:13:44	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-23 21:15:16	<--	Edu4rdSHL (~Edward@unaffiliated/edu4rdshl) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 21:17:11	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 21:17:46	-->	Esux (5e09f04d@gateway/web/freenode/ip.94.9.240.77) has joined #weechat
+2018-02-23 21:19:41	<--	Esux (5e09f04d@gateway/web/freenode/ip.94.9.240.77) has quit (Client Quit)
+2018-02-23 21:19:47	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-02-23 21:22:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 21:23:42	-->	sartan (~sartan@unaffiliated/sartan) has joined #weechat
+2018-02-23 21:25:41	-->	m1n (~m1n@unaffiliated/m1ntfr3sh) has joined #weechat
+2018-02-23 21:31:08	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 21:33:55	<--	banisterfiend (~banister@ruby/staff/banisterfiend) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-23 21:36:21	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 21:37:03	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 21:37:25	<--	wlarip (~tc@163.172.72.40) has quit (Quit: wlarip)
+2018-02-23 21:37:41	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 21:41:00	-->	wlarip (~tc@163.172.72.40) has joined #weechat
+2018-02-23 21:41:17	<--	amarok73 (~amarok73@159-205-182-133.adsl.inetia.pl) has quit (Quit: WeeChat 1.9)
+2018-02-23 21:42:22	-->	amarok73 (~amarok73@159-205-182-133.adsl.inetia.pl) has joined #weechat
+2018-02-23 21:46:32	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 21:46:51	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 21:47:21	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 21:51:00	-->	kdragon (~dragon@unaffiliated/dragon5232) has joined #weechat
+2018-02-23 21:51:35	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 21:53:55	-->	Wanderer- (~Wande@173.254.222.146) has joined #weechat
+2018-02-23 21:55:30	<--	wlarip (~tc@163.172.72.40) has quit (Quit: wlarip)
+2018-02-23 21:56:55	<--	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has quit (Ping timeout: 268 seconds)
+2018-02-23 21:58:17	-->	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has joined #weechat
+2018-02-23 21:58:47	-->	wlarip (~tc@163.172.72.40) has joined #weechat
+2018-02-23 22:01:00	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 22:01:43	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-23 22:03:21	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-23 22:03:46	-->	dysfigured (dysfigured@2600:3c01::f03c:91ff:feb4:be75) has joined #weechat
+2018-02-23 22:05:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 22:06:12	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 22:07:53	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 22:09:40	<--	userb (~userk@176.99.245.92) has quit (Remote host closed the connection)
+2018-02-23 22:10:06	<--	m1n (~m1n@unaffiliated/m1ntfr3sh) has quit (Quit: :qa)
+2018-02-23 22:16:26	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 22:19:21	<--	fours (~fives@unaffiliated/fours) has quit (Quit: WeeChat 1.9)
+2018-02-23 22:20:10	<--	hourensou (~hourensou@h-10-217-161.A328.priv.bahnhof.se) has quit (Quit: WeeChat 2.0.1)
+2018-02-23 22:21:05	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-23 22:21:40	-->	hourensou (~hourensou@h-10-217-161.A328.priv.bahnhof.se) has joined #weechat
+2018-02-23 22:23:56	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-23 22:24:17	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 22:24:33	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-23 22:28:31	-->	dt23 (~horst@gateway/tor-sasl/dt23) has joined #weechat
+2018-02-23 22:28:58	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 22:31:09	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 22:35:53	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 22:36:04	-->	yyt16384 (~yyt16384@unaffiliated/yyt16384) has joined #weechat
+2018-02-23 22:40:42	parsnip	when i type `/help`, it is difficult to see the section topics, as text is very light. not sure how to figure out name, except maybe search `/iset =default` and try changing each one.
+2018-02-23 22:40:58	parsnip	or, it might be `white`, or something else.
+2018-02-23 22:41:42	<--	sartan (~sartan@unaffiliated/sartan) has left #weechat ("Leaving")
+2018-02-23 22:43:54	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 22:44:53	-->	fours (~fives@unaffiliated/fours) has joined #weechat
+2018-02-23 22:48:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 22:52:50	-->	banisterfiend (~banister@ruby/staff/banisterfiend) has joined #weechat
+2018-02-23 22:53:50	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 22:54:45	<--	diniwed (~gavron@ool-944c262b.dyn.optonline.net) has quit (Ping timeout: 260 seconds)
+2018-02-23 22:55:17	-->	wilbert (~wilbert@unaffiliated/wilbert) has joined #weechat
+2018-02-23 22:55:50	<--	banisterfiend (~banister@ruby/staff/banisterfiend) has quit (Read error: Connection reset by peer)
+2018-02-23 22:58:24	-->	wilbert_ (wilbert@gateway/vpn/privateinternetaccess/wilbert) has joined #weechat
+2018-02-23 22:58:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-23 22:59:39	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 22:59:53	<--	wilbert (~wilbert@unaffiliated/wilbert) has quit (Ping timeout: 240 seconds)
+2018-02-23 23:02:34	<--	Shawn (~Shawn@unaffiliated/shawn) has quit (Quit: Bed.)
+2018-02-23 23:04:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 23:04:52	parsnip	wow, nearly my first try i think, guessed weechat.color.chat_buffer
+2018-02-23 23:05:06	parsnip	yay, now i can see help topics!
+2018-02-23 23:05:21	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 23:08:13	parsnip	that was a bit anticlimactic
+2018-02-23 23:08:56	-->	well_laid_lawn (~Jean-luc@203.87.119.17) has joined #weechat
+2018-02-23 23:09:19	-->	trens (~trens@cpe-184-54-196-170.swo.res.rr.com) has joined #weechat
+2018-02-23 23:10:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 263 seconds)
+2018-02-23 23:16:10	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 23:17:05	<--	batdog (~batdog@c-73-166-227-96.hsd1.tx.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-02-23 23:17:07	<--	pumps_ (pumps@gateway/vpn/privateinternetaccess/pumps) has quit (Read error: Connection reset by peer)
+2018-02-23 23:18:31	<--	uptime (alore@wikimania/cagematch/uptime) has quit (Quit: You only die once, if you lucky.)
+2018-02-23 23:18:32	squirrel	another happy customer!
+2018-02-23 23:21:21	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-23 23:22:43	-->	batdog (~batdog@c-73-166-227-96.hsd1.tx.comcast.net) has joined #weechat
+2018-02-23 23:23:25	<--	yyt16384 (~yyt16384@unaffiliated/yyt16384) has quit (Quit: yyt16384)
+2018-02-23 23:24:01	<--	somis (~somis@149.56.153.179) has quit (Ping timeout: 256 seconds)
+2018-02-23 23:25:17	-->	pumps_ (pumps@gateway/vpn/privateinternetaccess/pumps) has joined #weechat
+2018-02-23 23:26:03	surfist	set irc.ctcp.ping ""      will block pings  but....
+2018-02-23 23:27:11	surfist	set irc.ctcp.ping "text"      will not ... how to *replace*  ping response??
+2018-02-23 23:27:40	surfist	set irc.ctcp.ping "anything"     still show a numerical reply
+2018-02-23 23:27:58	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 23:30:25	<--	well_laid_lawn (~Jean-luc@203.87.119.17) has quit (Ping timeout: 248 seconds)
+2018-02-23 23:32:47		irc: disconnected from server
+2018-02-23 23:33:10	-->	zzzeyez (~zzzeyez@2001:5b0:49c9:6a68:b49b:b4d6:cab4:4bae) has joined #weechat
+2018-02-23 23:33:10		Topic for #weechat is "https://weechat.org/ | Latest stable version: 2.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2018-02-23 23:33:10		Topic set by nils_2 (~nils_2@unaffiliated/nils-2/x-2480262) on Tue, 06 Feb 2018 13:53:42
+2018-02-23 23:33:10		Channel #weechat: 836 nicks (4 ops, 1 voice, 831 normals)
+2018-02-23 23:33:10		PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2018-02-23 23:33:10		URL for #weechat: https://weechat.org/
+2018-02-23 23:33:11		Channel created on Sat, 25 Nov 2006 23:42:51
+2018-02-23 23:39:43	<--	wlarip (~tc@163.172.72.40) has quit (Quit: wlarip)
+2018-02-23 23:40:18	-->	MoziM (~alarm@ip68-4-120-41.oc.oc.cox.net) has joined #weechat
+2018-02-23 23:41:16	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 23:46:03	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-23 23:50:31	-->	wlarip (~tc@163.172.72.40) has joined #weechat
+2018-02-23 23:50:33	-->	raisen (~wey@cpe-76-94-176-186.socal.res.rr.com) has joined #weechat
+2018-02-23 23:51:22	-->	wilbert (~wilbert@unaffiliated/wilbert) has joined #weechat
+2018-02-23 23:51:44	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-23 23:52:52	<--	wilbert (~wilbert@unaffiliated/wilbert) has quit (Client Quit)
+2018-02-23 23:53:01	<--	wilbert_ (wilbert@gateway/vpn/privateinternetaccess/wilbert) has quit (Ping timeout: 252 seconds)
+2018-02-23 23:56:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 00:01:24	-->	arbrandes (~arbrandes@ec2-54-172-54-135.compute-1.amazonaws.com) has joined #weechat
+2018-02-24 00:01:45	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 00:01:57	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 00:03:21	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 00:03:40	<--	arbrandes1 (~arbrandes@ec2-54-172-54-135.compute-1.amazonaws.com) has quit (Ping timeout: 240 seconds)
+2018-02-24 00:06:41	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 00:11:08	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 00:12:06	<--	DMaza (~dm@wikimedia/dmaza-wmf) has quit (Ping timeout: 255 seconds)
+2018-02-24 00:14:37	-->	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has joined #weechat
+2018-02-24 00:16:21	<--	kdragon (~dragon@unaffiliated/dragon5232) has quit (Quit: ¯\_(ツ)_/¯)
+2018-02-24 00:16:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-24 00:16:39	-->	kdragon (~dragon@unaffiliated/dragon5232) has joined #weechat
+2018-02-24 00:17:11	<--	minimalism (~none@unaffiliated/minimalism) has quit (Quit: minimalism)
+2018-02-24 00:18:34	-->	cewood (~cewood@ip5b405512.dynamic.kabel-deutschland.de) has joined #weechat
+2018-02-24 00:22:24	man_in_shack	<surfist> set irc.ctcp.ping "text"      will not ... how to *replace*  ping response??
+2018-02-24 00:22:37	man_in_shack	^ not how ping works
+2018-02-24 00:22:44	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 00:27:52	<--	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 00:27:57	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-24 00:29:28	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 00:29:32	-->	LocaMocha (bocaneri@about/linux/staff/sauvin) has joined #weechat
+2018-02-24 00:32:04	surfist	have replaced ping time with random text in other clients
+2018-02-24 00:32:10	surfist	so there must be a way
+2018-02-24 00:32:22	surfist	hook something somewhere
+2018-02-24 00:33:06	<--	caecias (~caecias@unaffiliated/caecias) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 00:33:17	<--	zcrayfish (zachary@pdpc/supporter/student/zcrayfish) has quit (Quit: This is not the place for spam. Don't download IceChat.)
+2018-02-24 00:34:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 00:37:32	-->	zcrayfish (zachary@pdpc/supporter/student/zcrayfish) has joined #weechat
+2018-02-24 00:39:58	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 00:44:43	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 00:47:02	-->	explodes (~explodes@unaffiliated/explodes) has joined #weechat
+2018-02-24 00:49:40	-->	Hotpot33_ (~Hot_Pot@unaffiliated/hotpot33) has joined #weechat
+2018-02-24 00:49:52	<--	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has quit (Ping timeout: 248 seconds)
+2018-02-24 00:50:16	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-02-24 00:52:45	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 00:57:03	<--	Hotpot33_ (~Hot_Pot@unaffiliated/hotpot33) has quit (Ping timeout: 256 seconds)
+2018-02-24 00:57:18	sim642	I think the PING is special cased because it requires passing back the argument
+2018-02-24 00:57:29	sim642	Any custom reply wouldn't be able to do that
+2018-02-24 00:57:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 00:57:47	sim642	https://github.com/weechat/weechat/blob/f889306c5edf5eeb37a9e37e6468ec0ac549d32c/src/plugins/irc/irc-ctcp.c#L42-L50
+2018-02-24 00:57:54	-->	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has joined #weechat
+2018-02-24 00:58:23	sim642	Notice how ping isn't defined with that reply syntax even by default but there's some special code there to handle PING
+2018-02-24 00:59:52	man_in_shack	just because other clients are broken, doesn't mean weechat has to be ;)
+2018-02-24 00:59:54	sim642	Although I'm not sure if that necessarily means overriding it wouldn't work, just that there's something different
+2018-02-24 01:00:01	<--	sdothum (~znc@108.63.121.9) has quit (Quit: ZNC 1.6.5 - http://znc.in)
+2018-02-24 01:00:18	sim642	What's the goal anyway? To break other clients who try to CTCP PING you?
+2018-02-24 01:00:29	man_in_shack	^
+2018-02-24 01:01:16	-->	sdothum (~znc@108.63.121.9) has joined #weechat
+2018-02-24 01:03:24	-->	xprime (~prime@prime.co) has joined #weechat
+2018-02-24 01:04:16	<--	prime (~prime@unaffiliated/primex) has quit (Ping timeout: 248 seconds)
+2018-02-24 01:05:46	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 01:11:09	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-24 01:12:45	surfist	sim642:  no...  I like to use comic replies sometimes
+2018-02-24 01:13:28	surfist	in hexchat for example...   custom ping reply
+2018-02-24 01:14:21	@nils_2	then use hexchat :-)
+2018-02-24 01:14:29	surfist	not funny :)
+2018-02-24 01:14:40	surfist	it's a programming question
+2018-02-24 01:14:45	surfist	how to....
+2018-02-24 01:15:21	surfist	I will figure it out   but was hoping somebody has seen it before
+2018-02-24 01:15:21	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 01:16:48	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 01:18:01	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 01:21:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 01:22:07	-->	DonVlad (~Murii@79.113.205.114) has joined #weechat
+2018-02-24 01:22:24	-->	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has joined #weechat
+2018-02-24 01:22:34	-->	well_laid_lawn (~Jean-luc@203.87.119.17) has joined #weechat
+2018-02-24 01:24:01	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 01:25:56		OriginCode_ is now known as OriginCode
+2018-02-24 01:28:48	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 01:30:49	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 01:34:42	<--	kgrimes (~kgrimes@2600:1700:5881:3740:c584:2d36:c69d:3992) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 01:35:41	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 01:39:31	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 01:40:58	-->	cottoneyejim (~cottoneye@109.228.86.219) has joined #weechat
+2018-02-24 01:41:42	-->	iderik (~idk@h-0-97.A147.priv.bahnhof.se) has joined #weechat
+2018-02-24 01:44:39	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-24 01:55:05	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 01:58:33	-->	Kryptron (~Kryptron@unaffiliated/kryptron) has joined #weechat
+2018-02-24 01:59:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 01:59:41	-->	watered (~dagger@gateway/tor-sasl/watered) has joined #weechat
+2018-02-24 02:00:01	<--	hurricanehrndz (~hurricane@znc.techbyte.ca) has quit (Quit: Goodbye)
+2018-02-24 02:00:47	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 02:00:57	<--	Kryptron_ (~Kryptron@unaffiliated/kryptron) has quit (Ping timeout: 264 seconds)
+2018-02-24 02:01:21	<--	cottoneyejim (~cottoneye@109.228.86.219) has quit (Ping timeout: 252 seconds)
+2018-02-24 02:02:45	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 02:03:22	-->	widp (~widp@49.207.61.246) has joined #weechat
+2018-02-24 02:05:26	-->	hurricanehrndz (~hurricane@znc.techbyte.ca) has joined #weechat
+2018-02-24 02:10:13	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 02:14:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 02:22:19	-->	mohabaks (~mohabaks@gateway/tor-sasl/mohabaks) has joined #weechat
+2018-02-24 02:22:51	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 02:23:33	<--	wnereiz (~wnereiz@45.122.156.254) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 02:23:44	<--	well_laid_lawn (~Jean-luc@203.87.119.17) has quit (Ping timeout: 248 seconds)
+2018-02-24 02:27:35	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 02:27:53	mohabaks	hello folks;is it possible to integrate discord with weechat ?
+2018-02-24 02:27:59	<--	fours (~fives@unaffiliated/fours) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 02:29:05	<--	ferdna (~ferdna@68-73-71-246.lightspeed.elpstx.sbcglobal.net) has quit (Quit: Leaving)
+2018-02-24 02:32:16	<--	\` (wd@wd.eblan.it) has quit (Read error: Connection reset by peer)
+2018-02-24 02:32:30	-->	\` (wd@wd.eblan.it) has joined #weechat
+2018-02-24 02:35:59	<--	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 02:37:10	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 02:37:20		Ellenor is now known as Reinhilde
+2018-02-24 02:39:00	@nils_2	you can integrate every protocol in weechat
+2018-02-24 02:41:58	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 02:43:45	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Ping timeout: 255 seconds)
+2018-02-24 02:45:38	-->	clemens3 (~clemens@dynamic-adsl-78-13-222-95.clienti.tiscali.it) has joined #weechat
+2018-02-24 02:47:28	-->	steinex (~steinex@2a02:908:e943:a8a0::1) has joined #weechat
+2018-02-24 02:48:47	<--	Fats (fats@gateway/vpn/privateinternetaccess/fats) has quit (Remote host closed the connection)
+2018-02-24 02:49:55	-->	Fats (fats@gateway/vpn/privateinternetaccess/fats) has joined #weechat
+2018-02-24 02:52:34	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 02:52:37	mohabaks	nils_2, thanks
+2018-02-24 02:54:06	-->	coco (~coco@2a02:a442:b563:1:539b:98d5:cb46:e4f4) has joined #weechat
+2018-02-24 02:56:33		xcm is now known as Guest87032
+2018-02-24 02:56:33	<--	Guest87032 (~xcm@ipa210.225.tellas.gr) has quit (Killed (weber.freenode.net (Nickname regained by services)))
+2018-02-24 02:56:42	-->	jooni (~jooni@221.121.149.195) has joined #weechat
+2018-02-24 02:56:55	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-24 02:57:27	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 03:01:21	-->	nordmike1 (~nordmike@95.54.185.169) has joined #weechat
+2018-02-24 03:03:06	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 03:03:21	<--	nordmike (~nordmike@95.54.184.140) has quit (Ping timeout: 264 seconds)
+2018-02-24 03:05:54	-->	l2y (l2y@gateway/vpn/privateinternetaccess/l2y) has joined #weechat
+2018-02-24 03:06:53	l2y	is it possible to create a separate buffer for each network instead of having all of them in one?
+2018-02-24 03:07:37	@nils_2	each network has its own buffer
+2018-02-24 03:07:43	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 03:07:48	@nils_2	i guess you mean, that buffers are merged
+2018-02-24 03:08:02	@nils_2	/fset irc.look.server_buffer
+2018-02-24 03:09:09	dive	Is there a way of putting a space between the right edge of nicklist and right edge of terminal?
+2018-02-24 03:09:57	l2y	nils_2: thank you, that was it
+2018-02-24 03:10:12	dive	Or between the right end of the longest nick?
+2018-02-24 03:10:44	@nils_2	dive: no. you can only change size of bar
+2018-02-24 03:11:09	dive	ok
+2018-02-24 03:11:55	<--	l2y (l2y@gateway/vpn/privateinternetaccess/l2y) has left #weechat
+2018-02-24 03:12:17	@nils_2	imagine there is a nick with 100 chars long and the nicklist automatically changes the size to 200+1 chars. big times :-)
+2018-02-24 03:12:54	dive	?
+2018-02-24 03:13:26	surfist	truncate (like it does) and replace last char with space
+2018-02-24 03:14:12	surfist	maybe 100 lines to do it
+2018-02-24 03:14:15	dive	There's a size limit fir nicks.
+2018-02-24 03:14:15	surfist	kidding
+2018-02-24 03:14:43	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 03:15:13	dive	I just want to put a space between the list and the right edfe.
+2018-02-24 03:15:19	dive	edge
+2018-02-24 03:16:05	<--	trens (~trens@cpe-184-54-196-170.swo.res.rr.com) has quit (Read error: Connection reset by peer)
+2018-02-24 03:17:22	@nils_2	dive: i meant 100+1. longest nick in +1 char
+2018-02-24 03:18:09	dive	ok
+2018-02-24 03:18:34	dive	Gonna try the size and max size.
+2018-02-24 03:18:57	surfist	nicklen is 32 on some networks?
+2018-02-24 03:19:26	@nils_2	there is a always the question how to cripple the nick on the left, because weechat.look.prefix_align_max is unlimited
+2018-02-24 03:19:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-24 03:19:56	surfist	and squishes the text area
+2018-02-24 03:20:30	dive	18 seems ok.
+2018-02-24 03:20:48	<--	clemens3 (~clemens@dynamic-adsl-78-13-222-95.clienti.tiscali.it) has quit (Ping timeout: 248 seconds)
+2018-02-24 03:20:59	<--	badpixel (~badpixel@unaffiliated/badpixel) has quit (Ping timeout: 276 seconds)
+2018-02-24 03:22:10	-->	watered (~dagger@gateway/tor-sasl/watered) has joined #weechat
+2018-02-24 03:25:23	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 03:25:55	<--	DonVlad (~Murii@79.113.205.114) has quit (Quit: WeeChat 1.4)
+2018-02-24 03:26:27	-->	DonVlad (~Murii@79.113.205.114) has joined #weechat
+2018-02-24 03:28:53	<--	raisen (~wey@cpe-76-94-176-186.socal.res.rr.com) has quit (Quit: WeeChat 2.0)
+2018-02-24 03:29:39	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Ping timeout: 255 seconds)
+2018-02-24 03:30:05	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 03:36:19	-->	xmorph (~xt_@unaffiliated/xmorph) has joined #weechat
+2018-02-24 03:39:02	<--	mohabaks (~mohabaks@gateway/tor-sasl/mohabaks) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 03:39:37	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 03:40:45	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 03:43:33	-->	damke__ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 03:44:09	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 03:44:24	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 03:45:57	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 03:49:23	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 03:54:21	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-24 03:56:51	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-24 03:57:06	<--	nils_2 (~nils_2@unaffiliated/nils-2/x-2480262) has quit (Ping timeout: 248 seconds)
+2018-02-24 03:57:53	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-24 03:58:41	-->	nils_2 (~nils_2@unaffiliated/nils-2/x-2480262) has joined #weechat
+2018-02-24 03:58:42		Mode #weechat [+o nils_2] by ChanServ
+2018-02-24 04:00:25	<--	itai86 (~indstwetr@ip196-63-166-62.adsl.versatel.nl) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 04:01:36	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 04:03:21	<--	damke__ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 04:04:33	-->	badpixel (~badpixel@199.180.249.207) has joined #weechat
+2018-02-24 04:04:36	-->	yyt16384 (~yyt16384@unaffiliated/yyt16384) has joined #weechat
+2018-02-24 04:04:40	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 04:06:54	<--	yyt16384 (~yyt16384@unaffiliated/yyt16384) has quit (Client Quit)
+2018-02-24 04:07:43	-->	yyt16384 (~yyt16384@unaffiliated/yyt16384) has joined #weechat
+2018-02-24 04:09:19	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 04:13:50	<--	badpixel (~badpixel@199.180.249.207) has quit (Changing host)
+2018-02-24 04:13:50	-->	badpixel (~badpixel@unaffiliated/badpixel) has joined #weechat
+2018-02-24 04:16:35	-->	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has joined #weechat
+2018-02-24 04:16:39	<--	ynakao (~ynakao@mail.yujinakao.com) has quit (Quit: ZNC 1.6.5+deb1 - http://znc.in)
+2018-02-24 04:16:58	-->	ynakao (~ynakao@mail.yujinakao.com) has joined #weechat
+2018-02-24 04:17:32	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 04:22:09	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 04:23:39	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 04:27:14	<--	voxadam (~adam@fedora/voxadam) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 04:28:28	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 04:28:46	-->	DarkDefender (~zed@c-f3acd954.501502032205-0-757473696b74.cust.bredbandsbolaget.se) has joined #weechat
+2018-02-24 04:32:25	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Ping timeout: 252 seconds)
+2018-02-24 04:36:52	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-24 04:39:03	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 04:42:19	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Ping timeout: 252 seconds)
+2018-02-24 04:43:47	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 04:46:28	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-24 04:48:55	<--	drayer34 (~drayer34@cable-192.222.210.73.electronicbox.net) has quit (Ping timeout: 252 seconds)
+2018-02-24 04:49:17	<--	sim590 (~sim590@cable-192.222.210.73.electronicbox.net) has quit (Ping timeout: 252 seconds)
+2018-02-24 04:51:44	-->	drayer34 (~drayer34@cable-192.222.210.73.electronicbox.net) has joined #weechat
+2018-02-24 04:52:05	-->	sim590 (~sim590@cable-192.222.210.73.electronicbox.net) has joined #weechat
+2018-02-24 04:52:13	-->	mohabaks (~mohabaks@gateway/tor-sasl/mohabaks) has joined #weechat
+2018-02-24 04:53:41	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 04:55:31	yyt16384	is it possible to have right-aligned items in a horizontal bar?
+2018-02-24 04:55:50	<--	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has quit (Ping timeout: 260 seconds)
+2018-02-24 04:55:57	yyt16384	i didn't find anything about it in the docs, so probably scripts or patches are needed
+2018-02-24 04:56:42	@nils_2	no. there is no alignment in bars
+2018-02-24 04:57:32	yyt16384	can a script define a bar item that prints some spaces depending on the length of the bar and other items?
+2018-02-24 04:58:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 05:00:01	@nils_2	not that i am aware of
+2018-02-24 05:02:42	<--	parsnip (uid147265@gateway/web/irccloud.com/x-xhvizyviowkeljyg) has quit (Quit: Connection closed for inactivity)
+2018-02-24 05:06:26	<--	trn (jhj@prone.ws) has quit (Read error: Connection reset by peer)
+2018-02-24 05:07:46	yyt16384	thanks, i think i need to read more into the source code now
+2018-02-24 05:08:47	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 05:10:47	-->	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has joined #weechat
+2018-02-24 05:12:16	lohfu	hello. is https://weechat.org/scripts/source/multiline.pl.html/ the best plugin for making sure i can see the whole message i have written if its longer than my terminal?
+2018-02-24 05:12:36	lohfu	the reason i ask is it seems to add a lag before sending the message
+2018-02-24 05:12:44	<--	mohabaks (~mohabaks@gateway/tor-sasl/mohabaks) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 05:13:00	lohfu	and reading some comments in the actual script it seems to be made for a different purpose. even though it does seem to solve my issue.
+2018-02-24 05:13:10	lohfu	but the lag is mighty annoying.
+2018-02-24 05:13:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 05:13:53	@nils_2	first, its a script not a plugin. the script is very tricky, that causes the lag i guess
+2018-02-24 05:15:00	lohfu	ah. is there a simpler or more "legit" way of solving my problem?
+2018-02-24 05:15:20	lohfu	i want to see the entire message i have written, even if its longer than my terminal width.
+2018-02-24 05:16:41	<--	TheWolf (~TheWolf@pD95D8665.dip0.t-ipconnect.de) has quit (Disconnected by services)
+2018-02-24 05:16:56	-->	TheWolf_ (~TheWolf@pD95D99B3.dip0.t-ipconnect.de) has joined #weechat
+2018-02-24 05:17:02	@nils_2	i can see the entire message. longer messages will be displayed in two lines for example
+2018-02-24 05:17:54	@nils_2	/set weechat.bar.input.size 0
+2018-02-24 05:18:56	<--	lohfu (~lohfu@37.139.15.18) has quit (Quit: WeeChat 1.9)
+2018-02-24 05:19:09	-->	lohfu (~lohfu@37.139.15.18) has joined #weechat
+2018-02-24 05:21:04	lohfu	huh. it appears the script set that setting to 0 automatically when i installed it
+2018-02-24 05:21:32	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 05:21:50	lohfu	for a moment i felt very stupid when i could write multiline messages despite uninstalling the script
+2018-02-24 05:22:17	<--	chandan (~chandan@122.166.91.88) has quit (Ping timeout: 252 seconds)
+2018-02-24 05:24:13	<--	caecias (~caecias@unaffiliated/caecias) has quit (Ping timeout: 240 seconds)
+2018-02-24 05:24:34	-->	ztychr (~ztychr@unaffiliated/ztychr) has joined #weechat
+2018-02-24 05:26:45	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-24 05:26:45	-->	trn (jhj@prone.ws) has joined #weechat
+2018-02-24 05:27:16	@nils_2	problem solved? :-)
+2018-02-24 05:28:21	-->	blaze (~blaze@unaffiliated/blaze) has joined #weechat
+2018-02-24 05:28:56	-->	unik (~nikos@46-161-158.adsl.cyta.gr) has joined #weechat
+2018-02-24 05:30:42	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 05:30:58	-->	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has joined #weechat
+2018-02-24 05:35:29	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 05:42:25	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 05:45:22	<--	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has quit (Quit: terminalator)
+2018-02-24 05:46:20	-->	TheWolf (~TheWolf@pD95D92B8.dip0.t-ipconnect.de) has joined #weechat
+2018-02-24 05:47:45	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 264 seconds)
+2018-02-24 05:48:39	<--	unik (~nikos@46-161-158.adsl.cyta.gr) has quit (Quit: WeeChat 1.4)
+2018-02-24 05:49:03	<--	TheWolf_ (~TheWolf@pD95D99B3.dip0.t-ipconnect.de) has quit (Ping timeout: 252 seconds)
+2018-02-24 05:49:15	-->	sidharth_arya (~arya@112.196.142.238) has joined #weechat
+2018-02-24 05:51:09	<--	ztychr (~ztychr@unaffiliated/ztychr) has quit (Ping timeout: 265 seconds)
+2018-02-24 05:51:36	-->	ztychr (~ztychr@unaffiliated/ztychr) has joined #weechat
+2018-02-24 05:51:41	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 05:52:25	<--	sidharth_arya (~arya@112.196.142.238) has left #weechat
+2018-02-24 05:55:23	<--	nrh1703 (noshir@arch10a.lon1.lin.cloud.nrh.cc) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 05:56:32	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 05:56:46	<--	albongo (~albino@unaffiliated/albino/x-684385) has quit (Quit: WeeChat 1.7)
+2018-02-24 05:57:30	-->	albongo (~albino@unaffiliated/albino/x-684385) has joined #weechat
+2018-02-24 06:00:16	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 06:00:18	-->	choru (~choru@78-62-157-12.static.zebra.lt) has joined #weechat
+2018-02-24 06:00:28	-->	\void (~void@unaffiliated/ctrlaltdev) has joined #weechat
+2018-02-24 06:02:18	-->	voxadam (~adam@fedora/voxadam) has joined #weechat
+2018-02-24 06:02:47	-->	sidharth_arya (~user@112.196.142.238) has joined #weechat
+2018-02-24 06:03:26	<--	sidharth_arya (~user@112.196.142.238) has left #weechat
+2018-02-24 06:03:38	-->	sud0x3 (~sud0x3@79-67-6-182.dynamic.dsl.as9105.com) has joined #weechat
+2018-02-24 06:04:53	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 06:05:45	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:06:36	<--	surfist (~surfist@unaffiliated/surfist) has quit (Remote host closed the connection)
+2018-02-24 06:07:54	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 06:11:31	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 06:16:17	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 06:17:19	-->	somis (~somis@149.56.153.188) has joined #weechat
+2018-02-24 06:17:50	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 06:18:29	-->	sidharth_arya (~arya@112.196.142.238) has joined #weechat
+2018-02-24 06:19:59	<--	sidharth_arya (~arya@112.196.142.238) has left #weechat
+2018-02-24 06:20:26	-->	sidharth_arya (~arya@112.196.142.238) has joined #weechat
+2018-02-24 06:22:53	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-24 06:23:53	<--	ztychr (~ztychr@unaffiliated/ztychr) has quit (Ping timeout: 252 seconds)
+2018-02-24 06:25:46	<--	sidharth_arya (~arya@112.196.142.238) has quit (Quit: WeeChat 1.5)
+2018-02-24 06:27:27	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 06:28:59	<--	yyt16384 (~yyt16384@unaffiliated/yyt16384) has quit (Quit: yyt16384)
+2018-02-24 06:32:31	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-24 06:39:05	<--	phinxy (~ted@unaffiliated/phinxy) has quit (Ping timeout: 260 seconds)
+2018-02-24 06:39:35	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 06:44:25	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 06:44:36	<--	chuuna (~user@gateway/tor-sasl/chuun) has quit (Ping timeout: 255 seconds)
+2018-02-24 06:46:56	-->	chuuna (~user@gateway/tor-sasl/chuun) has joined #weechat
+2018-02-24 06:46:59	<--	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has quit (Ping timeout: 252 seconds)
+2018-02-24 06:47:54	-->	sidharth_arya (~arya@112.196.142.238) has joined #weechat
+2018-02-24 06:48:20	<--	d42 (~root@89-70-23-250.dynamic.chello.pl) has quit (Ping timeout: 276 seconds)
+2018-02-24 06:49:12	<--	sidharth_arya (~arya@112.196.142.238) has left #weechat
+2018-02-24 06:53:23	-->	d42 (~root@89-70-23-250.dynamic.chello.pl) has joined #weechat
+2018-02-24 06:54:59	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 06:55:58	-->	Xiti` (~Xiti-@unaffiliated/xiti) has joined #weechat
+2018-02-24 06:56:52	-->	squigzy (~squigz@i3/op/squigzy) has joined #weechat
+2018-02-24 06:57:02	-->	sidharth_arya (~user@112.196.142.238) has joined #weechat
+2018-02-24 06:57:08	<--	sidharth_arya (~user@112.196.142.238) has left #weechat
+2018-02-24 06:58:48	<--	puremourning (~ben@97e10015.skybroadband.com) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 06:59:01	<--	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:01	<--	luk3yx (luk3yx@unaffiliated/luk3yx) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:01	<--	OriginCode (~OriginCod@unaffiliated/origincode) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:01	<--	minasota (~minasota@unaffiliated/minasota) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:07	-->	prime (~prime@prime.co) has joined #weechat
+2018-02-24 06:59:08	<--	prime (~prime@prime.co) has quit (Changing host)
+2018-02-24 06:59:08	-->	prime (~prime@unaffiliated/primex) has joined #weechat
+2018-02-24 06:59:10	<--	xprime (~prime@prime.co) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:11	<--	codebam (~codebam@unaffiliated/codebam) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:11	<--	Xiti (~Xiti-@unaffiliated/xiti) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:28	-->	minasota (~minasota@unaffiliated/minasota) has joined #weechat
+2018-02-24 06:59:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 07:00:32	-->	fire|bir1 (~firebird@opensuse/member/firebird619) has joined #weechat
+2018-02-24 07:00:41	-->	katnip (yarddog@belencomputers/founder/katnip) has joined #weechat
+2018-02-24 07:01:51	-->	TJ- (~root@yes.iam.tj) has joined #weechat
+2018-02-24 07:02:14	-->	OriginCode (~OriginCod@unaffiliated/origincode) has joined #weechat
+2018-02-24 07:02:33	-->	Hotpot33 (~Hot_Pot@unaffiliated/hotpot33) has joined #weechat
+2018-02-24 07:03:30	-->	luk3yx (luk3yx@unaffiliated/luk3yx) has joined #weechat
+2018-02-24 07:04:15	-->	epscy (~epscy@176.126.241.239) has joined #weechat
+2018-02-24 07:05:16	-->	GordonGekko (~jul54@139.247.148.77.rev.sfr.net) has joined #weechat
+2018-02-24 07:05:16	-->	Guiri_ (~Anonymous@unaffiliated/guiri) has joined #weechat
+2018-02-24 07:05:21	-->	ider (~idk@h-0-97.A147.priv.bahnhof.se) has joined #weechat
+2018-02-24 07:05:42	-->	r3m_ (~r3m@unaffiliated/r3m) has joined #weechat
+2018-02-24 07:05:50	-->	thorre_se (~thorre@81-235-229-193-no78.tbcn.telia.com) has joined #weechat
+2018-02-24 07:06:02	-->	jbisch_ (~joseph@107.170.79.147) has joined #weechat
+2018-02-24 07:06:22	-->	cspack_ (cspack@gateway/vpn/privateinternetaccess/cspack) has joined #weechat
+2018-02-24 07:06:25	-->	Wanderer-- (~Wande@96.44.147.42) has joined #weechat
+2018-02-24 07:07:01	-->	WuBzY_ (~WuBzY@mobile-access-bcee97-61.dhcp.inet.fi) has joined #weechat
+2018-02-24 07:07:43	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 07:07:45	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 07:07:52	-->	esph_ (~weechat@unaffiliated/esph) has joined #weechat
+2018-02-24 07:07:59	<--	squigz (~squigz@i3/op/squigzy) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:08:12	-->	dElAvA_ (~dElAvA@45.55.129.38) has joined #weechat
+2018-02-24 07:08:31	-->	boomboxnation1 (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-24 07:09:18	-->	jwynn6_ (~justin@50.88.127.237) has joined #weechat
+2018-02-24 07:09:28	-->	codebam (~codebam@unaffiliated/codebam) has joined #weechat
+2018-02-24 07:09:29	-->	Lieuwex (~Lieuwex@5ED19C19.cm-7-2c.dynamic.ziggo.nl) has joined #weechat
+2018-02-24 07:09:30	-->	nielsk_ (~nielsk@2001:1560:a000:2:f06f:10a9:6265:b67) has joined #weechat
+2018-02-24 07:09:37	-->	MochaLoca (bocaneri@about/linux/staff/sauvin) has joined #weechat
+2018-02-24 07:09:38	-->	_musl_ (~musl@eta.hix.io) has joined #weechat
+2018-02-24 07:09:39	-->	Shane_ (~Shane@ec2-35-176-223-112.eu-west-2.compute.amazonaws.com) has joined #weechat
+2018-02-24 07:09:55	-->	DarkDefender1 (~zed@c-f3acd954.501502032205-0-757473696b74.cust.bredbandsbolaget.se) has joined #weechat
+2018-02-24 07:09:58	-->	amosbird_ (~amosbird@123.206.66.49) has joined #weechat
+2018-02-24 07:09:59	<--	Xiti` (~Xiti-@unaffiliated/xiti) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:09:59	<--	x-fak (~jul54@reactos/tester/x-fak) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:09:59	<--	firebird (~firebird@opensuse/member/firebird619) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:00	<--	Guiri (~Anonymous@unaffiliated/guiri) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:00	<--	iderik (~idk@h-0-97.A147.priv.bahnhof.se) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	jwynn6 (~justin@50.88.127.237) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	epscy_ (~epscy@176.126.241.239) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	kremfloete (~kremfloet@41641.s.time4vps.cloud) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	esph (~weechat@unaffiliated/esph) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	nielsk (~nielsk@striper.datahaven.space) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	prime (~prime@unaffiliated/primex) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	sharktamer (~Shane@ec2-35-176-223-112.eu-west-2.compute.amazonaws.com) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:02		Guiri_ is now known as Guiri
+2018-02-24 07:10:25	-->	Zic_ (zic@ubuntu/member/pdpc.active.zic) has joined #weechat
+2018-02-24 07:10:27	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:27	<--	ynakao (~ynakao@mail.yujinakao.com) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	LocaMocha (bocaneri@about/linux/staff/sauvin) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	Wanderer- (~Wande@173.254.222.146) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	musl_ (~musl@eta.hix.io) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	Zic (zic@ubuntu/member/pdpc.active.zic) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	jbisch (~joseph@107.170.79.147) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	Deltafire (~chris@82-71-7-120.dsl.in-addr.zen.co.uk) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	cspack (cspack@gateway/vpn/privateinternetaccess/cspack) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	DarkDefender (~zed@c-f3acd954.501502032205-0-757473696b74.cust.bredbandsbolaget.se) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	eldritch (~eldritch@unaffiliated/eldritch) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	amosbird (~amosbird@123.206.66.49) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	LambdaComplex (~LambdaCom@unaffiliated/lambdacomplex) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	WuBzY (~WuBzY@mobile-access-bcee97-61.dhcp.inet.fi) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	thorre (~thorre@81-235-229-193-no78.tbcn.telia.com) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	r3m (~r3m@unaffiliated/r3m) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	dElAvA (~dElAvA@45.55.129.38) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:29	<--	k (~krok@unaffiliated/krok) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:30	<--	tmlpp (~teemu@c743.ip19.netikka.fi) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:33		thorre_se is now known as thorre
+2018-02-24 07:10:40	-->	df (~chris@82-71-7-120.dsl.in-addr.zen.co.uk) has joined #weechat
+2018-02-24 07:10:41	-->	kremfloete (~kremfloet@41641.s.time4vps.cloud) has joined #weechat
+2018-02-24 07:10:41	-->	ynakao_ (~ynakao@mail.yujinakao.com) has joined #weechat
+2018-02-24 07:11:05		ynakao_ is now known as ynakao
+2018-02-24 07:11:13	-->	LambdaCo1 (~LambdaCom@45.55.72.125) has joined #weechat
+2018-02-24 07:11:18	-->	prime (~prime@prime.co) has joined #weechat
+2018-02-24 07:11:18	<--	prime (~prime@prime.co) has quit (Changing host)
+2018-02-24 07:11:18	-->	prime (~prime@unaffiliated/primex) has joined #weechat
+2018-02-24 07:11:22	-->	tmlpp (~teemu@c743.ip19.netikka.fi) has joined #weechat
+2018-02-24 07:11:48	-->	sidharth_arya (~user@112.196.142.238) has joined #weechat
+2018-02-24 07:11:51	<--	sidharth_arya (~user@112.196.142.238) has left #weechat
+2018-02-24 07:12:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 07:12:42		r3m_ is now known as r3m
+2018-02-24 07:13:19	-->	eldritch (~eldritch@unaffiliated/eldritch) has joined #weechat
+2018-02-24 07:13:29	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 07:14:09	-->	krok (~krok@unaffiliated/krok) has joined #weechat
+2018-02-24 07:15:46	-->	phinxy (~ted@unaffiliated/phinxy) has joined #weechat
+2018-02-24 07:17:58	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 07:20:49	-->	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has joined #weechat
+2018-02-24 07:21:17	<--	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has quit (Client Quit)
+2018-02-24 07:21:44	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-02-24 07:22:09	-->	eldritch2 (~eldritch@unaffiliated/eldritch) has joined #weechat
+2018-02-24 07:22:45	<--	eldritch (~eldritch@unaffiliated/eldritch) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:23:09	<--	brainwash (~tuturu@unaffiliated/brainwash) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:23:34	-->	Krennic (~Krennic@unaffiliated/krennic) has joined #weechat
+2018-02-24 07:23:41	-->	brainwash (~tuturu@unaffiliated/brainwash) has joined #weechat
+2018-02-24 07:23:43	<--	Krennic (~Krennic@unaffiliated/krennic) has quit (Client Quit)
+2018-02-24 07:23:53		eldritch2 is now known as eldritch
+2018-02-24 07:26:05	<--	caecias (~caecias@unaffiliated/caecias) has quit (Ping timeout: 240 seconds)
+2018-02-24 07:27:57	-->	puremourning (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-24 07:30:22	-->	winny (~winny@unaffiliated/winstonw) has joined #weechat
+2018-02-24 07:32:51	-->	Edu4rdSHL (~Edward@unaffiliated/edu4rdshl) has joined #weechat
+2018-02-24 07:33:12	<--	TJ- (~root@yes.iam.tj) has quit (Ping timeout: 252 seconds)
+2018-02-24 07:34:20	-->	TJ- (~root@yes.iam.tj) has joined #weechat
+2018-02-24 07:35:08	-->	diniwed (~gavron@ool-944c262b.dyn.optonline.net) has joined #weechat
+2018-02-24 07:43:42		Zic_ is now known as Zic
+2018-02-24 07:43:54	<--	Zic (zic@ubuntu/member/pdpc.active.zic) has quit (Quit: GNU/Linux The dynamic duo)
+2018-02-24 07:44:29	-->	Zic (zic@ubuntu/member/pdpc.active.zic) has joined #weechat
+2018-02-24 07:45:47	<--	Zic (zic@ubuntu/member/pdpc.active.zic) has quit (Client Quit)
+2018-02-24 07:46:26	-->	Zic (zic@ubuntu/member/pdpc.active.zic) has joined #weechat
+2018-02-24 07:46:27	<--	steven (~steven@unaffiliated/steven) has quit (Ping timeout: 268 seconds)
+2018-02-24 07:49:21	-->	steven (~steven@unaffiliated/steven) has joined #weechat
+2018-02-24 07:50:06	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-24 07:53:18	-->	TJ_Remix (~root@yes.iam.tj) has joined #weechat
+2018-02-24 07:53:32	-->	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has joined #weechat
+2018-02-24 07:53:42	<--	TJ- (~root@yes.iam.tj) has quit (Disconnected by services)
+2018-02-24 07:54:06		TJ_Remix is now known as TJ-
+2018-02-24 08:05:06	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 08:05:54	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 260 seconds)
+2018-02-24 08:13:47	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 08:13:59	<--	raynold (uid201163@gateway/web/irccloud.com/x-qhwymfkpufjzrxqd) has quit (Quit: Connection closed for inactivity)
+2018-02-24 08:16:00	<--	Edu4rdSHL (~Edward@unaffiliated/edu4rdshl) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 08:18:35	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 08:18:56	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 248 seconds)
+2018-02-24 08:20:58	<--	\` (wd@wd.eblan.it) has quit (Read error: Connection reset by peer)
+2018-02-24 08:26:06		amosbird_ is now known as amosbird
+2018-02-24 08:27:51	-->	Logic_1 (~fusE@88.243.22.213) has joined #weechat
+2018-02-24 08:28:33	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 08:32:01	-->	nucleargrave (~nucleargr@c-73-150-253-137.hsd1.nj.comcast.net) has joined #weechat
+2018-02-24 08:32:25	-->	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has joined #weechat
+2018-02-24 08:33:47	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-24 08:40:35	BrassHopper	Is their a command to view a channels banlist if you have the proper permissions?
+2018-02-24 08:41:15	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 08:44:57	@FlashCode	BrassHopper: /ban on the channel
+2018-02-24 08:45:57	-->	Edu4rdSHL (~Edward@unaffiliated/edu4rdshl) has joined #weechat
+2018-02-24 08:46:08	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 08:46:42	<--	silas (~silas@bluebook.xen.prgmr.com) has left #weechat
+2018-02-24 08:47:47	<--	sud0x3 (~sud0x3@79-67-6-182.dynamic.dsl.as9105.com) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 08:47:58	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-24 08:48:54	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 08:49:32	-->	fujisan (uid4207@gateway/web/irccloud.com/x-gtnfuxajzomkbrpy) has joined #weechat
+2018-02-24 08:52:29	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 256 seconds)
+2018-02-24 08:53:29	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 08:56:01	BrassHopper	Cool, thanks
+2018-02-24 08:56:02	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 08:56:27	<--	Edu4rdSHL (~Edward@unaffiliated/edu4rdshl) has quit (Ping timeout: 256 seconds)
+2018-02-24 09:00:43	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 09:01:49	<--	diniwed (~gavron@ool-944c262b.dyn.optonline.net) has quit (Quit: WeeChat 1.6)
+2018-02-24 09:01:56	-->	\` (wd@wd.eblan.it) has joined #weechat
+2018-02-24 09:03:46	-->	ztychr (~ztychr@unaffiliated/ztychr) has joined #weechat
+2018-02-24 09:04:46	-->	indeedwatson (~yama@181.92.147.110) has joined #weechat
+2018-02-24 09:05:56	-->	Xeyk_ (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has joined #weechat
+2018-02-24 09:07:43	-->	diniwed (~gavron@ool-944c262b.dyn.optonline.net) has joined #weechat
+2018-02-24 09:07:53	<--	ironwrk (~irongeeks@cpe-69-207-152-9.rochester.res.rr.com) has quit (Quit: Leaving)
+2018-02-24 09:08:02	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 09:08:36	<--	Xeyk (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-02-24 09:09:18	-->	Xeyk (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has joined #weechat
+2018-02-24 09:09:33	-->	vlt (~vlt@2a01:488:66:1000:57e6:5dd1:0:1) has joined #weechat
+2018-02-24 09:09:50	<--	vlt (~vlt@2a01:488:66:1000:57e6:5dd1:0:1) has quit (Client Quit)
+2018-02-24 09:10:02	-->	vlt (~vlt@2a01:488:66:1000:57e6:5dd1:0:1) has joined #weechat
+2018-02-24 09:10:07	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-24 09:11:48	<--	vlt (~vlt@2a01:488:66:1000:57e6:5dd1:0:1) has left #weechat
+2018-02-24 09:12:19	<--	Xeyk_ (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has quit (Ping timeout: 256 seconds)
+2018-02-24 09:12:55	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 09:15:28	<--	Xeyk (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has quit (Ping timeout: 248 seconds)
+2018-02-24 09:16:44	-->	Xeyk (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has joined #weechat
+2018-02-24 09:19:35	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 09:20:02	-->	Xeyk_ (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has joined #weechat
+2018-02-24 09:20:23	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Killed (barjavel.freenode.net (Nickname regained by services)))
+2018-02-24 09:20:45	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-24 09:22:35	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-02-24 09:22:57	<--	Xeyk (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has quit (Ping timeout: 248 seconds)
+2018-02-24 09:24:06	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 09:27:14	<--	caecias (~caecias@unaffiliated/caecias) has quit (Ping timeout: 248 seconds)
+2018-02-24 09:28:55	-->	realbadhorse (~realuname@27.106.65.139) has joined #weechat
+2018-02-24 09:30:14	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 09:34:58	<--	widp (~widp@49.207.61.246) has quit (Quit: WeeChat 1.4)
+2018-02-24 09:35:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 09:36:50	<--	terminalator (terminalat@gateway/vpn/privateinternetaccess/terminalator) has quit (Quit: terminalator)
+2018-02-24 09:36:53	<--	ztychr (~ztychr@unaffiliated/ztychr) has quit (Ping timeout: 240 seconds)
+2018-02-24 09:38:06	-->	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has joined #weechat
+2018-02-24 09:39:07	-->	ztychr (~ztychr@unaffiliated/ztychr) has joined #weechat
+2018-02-24 09:42:09	-->	Shawn (~Shawn@2604:6000:1511:40c6:e1b6:de10:8c4b:cac5) has joined #weechat
+2018-02-24 09:42:09	<--	Shawn (~Shawn@2604:6000:1511:40c6:e1b6:de10:8c4b:cac5) has quit (Changing host)
+2018-02-24 09:42:09	-->	Shawn (~Shawn@unaffiliated/shawn) has joined #weechat
+2018-02-24 09:42:33	-->	knidos (~knidos@88.245.76.81) has joined #weechat
+2018-02-24 09:43:53	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 09:44:04	<--	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 09:44:26	<--	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 09:46:35	-->	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has joined #weechat
+2018-02-24 09:47:11	-->	irongeeks (~irongeeks@2604:6000:1001:e3:a06f:2d78:4eff:97ed) has joined #weechat
+2018-02-24 09:48:32	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 245 seconds)
+2018-02-24 09:48:59	<--	GordonGekko (~jul54@139.247.148.77.rev.sfr.net) has left #weechat
+2018-02-24 09:50:06	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 09:51:14	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 240 seconds)
+2018-02-24 09:54:49	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-24 09:56:59		eblip is now known as eb0t-
+2018-02-24 09:59:54	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 10:01:33	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 10:03:43	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 260 seconds)
+2018-02-24 10:04:28	-->	fours (~fives@unaffiliated/fours) has joined #weechat
+2018-02-24 10:04:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 10:05:45	-->	fusE (58f316d5@gateway/web/freenode/ip.88.243.22.213) has joined #weechat
+2018-02-24 10:07:04	<--	fusE (58f316d5@gateway/web/freenode/ip.88.243.22.213) has quit (Client Quit)
+2018-02-24 10:07:17	<--	Logic_1 (~fusE@88.243.22.213) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 10:08:30	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 10:12:42	<--	cspack_ (cspack@gateway/vpn/privateinternetaccess/cspack) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 10:13:06	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 10:13:09	fours	moved my install to a new server, and just had weechat close itself (with a clean quit, per the quit msg) overnight unattended -- don't think i've ever experienced that before in years of using it
+2018-02-24 10:13:29	fours	can't offer much info sadly as i didn't have core/debug enabled, but if anybody has any clever thoughts, i'd listen :)
+2018-02-24 10:13:34	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-24 10:13:42	-->	cspack (cspack@gateway/vpn/privateinternetaccess/cspack) has joined #weechat
+2018-02-24 10:14:08	Zarthus	do you have a crash dump in ~/.weechat at all?
+2018-02-24 10:14:12	<--	realbadhorse (~realuname@27.106.65.139) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 10:14:26	Zarthus	it could have been a regular SIGHUP or something from your system
+2018-02-24 10:18:11	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 252 seconds)
+2018-02-24 10:18:17	fours	nope, only crash dumps were from about 7 years ago, my guess is it was some system thing that triggered it i'm just blanking on what it could be
+2018-02-24 10:18:21	fours	since its just a fresh debian install
+2018-02-24 10:18:30	fours	gonna keep poking around other logs
+2018-02-24 10:19:05	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 10:20:06	-->	_thelion_ (~matthias@85.199.49.127) has joined #weechat
+2018-02-24 10:22:02	<--	tg (~x@unaffiliated/tg) has quit (Quit: Leaving)
+2018-02-24 10:23:11		krok is now known as k
+2018-02-24 10:23:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 10:25:56	-->	z0T (~z0T@gateway/tor-sasl/z0t) has joined #weechat
+2018-02-24 10:30:48	-->	Logic_1 (~fusE@85.110.194.143) has joined #weechat
+2018-02-24 10:31:39	-->	watered (~dagger@gateway/tor-sasl/watered) has joined #weechat
+2018-02-24 10:34:31	<--	Logic_1 (~fusE@85.110.194.143) has quit (Client Quit)
+2018-02-24 10:34:40	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 10:34:59	-->	realbadhorse (~realuname@27.106.65.139) has joined #weechat
+2018-02-24 10:39:10	-->	eboladoc (~chris@gw7.ff3l.net) has joined #weechat
+2018-02-24 10:39:22	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 245 seconds)
+2018-02-24 10:42:12	-->	Valeyard (~Valeyard@186.210.84.96) has joined #weechat
+2018-02-24 10:42:36	-->	Logic_One (~fusE@85.106.65.32) has joined #weechat
+2018-02-24 10:42:39	<--	Pinapl (~pinapl@2601:281:ca80:1290:ba27:ebff:fe2d:5d1c) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 10:46:27	<--	tigrmesh (~tigrmesh@archlinux/op/tigrmesh) has quit (Quit: new kernel)
+2018-02-24 10:46:33	<--	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-02-24 10:46:57	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-02-24 10:46:59	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 10:47:30	<--	realbadhorse (~realuname@27.106.65.139) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 10:50:20	-->	well_laid_lawn (~Jean-luc@203.87.119.17) has joined #weechat
+2018-02-24 10:50:52	-->	misterhsp (~hsp@unaffiliated/misterhsp) has joined #weechat
+2018-02-24 10:51:29	<--	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has quit (Remote host closed the connection)
+2018-02-24 10:52:03	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-24 10:52:25	-->	tigrmesh (~tigrmesh@archlinux/op/tigrmesh) has joined #weechat
+2018-02-24 10:52:25	-->	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has joined #weechat
+2018-02-24 10:55:12	<--	tobsterius (~tobsteriu@tobsteri.us) has quit (Quit: ZNC - http://znc.in)
+2018-02-24 10:56:47	-->	tobsterius (~tobsteriu@tobsteri.us) has joined #weechat
+2018-02-24 10:57:37		fire|bir1 is now known as firebird
+2018-02-24 10:59:02	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 11:00:36	-->	surfist (surfist@unaffiliated/surfist) has joined #weechat
+2018-02-24 11:01:33	<--	tobsterius (~tobsteriu@tobsteri.us) has quit (Ping timeout: 240 seconds)
+2018-02-24 11:03:02	<--	nuc (~nuc@electra.zerofill.de) has quit (Quit: nuc)
+2018-02-24 11:03:39	-->	nuc (~nuc@electra.zerofill.de) has joined #weechat
+2018-02-24 11:03:39	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 11:04:22	-->	tobsterius (~tobsteriu@tobsteri.us) has joined #weechat
+2018-02-24 11:04:23	<--	wlarip (~tc@163.172.72.40) has quit (Quit: wlarip)
+2018-02-24 11:09:23	-->	ferdna (~ferdna@68-73-71-246.lightspeed.elpstx.sbcglobal.net) has joined #weechat
+2018-02-24 11:10:03	-->	MyMind (~Sembei@unaffiliated/sembei) has joined #weechat
+2018-02-24 11:10:22	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 11:10:28	<--	Sembei (~Sembei@unaffiliated/sembei) has quit (Ping timeout: 240 seconds)
+2018-02-24 11:11:11	-->	lobata (~mint@172.58.16.114) has joined #weechat
+2018-02-24 11:11:26	<--	Logic_One (~fusE@85.106.65.32) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 11:13:21	<--	misterhsp (~hsp@unaffiliated/misterhsp) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 11:14:04	-->	antranigv (~antranigv@45.76.37.114) has joined #weechat
+2018-02-24 11:14:30	antranigv	hey all! I'm planning to move from irssi to weechat only because of the mobile relay, but was looking for reviews :)
+2018-02-24 11:14:48	Zarthus	5/5 stars, no comment
+2018-02-24 11:14:56	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 11:15:09	antranigv	right now I ssh from my phone to the server and do `tmux a` but the mobile app, I don't know what it uses, HTTPs? or something else?
+2018-02-24 11:15:16	antranigv	Zarthus: do you use it everyday?
+2018-02-24 11:15:26	Zarthus	not really, it's my secondary client
+2018-02-24 11:15:43	antranigv	Zarthus: may I ask what's your primary?
+2018-02-24 11:15:49	Zarthus	mIRC, mostly for worse.
+2018-02-24 11:16:07	cawfee	there are no good mobile irc clients
+2018-02-24 11:16:15	Zarthus	i don't care about mobile irc luckiyl
+2018-02-24 11:16:17	cawfee	with the exception of irccloud but then that's mitm-tier
+2018-02-24 11:16:30	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 11:20:14	-->	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has joined #weechat
+2018-02-24 11:21:15	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 11:25:08	-->	wlarip (~tc@163.172.72.40) has joined #weechat
+2018-02-24 11:25:57	-->	minimalism (~none@unaffiliated/minimalism) has joined #weechat
+2018-02-24 11:26:17	<--	ztychr (~ztychr@unaffiliated/ztychr) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 11:27:06	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Ping timeout: 255 seconds)
+2018-02-24 11:28:18	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 11:34:48		irc: disconnected from server
+2018-02-24 11:36:25	-->	zzzeyez (~zzzeyez@2001:5b0:49c9:6a68:b49b:b4d6:cab4:4bae) has joined #weechat
+2018-02-24 11:36:25		Topic for #weechat is "https://weechat.org/ | Latest stable version: 2.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2018-02-24 11:36:25		Topic set by nils_2 (~nils_2@unaffiliated/nils-2/x-2480262) on Tue, 06 Feb 2018 13:53:42
+2018-02-24 11:36:25		Channel #weechat: 854 nicks (4 ops, 1 voice, 849 normals)
+2018-02-24 11:36:25		PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2018-02-24 11:36:25		URL for #weechat: https://weechat.org/
+2018-02-24 11:36:33		Channel created on Sat, 25 Nov 2006 23:42:51
+2018-02-24 11:37:17	-->	watered (~dagger@gateway/tor-sasl/watered) has joined #weechat
+2018-02-24 11:44:20		irc: disconnected from server
+2018-02-24 11:44:42	-->	zzzeyez (~zzzeyez@2001:5b0:49c9:6a68:28f3:2795:a1cf:f135) has joined #weechat
+2018-02-24 11:44:42		Topic for #weechat is "https://weechat.org/ | Latest stable version: 2.0.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2018-02-24 11:44:42		Topic set by nils_2 (~nils_2@unaffiliated/nils-2/x-2480262) on Tue, 06 Feb 2018 13:53:42
+2018-02-24 11:44:42		Channel #weechat: 853 nicks (4 ops, 1 voice, 848 normals)
+2018-02-24 11:44:43		PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2018-02-24 11:44:43		URL for #weechat: https://weechat.org/
+2018-02-24 11:44:46		Channel created on Sat, 25 Nov 2006 23:42:51
+2018-02-24 11:46:15	<--	andril (~andril@c-73-124-101-89.hsd1.fl.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-02-24 11:46:24	-->	Pinapl (~pinapl@2601:281:ca80:1290:ba27:ebff:fe2d:5d1c) has joined #weechat
+2018-02-24 11:46:37	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Ping timeout: 255 seconds)
+2018-02-24 11:47:39	<--	alfie (~alfie@wikipedia/alfie) has quit (Max SendQ exceeded)
+2018-02-24 11:47:49	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 260 seconds)
+2018-02-24 11:49:26	-->	alfie (~alfie@wikipedia/alfie) has joined #weechat
+2018-02-24 11:50:03	-->	jamesaxl (~James_Axl@109.172.62.242) has joined #weechat
+2018-02-24 11:52:52	-->	Xiti (~Xiti-@unaffiliated/xiti) has joined #weechat
+2018-02-24 11:54:31	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 11:55:26	shibumi	antranigv: weechat relay is awesome!
+2018-02-24 11:55:35	shibumi	I hope weechat will support weechat relay in future as well
+2018-02-24 11:55:43	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-24 11:56:19	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-24 11:59:08	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 12:01:32	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 12:02:28	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 12:04:04	-->	watered (~dagger@gateway/tor-sasl/watered) has joined #weechat
+2018-02-24 12:04:43	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 12:05:31	-->	raynold (uid201163@gateway/web/irccloud.com/x-lwplijmtyjfnhoae) has joined #weechat
+2018-02-24 12:06:12	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 245 seconds)
+2018-02-24 12:08:11	-->	rumflump (~weechat@unaffiliated/olscumpy) has joined #weechat
+2018-02-24 12:08:23	<--	caecias (~caecias@unaffiliated/caecias) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 12:09:24	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-02-24 12:10:59	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 12:12:19	<--	blaze (~blaze@unaffiliated/blaze) has quit (Quit: WeeChat 1.9.1)
+2018-02-24 12:14:58	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Ping timeout: 255 seconds)
+2018-02-24 12:15:02	-->	tg (~x@unaffiliated/tg) has joined #weechat
+2018-02-24 12:15:54	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 12:16:00	<--	TJ- (~root@yes.iam.tj) has quit (Quit: WeeChat 1.4)
+2018-02-24 12:18:59	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 12:22:28	<--	boomboxnation1 (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 12:22:43	-->	boomboxnation (~boomboxna@c-67-188-43-4.hsd1.ca.comcast.net) has joined #weechat
+2018-02-24 12:22:45	<--	jbisch_ (~joseph@107.170.79.147) has left #weechat
+2018-02-24 12:23:23	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 12:25:40	-->	watered (~dagger@gateway/tor-sasl/watered) has joined #weechat
+2018-02-24 12:26:59	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 12:27:52	-->	clemens3 (~clemens@dynamic-adsl-78-13-222-95.clienti.tiscali.it) has joined #weechat
+2018-02-24 12:29:07	-->	widp (~widp@49.207.61.246) has joined #weechat
+2018-02-24 12:31:49	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 12:33:10	antranigv	shibumi: ah so the weechat relay has nothing to do with out-of-the-box weechat? :D
+2018-02-24 12:33:56	<--	justanotheruser (~justanoth@unaffiliated/justanotheruser) has quit (Ping timeout: 265 seconds)
+2018-02-24 12:33:57	shibumi	antranigv: well it has something todo with it.. weechat offers the weechat relay, but it doesn't support it. So you can't connect with a weechat to that weechat relay. Only with a few clients like weechat for android
+2018-02-24 12:34:15	<--	nucleargrave (~nucleargr@c-73-150-253-137.hsd1.nj.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-02-24 12:34:20	shibumi	antranigv: that's why many people use weechat in a tmux session on their server or use the irc relay
+2018-02-24 12:35:57	antranigv	hm interesting
+2018-02-24 12:36:50	@nils_2	you can contact weechat <> weechat using the irc relay protocol from the /relay plugin
+2018-02-24 12:37:05	@nils_2	*connect
+2018-02-24 12:37:51	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 12:38:33	<--	Valeyard (~Valeyard@186.210.84.96) has quit (Read error: Connection reset by peer)
+2018-02-24 12:40:29	-->	cottoneyejim (~cottoneye@109.228.86.219) has joined #weechat
+2018-02-24 12:42:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 12:44:09	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 12:47:33	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-24 12:47:36	<--	coco (~coco@2a02:a442:b563:1:539b:98d5:cb46:e4f4) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 12:48:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 12:51:52	<--	puremouron (~ben@97e10015.skybroadband.com) has quit (Ping timeout: 245 seconds)
+2018-02-24 12:52:21	-->	blaze (~blaze@unaffiliated/blaze) has joined #weechat
+2018-02-24 12:53:47	-->	choki (~weechat@unaffiliated/choki) has joined #weechat
+2018-02-24 12:57:33	<--	Zuccace (~zucca@85-76-19-200-nat.elisa-mobile.fi) has quit (Ping timeout: 240 seconds)
+2018-02-24 12:59:07	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 13:03:44	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 13:08:41	-->	puzzler (~puzzled@c-73-15-53-88.hsd1.ca.comcast.net) has joined #weechat
+2018-02-24 13:10:01	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 13:11:15	-->	IanMalcolm (~ian@187.113.243.177) has joined #weechat
+2018-02-24 13:11:35	<--	IanMalcolm (~ian@187.113.243.177) has quit (Remote host closed the connection)
+2018-02-24 13:13:33	<--	MyMind (~Sembei@unaffiliated/sembei) has quit (Read error: Connection reset by peer)
+2018-02-24 13:13:58	-->	MyMind (~Sembei@unaffiliated/sembei) has joined #weechat
+2018-02-24 13:14:23	-->	kelnoky (~shao@ip1f10338a.dynamic.kabel-deutschland.de) has joined #weechat
+2018-02-24 13:14:33	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 13:15:06	<--	puzzler (~puzzled@c-73-15-53-88.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2018-02-24 13:15:38	-->	puzzler (~puzzled@17.150.213.180) has joined #weechat
+2018-02-24 13:15:39	<--	puzzler (~puzzled@17.150.213.180) has quit (Client Quit)
+2018-02-24 13:19:06	<--	_thelion_ (~matthias@85.199.49.127) has quit (Quit: WeeChat 1.9.1)
+2018-02-24 13:19:10	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 13:23:35	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 13:26:32	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 13:30:26	<--	eboladoc (~chris@gw7.ff3l.net) has quit (Remote host closed the connection)
+2018-02-24 13:30:39	-->	demlak (~demlak@0ma.de) has joined #weechat
+2018-02-24 13:30:47	-->	eboladoc (~chris@gw7.ff3l.net) has joined #weechat
+2018-02-24 13:31:02	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 245 seconds)
+2018-02-24 13:31:02	-->	Valeyard (~Valeyard@186.210.84.96) has joined #weechat
+2018-02-24 13:31:11	demlak	hi, is it possible to assign new nick-colors randomized on demand?
+2018-02-24 13:31:45	<--	lobata (~mint@172.58.16.114) has quit (Quit: naptime)
+2018-02-24 13:32:28	@nils_2	simply add more colors to weechat.color.chat_nick_colors
+2018-02-24 13:33:49	jokrebel	this is mine: /set weechat.color.chat_nick_colors "cyan,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,31,35,38,40,49,63,70,80,99,112,130,138,142,148,164,167,169,174,176,178,184,186,210,212,215,247"
+2018-02-24 13:33:52	demlak	current: weechat.color.chat_nick_colors = "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue,31,35,38,40,49,63,70,80,92,99,112,126,130,138,142,148,160,162,167,169,174,176,178,184,186,210,212,215,247"
+2018-02-24 13:34:00	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 13:34:47	demlak	sometimes in some channels, there are recurring discussions between some people who have similar nick-colors.
+2018-02-24 13:36:06	jokrebel	demlak: with /color alt+c you can look for more
+2018-02-24 13:36:35	@nils_2	/set weechat.look.nick_color_hash
+2018-02-24 13:38:28	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 13:39:27	demlak	thx
+2018-02-24 13:40:29	sylvblck	thx too :)
+2018-02-24 13:40:43	<--	Xeyk_ (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 13:40:57	<--	pokk (~pokk@unaffiliated/pokk) has quit (Ping timeout: 265 seconds)
+2018-02-24 13:41:22	-->	pokk (~pokk@unaffiliated/pokk) has joined #weechat
+2018-02-24 13:41:36	-->	Copenhagen_Bram (~elonsatos@unaffiliated/elon-satoshi/x-2794555) has joined #weechat
+2018-02-24 13:45:04	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 13:49:36	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 13:54:21	-->	trens (~trens@cpe-184-54-196-170.swo.res.rr.com) has joined #weechat
+2018-02-24 13:54:54	<--	MyMind (~Sembei@unaffiliated/sembei) has quit (Read error: Connection reset by peer)
+2018-02-24 13:55:07	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 13:55:18	-->	MyMind (~Sembei@unaffiliated/sembei) has joined #weechat
+2018-02-24 13:56:46	-->	nucleargrave (~nucleargr@c-73-150-253-137.hsd1.nj.comcast.net) has joined #weechat
+2018-02-24 13:59:16	-->	Xeyk (~neilf@c-67-165-238-252.hsd1.co.comcast.net) has joined #weechat
+2018-02-24 13:59:45	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 13:59:47	<--	Dan39 (~dan@unaffiliated/dan39) has quit (Quit: brb)
+2018-02-24 14:03:27	-->	ianmalcolm (~Ian@unaffiliated/ianmalcolm) has joined #weechat
+2018-02-24 14:03:48	-->	Dan39 (~dan@unaffiliated/dan39) has joined #weechat
+2018-02-24 14:03:55	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 14:04:42	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 14:06:21	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 14:06:34	-->	puremouron (~ben@97e10015.skybroadband.com) has joined #weechat
+2018-02-24 14:08:27	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 14:08:33	-->	Gaxpaxxo (~Gazpacho@190.red-83-36-9.dynamicip.rima-tde.net) has joined #weechat
+2018-02-24 14:08:34	-->	Valeyard1 (~Valeyard@186.210.84.96) has joined #weechat
+2018-02-24 14:08:51	<--	Valeyard1 (~Valeyard@186.210.84.96) has quit (Client Quit)
+2018-02-24 14:09:14	<--	Gaxpaxxo (~Gazpacho@190.red-83-36-9.dynamicip.rima-tde.net) has quit (Client Quit)
+2018-02-24 14:10:44	-->	frakturfreak (~frakturfr@unaffiliated/frakturfreak) has joined #weechat
+2018-02-24 14:13:09	-->	Turkish_Guy (~geveze@176.240.152.165) has joined #weechat
+2018-02-24 14:14:42	-->	axoi (~axoi@pizza.skrzyp.net) has joined #weechat
+2018-02-24 14:15:23	<--	Turkish_Guy (~geveze@176.240.152.165) has quit (Client Quit)
+2018-02-24 14:16:23	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 14:18:20	<--	axoi (~axoi@pizza.skrzyp.net) has left #weechat
+2018-02-24 14:18:22	-->	axoi (~axoi@pizza.skrzyp.net) has joined #weechat
+2018-02-24 14:19:19	axoi	Hello! How can I define my own keyboard shortcut on weechat? I wand one that swaps bufflist and nicklist.
+2018-02-24 14:21:04	jokrebel	buffers or the buflist script?
+2018-02-24 14:21:04	<--	somis (~somis@149.56.153.188) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 14:21:09	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 256 seconds)
+2018-02-24 14:22:15	jokrebel	err
+2018-02-24 14:22:29	axoi	buflist from weechat 2.0.1
+2018-02-24 14:22:33	jokrebel	buffers script or buflist plugin
+2018-02-24 14:23:23	axoi	that was build in.
+2018-02-24 14:24:27	<--	Copenhagen_Bram (~elonsatos@unaffiliated/elon-satoshi/x-2794555) has quit (Remote host closed the connection)
+2018-02-24 14:24:55	Dan39	is there a setting/plugin/script to make tab completion work more like in bash? where it will complete up until the point of multiple options, then display the options to the buffer (not the status bar since there is never enough room there with the hotlist there too)
+2018-02-24 14:25:16	jokrebel	I got that things scrollable with: /set weechat.bar.buddylist.items "buddylist,─────────────────────────,buflist,─────────────────────────,buffer_nicklist,────────────────────────"
+2018-02-24 14:25:19	-->	Copenhagen_Bram (~elonsatos@unaffiliated/elon-satoshi/x-2794555) has joined #weechat
+2018-02-24 14:26:15	axoi	jokrebel: it is an option but… I want to swap them. :(
+2018-02-24 14:26:43	jokrebel	sorry - no idea for that from me
+2018-02-24 14:26:59	-->	pandalove (~JdgS@85-69-124-216.rev.numericable.fr) has joined #weechat
+2018-02-24 14:29:39	ianmalcolm	I want to add my .weechat to my dotfiles on github. Which files shouldn't I be committing? I'm guessing irc.conf as that has server creds. Is that all?
+2018-02-24 14:30:03	<--	demlak (~demlak@0ma.de) has left #weechat ("WeeChat 2.0.1")
+2018-02-24 14:30:24	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 14:30:32	@FlashCode	ianmalcolm: you can use /secure and move passwords to sec.conf
+2018-02-24 14:30:40	@FlashCode	and then sec.conf should never be public
+2018-02-24 14:30:43	-->	somis (~somis@149.56.153.187) has joined #weechat
+2018-02-24 14:31:12	@FlashCode	irc.conf can still contain private channels or things like that
+2018-02-24 14:31:21	axoi	jokrebel: /alias add bn /bar toggle buflist;/bar toggle nicklist  && /key bind ctrl-O /bn
+2018-02-24 14:31:49	axoi	keep in mind it's not aware of the bars' visibility state
+2018-02-24 14:31:56	ianmalcolm	FlashCode: cool, thanks!
+2018-02-24 14:32:50	axoi	FlashCode: do you know any "better" way to swap bars visible on the same position?
+2018-02-24 14:33:55	@FlashCode	axoi: /bar toggle xxx ?
+2018-02-24 14:33:59	-->	skrzyp (~skrzyp@pizza.skrzyp.net) has joined #weechat
+2018-02-24 14:34:31	axoi	FlashCode: see above, I've shown my current solution
+2018-02-24 14:34:45	<--	eboladoc (~chris@gw7.ff3l.net) has quit (Remote host closed the connection)
+2018-02-24 14:35:13	-->	eboladoc (~chris@gw7.ff3l.net) has joined #weechat
+2018-02-24 14:35:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 14:35:16	axoi	but if the bar visibility would be canged outside of that alias, it's not going to maintain the state anyways
+2018-02-24 14:38:09	<--	nucleargrave (~nucleargr@c-73-150-253-137.hsd1.nj.comcast.net) has quit (Ping timeout: 252 seconds)
+2018-02-24 14:38:42	Dan39	hmm, dont think it exists.
+2018-02-24 14:39:06	Dan39	seems like it would be an easy feature to add, ill have to request it :P
+2018-02-24 14:42:29	<--	pandalove (~JdgS@85-69-124-216.rev.numericable.fr) has left #weechat
+2018-02-24 14:44:33	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 14:48:32	@FlashCode	can be done with a script if needed
+2018-02-24 14:48:35	<--	clemens3 (~clemens@dynamic-adsl-78-13-222-95.clienti.tiscali.it) has quit (Ping timeout: 240 seconds)
+2018-02-24 14:49:05	<--	cspack (cspack@gateway/vpn/privateinternetaccess/cspack) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 14:49:31	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 252 seconds)
+2018-02-24 14:49:56	-->	cspack (cspack@gateway/vpn/privateinternetaccess/cspack) has joined #weechat
+2018-02-24 14:50:31	-->	chomwitt (~chomwitt@2a02:587:dc08:a00:d929:74cf:8e1e:8fac) has joined #weechat
+2018-02-24 14:51:21	<--	blaze (~blaze@unaffiliated/blaze) has quit (Quit: WeeChat 1.9.1)
+2018-02-24 14:51:41	<--	eboladoc (~chris@gw7.ff3l.net) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 14:52:35	<--	fiet (~nobody@unaffiliated/fiet) has quit (Ping timeout: 260 seconds)
+2018-02-24 14:53:17	-->	fiet (~nobody@unaffiliated/fiet) has joined #weechat
+2018-02-24 14:53:29	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 14:54:35	-->	nucleargrave (~nucleargr@c-73-150-253-137.hsd1.nj.comcast.net) has joined #weechat
+2018-02-24 14:58:25	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 260 seconds)
+2018-02-24 15:05:00	<--	knidos (~knidos@88.245.76.81) has quit (Quit: WeeChat 1.9.1)
+2018-02-24 15:06:17	<--	rydare (~rydare@unaffiliated/unheeding) has quit (Quit: See ya later!)
+2018-02-24 15:07:26	-->	rydare (~rydare@unaffiliated/unheeding) has joined #weechat
+2018-02-24 15:07:47	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 15:07:57	<--	choru (~choru@78-62-157-12.static.zebra.lt) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 15:10:25	<--	well_laid_lawn (~Jean-luc@203.87.119.17) has quit (Ping timeout: 252 seconds)
+2018-02-24 15:12:13	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-02-24 15:12:21	<--	eXino (~exino@2a01:4f8:140:10b0::2) has quit (Read error: Connection reset by peer)
+2018-02-24 15:13:19	<--	widp (~widp@49.207.61.246) has quit (Quit: WeeChat 1.4)
+2018-02-24 15:16:53	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 15:21:20	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2018-02-24 15:22:23	-->	JBbanks (~JBbanks@24-119-76-148.cpe.cableone.net) has joined #weechat
+2018-02-24 15:22:27	<--	fiet (~nobody@unaffiliated/fiet) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 15:25:39	<--	mkoskar (~mkoskar@unaffiliated/mkoskar) has quit (Ping timeout: 256 seconds)
+2018-02-24 15:28:12	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Remote host closed the connection)
+2018-02-24 15:28:49	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-02-24 15:30:43	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 15:33:44	-->	m1n (~m1n@unaffiliated/m1ntfr3sh) has joined #weechat
+2018-02-24 15:41:12	-->	banditkroot (~bandit@gateway/tor-sasl/banditkroot) has joined #weechat
+2018-02-24 15:46:46	-->	Evropi (~superuser@88-111-127-6.dynamic.dsl.as9105.com) has joined #weechat
+2018-02-24 15:48:59	<--	Evropi (~superuser@88-111-127-6.dynamic.dsl.as9105.com) has quit (Changing host)
+2018-02-24 15:48:59	-->	Evropi (~superuser@unaffiliated/evropi) has joined #weechat
+2018-02-24 15:50:41	-->	wlarip (~tc@163.172.72.40) has joined #weechat
+2018-02-24 15:51:36	<--	xmorph (~xt_@unaffiliated/xmorph) has quit (Quit: WeeChat 1.9.1)
+2018-02-24 15:51:41	-->	kgrimes (~kgrimes@2600:1700:5881:3740:64cf:4388:3150:ca29) has joined #weechat
+2018-02-24 15:51:59	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Read error: Connection reset by peer)
+2018-02-24 15:56:24	<--	rydare (~rydare@unaffiliated/unheeding) has left #weechat ("good luck everyone!")
+2018-02-24 16:01:06	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-02-24 16:02:03	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Ping timeout: 255 seconds)
+2018-02-24 16:02:45	<--	damke_ (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-02-24 16:06:55	-->	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #weechat
+2018-02-24 16:14:51	-->	well_laid_lawn (~Jean-luc@203.87.119.17) has joined #weechat
+2018-02-24 16:17:58	<--	Evropi (~superuser@unaffiliated/evropi) has quit (Quit: WeeChat 2.0.1)
+2018-02-24 16:21:30	-->	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has joined #weechat
+2018-02-24 16:21:33	<--	xylix (~johnsmith@2001:2060:41:192::e7) has quit (Ping timeout: 276 seconds)
+2018-02-24 16:22:15	-->	xylix (~johnsmith@2001:2060:41:192::e7) has joined #weechat
+2018-02-24 16:23:25	<--	\void (~void@unaffiliated/ctrlaltdev) has quit (Quit: So long, and thanks for all the fish.)
+2018-02-24 16:25:53	<--	Jacta (~Jacta@90.184.175.195.1.fullrate.ninja) has quit (Ping timeout: 240 seconds)
+2018-03-21 02:36:25	-->	zzzeyez (~zzzeyez@ss-30-212.pld.com) has joined #weechat
+2018-03-21 02:36:25		Topic for #weechat is "https://weechat.org/ | Latest stable version: 2.1 | English support channel, *ONLY* about WeeChat software | Please read docs before asking! | Bug reports are welcome ONLY for latest stable or devel | Off-topic chan: #weechat-offtopic | Fingerprint: A9AB 5AB7 78FA 5C35 22FD 0378 F82F 4B16 DEC4 08F8"
+2018-03-21 02:36:25		Topic set by FlashCode (~FlashCode@weechat.org) on Sun, 18 Mar 2018 01:36:46
+2018-03-21 02:36:25		Channel #weechat: 851 nicks (4 ops, 1 voice, 846 normals)
+2018-03-21 02:36:25		PvNotice(ChanServ): Welcome to WeeChat english support channel. IMPORTANT: you *MUST* have read docs and FAQ before asking something on this channel! Read them at: https://weechat.org/doc/
+2018-03-21 02:36:26		URL for #weechat: https://weechat.org/
+2018-03-21 02:36:27		Channel created on Sat, 25 Nov 2006 23:42:51
+2018-03-21 02:37:10	-->	iderik (~idk@h-0-97.A147.priv.bahnhof.se) has joined #weechat
+2018-03-21 02:37:24	zzzeyez	i did this to get notifications on alerts:
+2018-03-21 02:37:27	zzzeyez	/set trigger.trigger.beep.command "/exec notify-send '${tg_tag_nick}: ${tg_message_nocolor}'"
+2018-03-21 02:37:59	<--	dboneham (~dboneham@host86-153-132-163.range86-153.btcentralplus.com) has quit (Quit: WeeChat 1.4)
+2018-03-21 02:38:40	<--	eldritch (~eldritch@unaffiliated/eldritch) has quit (Ping timeout: 268 seconds)
+2018-03-21 02:39:09	zzzeyez	now when i'm alerted i get "exec: end of command 0 "..."), return code: 0"
+2018-03-21 02:41:15	r3m	/exec -norc
+2018-03-21 02:41:28	zzzeyez	:') ty
+2018-03-21 02:43:28	-->	eldritch (~eldritch@unaffiliated/eldritch) has joined #weechat
+2018-03-21 02:50:11	-->	kelnoky (~shao@ip1f106bc9.dynamic.kabel-deutschland.de) has joined #weechat
+2018-03-21 02:50:50	-->	dagb2 (~dagb@36.51-174-8.customer.lyse.net) has joined #weechat
+2018-03-21 02:51:23	-->	DarkDefender (~zed@c-f3acd954.501502032205-0-757473696b74.cust.bredbandsbolaget.se) has joined #weechat
+2018-03-21 02:52:15	dagb2	good morning. trying to switch to weechat. having an issue with freenode disliking my username, as it appears to have some non-alfa characters at the beginning. not like that in the config.
+2018-03-21 02:53:07	grawity	what is the specific message that freenode reports?
+2018-03-21 02:53:12	dagb2	(Invalid username [~=_"dagb"])
+2018-03-21 02:53:39	dagb2	livingstone.freenode.net: *** Your username is invalid. Please make sure that your username contains only alphanumeric characters.
+2018-03-21 02:53:56	dagb2	using SASL for authenticating
+2018-03-21 02:54:08	grawity	is the garbage shown in "/set irc.*.username"?
+2018-03-21 02:54:37	atluxity	what version of weechat are you using? just curious
+2018-03-21 02:55:39	dagb2	ooh.     irc.server_default.username   string  "= "dagb""
+2018-03-21 02:55:50	dagb2	that doesn't look right
+2018-03-21 02:56:37	atluxity	no, it does not
+2018-03-21 02:56:56	dagb2	but I also have a username set for freenode, which is right
+2018-03-21 02:57:09	dagb2	anyways. fixed the default. better now
+2018-03-21 02:57:16	grawity	sasl_username has absolutely nothing to do with your current problem
+2018-03-21 02:57:39	dagb2	grawity: ok. learning as fast as I can
+2018-03-21 02:57:46	-->	dagb (~dagb@2a02:8389:2301:8300:970d:63c4:ed0b:1e5c) has joined #weechat
+2018-03-21 02:58:03	dagb	looks better
+2018-03-21 02:58:11	<--	dagb2 (~dagb@36.51-174-8.customer.lyse.net) has left #weechat
+2018-03-21 03:00:13	<--	wnereiz (~wnereiz@45.122.156.254) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 03:00:42	<--	dagb (~dagb@2a02:8389:2301:8300:970d:63c4:ed0b:1e5c) has quit (Client Quit)
+2018-03-21 03:01:46	-->	dagb (~dagb@80-110-69-241.cgn.dynamic.surfer.at) has joined #weechat
+2018-03-21 03:03:00	<--	n0s3 (~n0s3@bob.n0s3.xyz) has quit (Quit: Bye Bye)
+2018-03-21 03:03:59	-->	n0s3 (~n0s3@bob.n0s3.xyz) has joined #weechat
+2018-03-21 03:05:09	-->	wnereiz (~wnereiz@45.122.156.254) has joined #weechat
+2018-03-21 03:09:39	-->	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has joined #weechat
+2018-03-21 03:14:00	-->	Selth (~Selth@90.253.96.20) has joined #weechat
+2018-03-21 03:14:34	dagb	is there a way to specify the python interpreter to use in weechat?
+2018-03-21 03:14:43	dagb	I.e. the exact binary
+2018-03-21 03:14:53	<--	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has quit (Ping timeout: 240 seconds)
+2018-03-21 03:14:58	MrElendig	at compile time, yes
+2018-03-21 03:15:12	MrElendig	not the binary though, since weechat embeds the interpeter
+2018-03-21 03:15:17	MrElendig	it doesn't call out to it
+2018-03-21 03:15:19	dagb	good morning, MrElendig
+2018-03-21 03:16:00	MrElendig	-DPYTHON_EXECUTABLE  -DPYTHON_LIBRARY
+2018-03-21 03:16:10	dagb	ok. got it.
+2018-03-21 03:17:42	<--	kgrimes (~kgrimes@2600:1700:5881:3740:99e3:1bb4:1a90:542b) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 03:19:32	<--	kelsoo1 (~kelsoo@dragora/developer/kelsoo) has quit (Quit: WeeChat 1.5)
+2018-03-21 03:20:47	<--	dagb (~dagb@80-110-69-241.cgn.dynamic.surfer.at) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 03:24:47	<--	wnereiz (~wnereiz@45.122.156.254) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 03:27:05	-->	ma27 (~ma27@2a00:cb0:8002:1055:ca5b:76ff:feca:d3c5) has joined #weechat
+2018-03-21 03:29:07	<--	haavard (root@haavard.me) has quit (Quit: boarding longship)
+2018-03-21 03:32:55	<--	kelnoky (~shao@ip1f106bc9.dynamic.kabel-deutschland.de) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 03:35:04	<--	caecias (~caecias@unaffiliated/caecias) has quit (Ping timeout: 260 seconds)
+2018-03-21 03:40:50	-->	Louge (~Louge@gateway/tor-sasl/louge) has joined #weechat
+2018-03-21 03:41:47	<--	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has quit (Quit: WeeChat 2.1)
+2018-03-21 03:42:46	-->	cewood (~cewood@ip-2-205-86-231.web.vodafone.de) has joined #weechat
+2018-03-21 03:45:01	cewood	Q: how can I permanently set weechat.bar.buffers.hidden, currently it always returns after restart
+2018-03-21 03:48:14	-->	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has joined #weechat
+2018-03-21 03:49:43	@FlashCode	cewood: if using the script buffers.pl you can remove the script
+2018-03-21 03:49:54	@FlashCode	buflist (built-in plugin) now replaces buffers.pl
+2018-03-21 03:51:19	cewood	FlashCode: thanks, completely forgot to check that. probably carrying a bunch of old junk around from prior versions still
+2018-03-21 03:59:01	-->	sublimination (~sublimina@gateway/tor-sasl/sublimination) has joined #weechat
+2018-03-21 04:01:22	-->	TJ- (~root@2a02:8011:2007::5) has joined #weechat
+2018-03-21 04:01:23	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-03-21 04:03:20	<--	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has quit (Quit: WeeChat 2.1)
+2018-03-21 04:03:57	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-03-21 04:06:05	<--	s_edrik_ (~s_edrik@81-234-44-180-no522.tbcn.telia.com) has quit (Ping timeout: 240 seconds)
+2018-03-21 04:08:43	-->	smithch (~smithch@c-24-63-196-201.hsd1.ma.comcast.net) has joined #weechat
+2018-03-21 04:09:54	<--	smithch (~smithch@c-24-63-196-201.hsd1.ma.comcast.net) has quit (Remote host closed the connection)
+2018-03-21 04:13:40	-->	smithch (~smithch@c-24-63-196-201.hsd1.ma.comcast.net) has joined #weechat
+2018-03-21 04:14:33	-->	cottoneyejim (~cottoneye@77.222.2.110) has joined #weechat
+2018-03-21 04:17:03	-->	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has joined #weechat
+2018-03-21 04:19:30	<--	n0s3 (~n0s3@bob.n0s3.xyz) has quit (Quit: Bye Bye)
+2018-03-21 04:20:01	<--	Louge (~Louge@gateway/tor-sasl/louge) has quit (Quit: Louge)
+2018-03-21 04:20:47	<--	smithch (~smithch@c-24-63-196-201.hsd1.ma.comcast.net) has quit (Remote host closed the connection)
+2018-03-21 04:20:55	-->	n0s3 (~n0s3@bob.n0s3.xyz) has joined #weechat
+2018-03-21 04:21:07	-->	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has joined #weechat
+2018-03-21 04:22:07	<--	xcm (~xcm@ipa210.225.tellas.gr) has quit (Read error: Connection reset by peer)
+2018-03-21 04:22:13	<--	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has quit (Ping timeout: 240 seconds)
+2018-03-21 04:22:35	-->	jdegreef (~jdegreef@91.180.222.18) has joined #weechat
+2018-03-21 04:22:51	-->	xcm (~xcm@ipa210.225.tellas.gr) has joined #weechat
+2018-03-21 04:23:25	<--	m4v (~znc@ubuntu/member/m4v) has quit (Ping timeout: 246 seconds)
+2018-03-21 04:24:51	<--	sublimination (~sublimina@gateway/tor-sasl/sublimination) has quit (Remote host closed the connection)
+2018-03-21 04:25:43	-->	m4v (~znc@ubuntu/member/m4v) has joined #weechat
+2018-03-21 04:27:53	<--	irongeeks (~irongeeks@2604:6000:1001:e3:8d38:cafe:9efd:e291) has quit (Quit: Leaving)
+2018-03-21 04:30:29	-->	backwardspy (~backwards@194.74.152.11) has joined #weechat
+2018-03-21 04:30:36	<--	MoziM (~alarm@ip68-4-120-41.oc.oc.cox.net) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 04:32:08	<--	backwardspy (~backwards@194.74.152.11) has left #weechat ("WeeChat 1.9.1")
+2018-03-21 04:32:52	-->	MoziM (~alarm@209.58.148.227) has joined #weechat
+2018-03-21 04:34:33	<--	cottoneyejim (~cottoneye@77.222.2.110) has quit (Ping timeout: 264 seconds)
+2018-03-21 04:37:33	-->	zava (~zava@86.93.43.117) has joined #weechat
+2018-03-21 04:37:53	<--	schneider (~schneider@unaffiliated/schneider) has quit (Ping timeout: 240 seconds)
+2018-03-21 04:38:57	<--	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has quit (Quit: WeeChat 2.1)
+2018-03-21 04:40:17	-->	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has joined #weechat
+2018-03-21 04:43:32	-->	ScrumpyJack (~ScrumpyJa@bigyellowfish.com) has joined #weechat
+2018-03-21 04:45:09	<--	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has quit (Client Quit)
+2018-03-21 04:47:22	-->	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has joined #weechat
+2018-03-21 04:54:09	-->	irongeeks (~irongeeks@2604:6000:1001:e3:99f6:ff59:2a51:cb00) has joined #weechat
+2018-03-21 04:55:21	-->	Tzunamii (~Tzunamii@unaffiliated/tzunamii) has joined #weechat
+2018-03-21 04:56:23	<--	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has quit (Quit: WeeChat 2.1)
+2018-03-21 05:00:33	<--	fayek (~fayek@unaffiliated/fayek) has quit (Read error: Connection reset by peer)
+2018-03-21 05:04:42	<--	watered (~dagger@gateway/tor-sasl/watered) has quit (Remote host closed the connection)
+2018-03-21 05:04:55	-->	schneider (~schneider@unaffiliated/schneider) has joined #weechat
+2018-03-21 05:05:19	-->	watered (~dagger@gateway/tor-sasl/watered) has joined #weechat
+2018-03-21 05:05:59	<--	mmmonk (~mmmonk@2a02:348:53:50bb::1) has quit (Ping timeout: 276 seconds)
+2018-03-21 05:07:55	<--	zephrax (zephrax@unaffiliated/zephrax) has quit (Quit: Leaving)
+2018-03-21 05:08:17	-->	zephrax (zephrax@2600:3c03::f03c:91ff:fe37:5abd) has joined #weechat
+2018-03-21 05:08:17	<--	zephrax (zephrax@2600:3c03::f03c:91ff:fe37:5abd) has quit (Changing host)
+2018-03-21 05:08:17	-->	zephrax (zephrax@unaffiliated/zephrax) has joined #weechat
+2018-03-21 05:08:23	-->	mmmonk (~mmmonk@2a02:348:53:50bb::1) has joined #weechat
+2018-03-21 05:09:10	<--	minimalism (~none@unaffiliated/minimalism) has quit (Quit: minimalism)
+2018-03-21 05:09:29	<--	schneider (~schneider@unaffiliated/schneider) has quit (Ping timeout: 256 seconds)
+2018-03-21 05:15:38	-->	im0nde (~im0nde@2a03:2260:11e:301:d8fb:c4e0:1077:6be5) has joined #weechat
+2018-03-21 05:15:41	-->	schneider (~schneider@unaffiliated/schneider) has joined #weechat
+2018-03-21 05:17:33	im0nde	Hi, my weechat looks like this: https://imgur.com/a/FZSEj Is there a way "indent" the input line (where you write in) so it's start is aligned with the messages in the buffer?
+2018-03-21 05:18:34	-->	alex-pat (~alex-pat@86.57.255.94) has joined #weechat
+2018-03-21 05:18:54	im0nde	                                 Something like this: https://imgur.com/a/87arg
+2018-03-21 05:19:20	-->	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has joined #weechat
+2018-03-21 05:22:11	-->	rgr (~Roger@107-213-194-4.lightspeed.tukrga.sbcglobal.net) has joined #weechat
+2018-03-21 05:22:25	<--	rgr (~Roger@107-213-194-4.lightspeed.tukrga.sbcglobal.net) has left #weechat
+2018-03-21 05:23:30	sim642	Not exactly
+2018-03-21 05:23:57	sim642	You could change the bar priorities so the input bar would begin from where the buflist ends, not underneath it
+2018-03-21 05:24:46	<--	jamesaxl (~James_Axl@109.172.62.242) has quit (Read error: Connection reset by peer)
+2018-03-21 05:24:58	<--	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has quit (Ping timeout: 264 seconds)
+2018-03-21 05:25:06	<--	nailyk (~nailyk@carbonfusion/co-admin/nailyk) has quit (Ping timeout: 256 seconds)
+2018-03-21 05:26:24	-->	jamesaxl (~James_Axl@109.172.62.242) has joined #weechat
+2018-03-21 05:26:56	-->	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has joined #weechat
+2018-03-21 05:28:36	<--	alex-pat (~alex-pat@86.57.255.94) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 05:29:14	<--	sdothum (~znc@108.63.152.41) has quit (Quit: ZNC 1.6.6 - http://znc.in)
+2018-03-21 05:30:00	<--	nemesit|znc (~nemesit@2a01:488:66:1000:2ea3:4eeb:0:1) has quit (Ping timeout: 255 seconds)
+2018-03-21 05:31:18	<--	intcat (~zshlyk@gateway/tor-sasl/intcat) has quit (Ping timeout: 268 seconds)
+2018-03-21 05:31:31	-->	sdothum (~znc@108.63.152.41) has joined #weechat
+2018-03-21 05:31:45	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-03-21 05:32:14	<--	im0nde (~im0nde@2a03:2260:11e:301:d8fb:c4e0:1077:6be5) has quit (Ping timeout: 255 seconds)
+2018-03-21 05:33:22	<--	armin (~armin@engine.vpn.blue) has quit (Ping timeout: 260 seconds)
+2018-03-21 05:34:23	-->	intcat (~zshlyk@gateway/tor-sasl/intcat) has joined #weechat
+2018-03-21 05:35:24	<--	raynold (uid201163@gateway/web/irccloud.com/x-spkrtwnnmwnlmkex) has quit (Quit: Connection closed for inactivity)
+2018-03-21 05:35:57	-->	armin (~armin@engine.vpn.blue) has joined #weechat
+2018-03-21 05:36:04	-->	nemesit|znc (~nemesit@2a01:488:66:1000:2ea3:4eeb:0:1) has joined #weechat
+2018-03-21 05:36:50	<--	caecias (~caecias@unaffiliated/caecias) has quit (Ping timeout: 265 seconds)
+2018-03-21 05:37:15	<--	mrBen2k2k2k___ (~logstash@52.90.128.212) has quit (Ping timeout: 256 seconds)
+2018-03-21 05:37:51	-->	choki (~weechat@unaffiliated/choki) has joined #weechat
+2018-03-21 05:37:57	-->	nailyk (~nailyk@carbonfusion/co-admin/nailyk) has joined #weechat
+2018-03-21 05:41:33	<--	sim590 (~sim590@cable-192.222.210.73.electronicbox.net) has quit (Ping timeout: 240 seconds)
+2018-03-21 05:42:21	<--	schneider (~schneider@unaffiliated/schneider) has quit (Ping timeout: 264 seconds)
+2018-03-21 05:42:49	<--	drayer34 (~drayer34@cable-192.222.210.73.electronicbox.net) has quit (Ping timeout: 260 seconds)
+2018-03-21 05:44:59	-->	im0nde (~im0nde@2a0a-a540-d89c-0-6236-ddff-fe81-acd6.ipv6dyn.netcologne.de) has joined #weechat
+2018-03-21 05:46:48	<--	vertor (~vertor@unaffiliated/vertor) has quit (Quit: vertor's left the freenode)
+2018-03-21 05:46:59	<--	mmmonk (~mmmonk@2a02:348:53:50bb::1) has quit (Ping timeout: 265 seconds)
+2018-03-21 05:56:01	-->	schneider (~schneider@unaffiliated/schneider) has joined #weechat
+2018-03-21 05:58:08	-->	smithch (~smithch@24.63.196.201) has joined #weechat
+2018-03-21 05:59:44	<--	DarkDefender (~zed@c-f3acd954.501502032205-0-757473696b74.cust.bredbandsbolaget.se) has quit (Quit: WeeChat 2.1)
+2018-03-21 06:01:33	-->	damke (~damke@unaffiliated/damke) has joined #weechat
+2018-03-21 06:01:38	<--	damke_ (~damke@unaffiliated/damke) has quit (Read error: Connection reset by peer)
+2018-03-21 06:04:04	<--	im0nde (~im0nde@2a0a-a540-d89c-0-6236-ddff-fe81-acd6.ipv6dyn.netcologne.de) has quit (Quit: im0nde)
+2018-03-21 06:04:39	-->	im0nde (~im0nde@2a0a-a540-d89c-0-6236-ddff-fe81-acd6.ipv6dyn.netcologne.de) has joined #weechat
+2018-03-21 06:06:19	-->	Edu4rdSHL (~Edward@unaffiliated/edu4rdshl) has joined #weechat
+2018-03-21 06:07:40	-->	Cueball (lee@crush.lb3.co.uk) has joined #weechat
+2018-03-21 06:10:26	<--	MoziM (~alarm@209.58.148.227) has quit (Quit: WeeChat 2.1)
+2018-03-21 06:10:52	-->	mmmonk (~mmmonk@2a02:348:53:50bb::1) has joined #weechat
+2018-03-21 06:11:53	-->	Rama007 (~root@mx02.bancobsf.com.ar) has joined #weechat
+2018-03-21 06:15:21	<--	Rama007 (~root@mx02.bancobsf.com.ar) has quit (Quit: Leaving.)
+2018-03-21 06:18:03	<--	humanmeat (~humanmeat@192-0-226-187.cpe.teksavvy.com) has quit (Ping timeout: 256 seconds)
+2018-03-21 06:23:33	-->	LazarUS (~LazarUS@unaffiliated/kreonium) has joined #weechat
+2018-03-21 06:33:04	-->	Lunatrius` (~Lunatrius@77.38.21.155) has joined #weechat
+2018-03-21 06:34:23	<--	Fats (fats@gateway/vpn/privateinternetaccess/fats) has quit (Remote host closed the connection)
+2018-03-21 06:35:40	-->	Fats (fats@gateway/vpn/privateinternetaccess/fats) has joined #weechat
+2018-03-21 06:35:54	<--	Lunatrius (~Lunatrius@77.38.21.155) has quit (Ping timeout: 260 seconds)
+2018-03-21 06:35:54		Lunatrius` is now known as Lunatrius
+2018-03-21 06:40:55	<--	LazarUS (~LazarUS@unaffiliated/kreonium) has quit (Ping timeout: 256 seconds)
+2018-03-21 06:52:08	<--	fl3sh (~m@2001:15e8:110:1421::1) has quit (Changing host)
+2018-03-21 06:52:08	-->	fl3sh (~m@unaffiliated/fl4sh) has joined #weechat
+2018-03-21 06:52:11	henk	xt: you linked me to https://github.com/weechat/weechat/wiki/Triggers#dim-messages-coming-from-a-certain-nick-alternative-to-ignoring the other day.  It seems there is an image missing where "screenshot of dimmed user" stands, which is the 'alt-text' for the image AFAICT.  Any idea who can take care of that?
+2018-03-21 06:52:21	-->	LazarUS (~LazarUS@unaffiliated/kreonium) has joined #weechat
+2018-03-21 06:58:21	-->	vertor (~vertor@unaffiliated/vertor) has joined #weechat
+2018-03-21 07:00:06	<--	dt23_ (~horst@gateway/tor-sasl/dt23) has quit (Ping timeout: 268 seconds)
+2018-03-21 07:00:55	-->	dt23_ (~horst@gateway/tor-sasl/dt23) has joined #weechat
+2018-03-21 07:04:58	<--	pvoigt (~Linux@unaffiliated/pvoigt) has quit (Quit: WeeChat 2.1)
+2018-03-21 07:10:17	-->	pvoigt (~Linux@unaffiliated/pvoigt) has joined #weechat
+2018-03-21 07:16:03	<--	schneider (~schneider@unaffiliated/schneider) has quit (Read error: Connection reset by peer)
+2018-03-21 07:17:24	-->	schneider (~schneider@unaffiliated/schneider) has joined #weechat
+2018-03-21 07:19:07	<--	kqr (~kqr@vps.xkqr.org) has quit (Ping timeout: 246 seconds)
+2018-03-21 07:30:05	FiXato	theoretically you should be able to take care of it yourself, by taking a screenshot and submitting it to the wiki, lol
+2018-03-21 07:32:19	-->	caecias (~caecias@unaffiliated/caecias) has joined #weechat
+2018-03-21 07:34:42	-->	kqr (~kqr@h-144-148.A328.priv.bahnhof.se) has joined #weechat
+2018-03-21 07:35:41	kqr	I did something stupid. I accidentally ran /upgrade when it took me from version 2.0 to 1.5. as soon as I realised my mistake I recompiled and installed 2.0 again, and re-ran /upgrade
+2018-03-21 07:36:21	kqr	however, I think 1.5 may have shat all over my configuration because 2.0 is acting really weird. basically no commands are recognised other than the most basic [core] stuff
+2018-03-21 07:36:28	man_in_shack	the stupid part is having 1.5 still installed ;)
+2018-03-21 07:36:42	kqr	not anymore :(
+2018-03-21 07:37:05	kqr	so uh, if a large portion of my config looks intact – is there a good way to troubleshoot what went wrong that causes this weird behaviour?
+2018-03-21 07:37:13	man_in_shack	maybe unload/reload all the plugins?
+2018-03-21 07:37:23	<--	caecias (~caecias@unaffiliated/caecias) has quit (Ping timeout: 256 seconds)
+2018-03-21 07:38:20	<--	dt23_ (~horst@gateway/tor-sasl/dt23) has quit (Ping timeout: 268 seconds)
+2018-03-21 07:39:01	FiXato	kqr, try starting weechat with a fresh temporary config: weechat -d /tmp/weechat-tmp
+2018-03-21 07:39:30	kqr	man_in_shack: WAIT! maybe I get it now! it's saying "unable to load plugin irc, irc cannot open shared object file no such file or directory"
+2018-03-21 07:39:34	FiXato	if the problem persists, the issue is with your installation; if it is solved, the issue is likely in your config
+2018-03-21 07:39:54	kqr	starting to suspect it's my umask that has inadvertently limited the installation to root eyes only
+2018-03-21 07:40:31	-->	v01d1 (~v01d1@5-12-20-170.residential.rdsnet.ro) has joined #weechat
+2018-03-21 07:41:11	kqr	that has happened before when make scripts don't chmod all the files after installation (which may or may not be desired behaviour)
+2018-03-21 07:42:28	kqr	no maybe that wasn't it either
+2018-03-21 07:42:36	kqr	trying your suggestion, fixato
+2018-03-21 07:43:17	kqr	fresh config has same problem
+2018-03-21 07:44:42	kqr	i guess i'll just retrace more and more steps with a more permissive umask
+2018-03-21 07:44:55	-->	ralpheeee (ralpheeee@gateway/vpn/privateinternetaccess/ralpheeee) has joined #weechat
+2018-03-21 07:44:57	FiXato	now you at least know it isn't your config :)
+2018-03-21 07:45:01	kqr	yeah, that's a relief
+2018-03-21 07:45:10	kqr	because I just realised that's the one thing I haven't put into my backup rotation
+2018-03-21 07:45:49	FiXato	I fear you might already have lost some config options from doing a /upgrade from 2.0 to 1.5 though
+2018-03-21 07:46:29	FiXato	personally I like the script that does a git commit after every config save
+2018-03-21 07:46:45	FiXato	I think that's done via a trigger now rather than a script though
+2018-03-21 07:46:57	kqr	that's neat, actually. more things should work like that
+2018-03-21 07:47:35	kqr	(i don't know why the idea of doing an /upgrade from 2.0 to 1.5 is still so hilarious to me)
+2018-03-21 07:48:20	FiXato	https://weechat.org/scripts/source/confversion.py.html/
+2018-03-21 07:48:37	FiXato	that's what I use
+2018-03-21 07:48:43	<--	psachin (~psachin@103.51.233.44) has quit (Ping timeout: 256 seconds)
+2018-03-21 07:49:54	henk	oh, that looks nice
+2018-03-21 07:50:25	henk	I wonder whether it works with VCS-Home?  are the authors here?
+2018-03-21 07:50:42	FiXato	never heard of vcs-home
+2018-03-21 07:51:15	FiXato	the author is drubin, and unfortunately he passed away (if I'm not mistaking him for another weechat user)
+2018-03-21 07:51:20	-->	Zuccace (~zucca@85-76-17-76-nat.elisa-mobile.fi) has joined #weechat
+2018-03-21 07:51:38	henk	FiXato: https://vcs-home.branchable.com/ very helpful IMHO.  combines nicely with 'myrepos': https://joeyh.name/code/mr/
+2018-03-21 07:52:19	kqr	hm if I ./configure --prefix=/usr it seems to work a tiny bit better....
+2018-03-21 07:52:30	-->	dt23 (~horst@gateway/tor-sasl/dt23) has joined #weechat
+2018-03-21 07:52:33	kqr	let's see what happens if I make uninstall with that prefix and then reinstall under the correct prefix
+2018-03-21 07:52:46	kqr	oh then it breaks
+2018-03-21 07:52:48	kqr	interesting
+2018-03-21 07:53:06	kqr	very interesting
+2018-03-21 07:53:33	<--	ZucZero (~zucca@85-76-22-99-nat.elisa-mobile.fi) has quit (Ping timeout: 240 seconds)
+2018-03-21 07:53:43	-->	DarkDefender (~zed@c-f3acd954.501502032205-0-757473696b74.cust.bredbandsbolaget.se) has joined #weechat
+2018-03-21 07:54:57	<--	davidl (~usrname@fsf/member/usrname) has quit (Ping timeout: 256 seconds)
+2018-03-21 07:55:12	FiXato	dotsync does sound interesting...
+2018-03-21 07:55:21	kqr	oh crap. now where did the stuff go
+2018-03-21 07:55:37	kqr	oh it's there, in the wrong place
+2018-03-21 07:55:39	kqr	what happened lol
+2018-03-21 07:55:49	-->	cyberg (~cyberg@65.35.248.210) has joined #weechat
+2018-03-21 07:56:11	-->	endokqr (~kqr@vps.xkqr.org) has joined #weechat
+2018-03-21 07:56:45	<--	kqr (~kqr@h-144-148.A328.priv.bahnhof.se) has quit (Quit: WeeChat 1.6)
+2018-03-21 07:57:08	<--	duckpuppy (~patrickai@h213.6.30.71.dynamic.ip.windstream.net) has quit (Ping timeout: 255 seconds)
+2018-03-21 07:58:13	-->	Louge (~Louge@gateway/tor-sasl/louge) has joined #weechat
+2018-03-21 07:58:28	<--	phinxy (~ted@unaffiliated/phinxy) has quit (Read error: Connection reset by peer)
+2018-03-21 07:58:41	FiXato	lol. Added 1.6 into the mix too? ;)
+2018-03-21 07:59:37	-->	phinxy (~ted@unaffiliated/phinxy) has joined #weechat
+2018-03-21 08:01:09	-->	damke_ (~damke@unaffiliated/damke) has joined #weechat
+2018-03-21 08:02:13	<--	endokqr (~kqr@vps.xkqr.org) has quit (Remote host closed the connection)
+2018-03-21 08:02:14	-->	sjl (~sjl@cpe-67-247-81-93.rochester.res.rr.com) has joined #weechat
+2018-03-21 08:02:55	-->	ferdna (~ferdna@68.73.71.246) has joined #weechat
+2018-03-21 08:03:21	<--	damke (~damke@unaffiliated/damke) has quit (Ping timeout: 264 seconds)
+2018-03-21 08:05:08	-->	sjl__ (~sjl@ec2-52-8-232-46.us-west-1.compute.amazonaws.com) has joined #weechat
+2018-03-21 08:06:13	-->	kqr (~kqr@vps.xkqr.org) has joined #weechat
+2018-03-21 08:06:57	<--	sjl (~sjl@cpe-67-247-81-93.rochester.res.rr.com) has quit (Ping timeout: 248 seconds)
+2018-03-21 08:07:16	kqr	don't remember who was worried I had lost config but: from what I can tell most of the config is spared. the biggest issue is that I had the autoconnect/autojoin scripts enabled which reconnect to all servers last connected to
+2018-03-21 08:07:30	kqr	but since – I guess? – the irc plugin was unavailable before, it thinks I was connected to 0 servers before...
+2018-03-21 08:07:58	man_in_shack	pretty sure it was kqr who was worried you had lost config
+2018-03-21 08:08:05	<--	Chex (sss@sleepl.northnook.ca) has quit (Ping timeout: 248 seconds)
+2018-03-21 08:08:05	<--	Death_Syn (deathsyn@deathsyn.com) has quit (Ping timeout: 248 seconds)
+2018-03-21 08:08:53	-->	Chex (sss@sleepl.northnook.ca) has joined #weechat
+2018-03-21 08:09:16		Chex is now known as Guest82540
+2018-03-21 08:09:30	<--	choki (~weechat@unaffiliated/choki) has quit (Quit: WeeChat 2.0.1)
+2018-03-21 08:11:08	-->	Death_Syn (deathsyn@deathsyn.com) has joined #weechat
+2018-03-21 08:11:39	kqr	haha
+2018-03-21 08:11:41	kqr	thanks
+2018-03-21 08:12:31	kqr	hey – I think I've set everything up again! at least nothing obvious is missing right now
+2018-03-21 08:12:41	kqr	thank you for pointing me toward the solution and being SOLID moral support
+2018-03-21 08:12:44	kqr	you did good today
+2018-03-21 08:23:03	-->	dbmikus (~dbmikus@ec2-52-70-171-151.compute-1.amazonaws.com) has joined #weechat
+2018-03-21 08:25:22	<--	phinxy (~ted@unaffiliated/phinxy) has quit (Read error: Connection reset by peer)
+2018-03-21 08:26:39	-->	Vonter (~Vonter@106.51.105.1) has joined #weechat
+2018-03-21 08:26:48	-->	phinxy (~ted@unaffiliated/phinxy) has joined #weechat
+2018-03-21 08:29:32	<--	im0nde (~im0nde@2a0a-a540-d89c-0-6236-ddff-fe81-acd6.ipv6dyn.netcologne.de) has quit (Ping timeout: 276 seconds)
+2018-03-21 08:29:51	-->	davidl (~usrname@fsf/member/usrname) has joined #weechat
+2018-03-21 08:32:01	-->	dmaza (~dm@wikimedia/dmaza-wmf) has joined #weechat
+2018-03-21 08:34:44	<--	trens (~trens@cpe-184-54-204-115.swo.res.rr.com) has quit (Read error: Connection reset by peer)
+2018-03-21 08:37:10	<--	vertor (~vertor@unaffiliated/vertor) has quit (Quit: vertor's left the freenode)
+2018-03-21 08:38:57	<--	davidl (~usrname@fsf/member/usrname) has quit (Ping timeout: 240 seconds)
+2018-03-21 08:39:52	-->	karols146 (~karols146@host-81-190-99-6.dynamic.mm.pl) has joined #weechat
+2018-03-21 08:40:57	<--	cyberg (~cyberg@65.35.248.210) has quit (Ping timeout: 240 seconds)
+2018-03-21 08:41:34	<--	karols146 (~karols146@host-81-190-99-6.dynamic.mm.pl) has quit (Client Quit)
+2018-03-21 08:41:52	-->	karols146 (~karols146@host-81-190-99-6.dynamic.mm.pl) has joined #weechat
+2018-03-21 08:44:18	-->	cyberg (~cyberg@65.35.248.210) has joined #weechat
+2018-03-21 08:45:53	-->	capin (capin@107.170.40.252) has joined #weechat
+2018-03-21 08:46:10	<--	capin (capin@107.170.40.252) has quit (Changing host)
+2018-03-21 08:46:10	-->	capin (capin@unaffiliated/capin) has joined #weechat
+2018-03-21 08:46:24	-->	kn-928 (kn-928@gateway/vpn/privateinternetaccess/kn-928) has joined #weechat
+2018-03-21 08:47:24	-->	vertor (~vertor@unaffiliated/vertor) has joined #weechat

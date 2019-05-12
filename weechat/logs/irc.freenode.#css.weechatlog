@@ -1,0 +1,870 @@
+2018-03-20 21:56:09	-->	zzzeyez (~zzzeyez@ss-30-212.pld.com) has joined #css
+2018-03-20 21:56:09		Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2018-03-20 21:56:09		Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 15:44:01
+2018-03-20 21:56:09		Channel #css: 445 nicks (0 ops, 0 voices, 445 normals)
+2018-03-20 21:56:12		Channel created on Sat, 25 Nov 2006 23:42:45
+2018-03-20 21:57:17	-->	phenom (~primus@unaffiliated/phenom) has joined #css
+2018-03-20 21:57:54	zzzeyez	is there a way to use a back-up value if a variable does not exist?  for example: "line-height: var(--pollen-height), 10px;" where 10px would be the line-height if var(--pollen-height) does not exist?
+2018-03-20 21:59:40	-->	Mattiaslndstrm (~Mattiasln@2806:103e:9:98ab:d8cc:161d:c7ae:a148) has joined #css
+2018-03-20 22:00:25	<--	orbyt_ (~orbyt@172.92.5.20) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-20 22:06:02	-->	mindpattern (~textual@202-173-165-222.dyn.iinet.net.au) has joined #css
+2018-03-20 22:06:54	<--	tfitts (uid158900@gateway/web/irccloud.com/x-nmauxwfcmggdyavl) has quit (Quit: Connection closed for inactivity)
+2018-03-20 22:07:32	a-ja	zzzeyez: line-height: 10px; line-height: var(--pollen-height, 10px);
+2018-03-20 22:07:32		exec: end of command 0 ("notify-send 'a-ja: zzzeyez: line-height: 10px; line-height: var(--pollen-height, 10px);'"), return code: 0
+2018-03-20 22:08:21	a-ja	the former being for browsers that don't support var at all
+2018-03-20 22:08:57	zzzeyez	ty!
+2018-03-20 22:09:20	a-ja	np
+2018-03-20 22:09:20	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-20 22:09:27	<--	GreenJello (~Guest18@unaffiliated/greenjello) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-20 22:11:39	-->	rakm (~rakm@c-24-130-141-146.hsd1.ca.comcast.net) has joined #css
+2018-03-20 22:12:00	-->	GreenJello (~Guest18@unaffiliated/greenjello) has joined #css
+2018-03-20 22:13:09	<--	degenerate (~degenerat@S0106689e199caaf4.no.shawcable.net) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2018-03-20 22:14:45	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 264 seconds)
+2018-03-20 22:15:05	<--	GreenJello (~Guest18@unaffiliated/greenjello) has quit (Client Quit)
+2018-03-20 22:16:18	zzzeyez	what about in the scenario where a fall-back value is also a variable?
+2018-03-20 22:16:33	<--	Mattiaslndstrm (~Mattiasln@2806:103e:9:98ab:d8cc:161d:c7ae:a148) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-20 22:16:39	zzzeyez	say instead of 10px, it's var(--bird)
+2018-03-20 22:17:10	-->	AMcBain (~Art@172-223-225-004.dhcp.chtrptr.net) has joined #css
+2018-03-20 22:18:16	-->	aruns__ (~indistylo@119.82.105.106) has joined #css
+2018-03-20 22:19:30	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-20 22:19:56	a-ja	you mean var(--pollen-height, var(--bird)); ?
+2018-03-20 22:20:03	<--	mindpattern (~textual@202-173-165-222.dyn.iinet.net.au) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2018-03-20 22:22:16	zzzeyez	i want var(--pollen-height) to be the value used, but some users will not have this value available to them and in that scenario they would get var(--bird) instead
+2018-03-20 22:22:28	<--	Rob235 (~Rob235@pool-100-35-64-150.nwrknj.fios.verizon.net) has quit (Quit: Gone to sleep...)
+2018-03-20 22:22:57	<--	johnflux_ (~johnflux@konversation/developer/JohnFlux) has quit (Ping timeout: 248 seconds)
+2018-03-20 22:23:05	a-ja	i think the above would work
+2018-03-20 22:23:10	zzzeyez	line-height: var(--bird); line-height: var(--pollen-height, var(--bird));
+2018-03-20 22:23:14	zzzeyez	with no luck
+2018-03-20 22:23:56	-->	Keytap (~nicholasr@167.89.254.27) has joined #css
+2018-03-20 22:24:04	<--	James0r (~James0r@c-71-198-216-89.hsd1.ca.comcast.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-20 22:26:04	<--	kapil___ (uid36151@gateway/web/irccloud.com/x-gphugupktsrlrlrk) has quit (Quit: Connection closed for inactivity)
+2018-03-20 22:28:13	<--	Keytap (~nicholasr@167.89.254.27) has quit (Ping timeout: 240 seconds)
+2018-03-20 22:28:51	a-ja	guess it's not supported that way...when in doubt, read the spec...there's a bunch of examples of what's legal/not
+2018-03-20 22:29:37	-->	Keytap (~nicholasr@167.89.254.27) has joined #css
+2018-03-20 22:33:26	<--	\mSg (~mSg@irchelp/msg) has quit (Read error: Connection reset by peer)
+2018-03-20 22:33:55	-->	\mSg (~mSg@irchelp/msg) has joined #css
+2018-03-20 22:33:57	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 256 seconds)
+2018-03-20 22:34:35	a-ja	zzzeyez, see https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables#Custom_Property_fallback_values
+2018-03-20 22:34:35		exec: end of command 0 ("notify-send 'a-ja: zzzeyez, see https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables#Custom_Property_fallback_values'"), return code: 0
+2018-03-20 22:34:39	<--	Keytap (~nicholasr@167.89.254.27) has quit (Ping timeout: 260 seconds)
+2018-03-20 22:34:49	a-ja	makes me think it should work
+2018-03-20 22:35:13	 *	a-ja has never tried it
+2018-03-20 22:35:32	-->	bilb_ono (~alex@ip98-171-161-134.sb.sd.cox.net) has joined #css
+2018-03-20 22:37:23	<--	SwiftMatt (~Objective@2601:282:4300:3e:f45a:7712:b74:1e5d) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2018-03-20 22:37:55	<--	Oli`` (~Oli``@ubuntu/member/oli) has quit (Ping timeout: 256 seconds)
+2018-03-20 22:39:59	-->	Oli (~Oli``@ubuntu/member/oli) has joined #css
+2018-03-20 22:42:22	a-ja	zzzeyez, see the .three rule in that example?
+2018-03-20 22:42:23		exec: end of command 0 ("notify-send 'a-ja: zzzeyez, see the .three rule in that example?'"), return code: 0
+2018-03-20 22:42:47	zzzeyez	oh thank you!
+2018-03-20 22:43:06	<--	rakm (~rakm@c-24-130-141-146.hsd1.ca.comcast.net) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2018-03-20 22:43:19	zzzeyez	hey i played around a little bit and defining var(--bird) like so worked:
+2018-03-20 22:43:42	zzzeyez	--bird: var(--pollen-height, 20px);
+2018-03-20 22:44:16	a-ja	makes sense, too
+2018-03-20 22:44:16	zzzeyez	so pretty much what you initially said, but doing it where the variables are defined
+2018-03-20 22:44:30	<--	bilb_ono (~alex@ip98-171-161-134.sb.sd.cox.net) has quit (Quit: bilb_ono)
+2018-03-20 22:45:44	a-ja	don't then try to have --pollen-height reference --bird     i know that's an error
+2018-03-20 22:46:33	zzzeyez	lol
+2018-03-20 22:46:48	-->	oksushi (~oksushi@128.199.226.173) has joined #css
+2018-03-20 22:46:49	zzzeyez	yeah, that reminds me of getting stuck in a loop script that made directories once
+2018-03-20 22:46:59	zzzeyez	.three { background-color: var(--my-var, var(--my-background, pink)); }
+2018-03-20 22:47:09	zzzeyez	hmm wonder why it works for them and not me
+2018-03-20 22:47:16	-->	johnflux_ (~johnflux@58-189-8-247f1.shg1.eonet.ne.jp) has joined #css
+2018-03-20 22:47:16	<--	johnflux_ (~johnflux@58-189-8-247f1.shg1.eonet.ne.jp) has quit (Changing host)
+2018-03-20 22:47:16	-->	johnflux_ (~johnflux@konversation/developer/JohnFlux) has joined #css
+2018-03-20 22:47:32	zzzeyez	i'm working on a desktop widget though, so maybe it's interpretted differently idk
+2018-03-20 22:51:15	a-ja	perhaps test cross-browser? could be bad example, or bad support in 1 or more rendering engines
+2018-03-20 22:53:16	a-ja	e.g. i found & reported a parser prob in one engine a few weeks ago...an edge case.  not related to --var, though
+2018-03-20 22:53:38	zzzeyez	maybe i will actually
+2018-03-20 22:54:17	<--	leptone (~leptone@2601:645:4101:4db7:fde1:dfa4:5728:c1f4) has quit (Remote host closed the connection)
+2018-03-20 22:57:07	a-ja	actually, was related, iirc.  had problem with redefining a prop, but only occurred within media queries
+2018-03-20 22:57:57	-->	electronicmaji (~plpl@107-134-11-5.lightspeed.fyvlar.sbcglobal.net) has joined #css
+2018-03-20 23:00:18	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-20 23:00:27	-->	spaces__ (~spaces@unaffiliated/spaces) has joined #css
+2018-03-20 23:00:58	<--	spaces (~spaces@unaffiliated/spaces) has quit (Ping timeout: 264 seconds)
+2018-03-20 23:01:04		spaces__ is now known as spaces
+2018-03-20 23:03:40	-->	spaces_ (~spaces@unaffiliated/spaces) has joined #css
+2018-03-20 23:05:24	-->	leptone (~leptone@c-67-188-39-20.hsd1.ca.comcast.net) has joined #css
+2018-03-20 23:05:44	-->	spaces__ (~spaces@unaffiliated/spaces) has joined #css
+2018-03-20 23:05:45	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 263 seconds)
+2018-03-20 23:05:45	<--	spaces (~spaces@unaffiliated/spaces) has quit (Ping timeout: 263 seconds)
+2018-03-20 23:05:46		spaces__ is now known as spaces
+2018-03-20 23:06:27	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 256 seconds)
+2018-03-20 23:08:15	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-20 23:08:45	<--	spaces_ (~spaces@unaffiliated/spaces) has quit (Ping timeout: 264 seconds)
+2018-03-20 23:10:33	<--	leptone (~leptone@c-67-188-39-20.hsd1.ca.comcast.net) has quit (Ping timeout: 264 seconds)
+2018-03-20 23:12:57	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 264 seconds)
+2018-03-20 23:14:19	<--	luisdavidgd (~Thunderbi@190.236.206.116) has quit (Ping timeout: 260 seconds)
+2018-03-20 23:14:44	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-20 23:17:26	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-20 23:17:57	<--	preaction (~doug@irc.preaction.me) has quit (Ping timeout: 240 seconds)
+2018-03-20 23:19:08	-->	preaction (~doug@irc.preaction.me) has joined #css
+2018-03-20 23:20:42	<--	a-ja (~aja@24-207-230-17.dhcp.stls.mo.charter.com) has quit (Quit: Quitting ✌🏽)
+2018-03-20 23:21:57	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 264 seconds)
+2018-03-20 23:24:32	-->	Keytap (~nicholasr@167.89.254.27) has joined #css
+2018-03-20 23:26:43	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-20 23:27:42	<--	dr3w_ (~dr3w_@abercs/dr3w) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-20 23:28:43	-->	leptone (~leptone@2601:645:4101:4db7:fde1:dfa4:5728:c1f4) has joined #css
+2018-03-20 23:29:20	<--	leptone (~leptone@2601:645:4101:4db7:fde1:dfa4:5728:c1f4) has quit (Client Quit)
+2018-03-20 23:30:48	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 246 seconds)
+2018-03-20 23:32:13	<--	tiwula (~lane@174-23-5-207.slkc.qwest.net) has quit (Quit: Leaving)
+2018-03-20 23:32:23	<--	StrangeCompany (~StarkRavi@2602:304:68c3:bc70:1482:661:418f:b689) has quit (Quit: Leaving)
+2018-03-20 23:34:42	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-20 23:35:09	<--	Keytap (~nicholasr@167.89.254.27) has quit (Ping timeout: 256 seconds)
+2018-03-20 23:35:15	-->	luisdavidgd (~Thunderbi@190.236.206.116) has joined #css
+2018-03-20 23:35:45	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 263 seconds)
+2018-03-20 23:39:33	<--	morlenxus (~morlenxus@enlightenment/developer/morlenxus) has quit (Ping timeout: 240 seconds)
+2018-03-20 23:41:02	-->	morlenxus (~morlenxus@enlightenment/developer/morlenxus) has joined #css
+2018-03-20 23:41:27	<--	umahduh (~quassel@2603:3001:a18:0:cc63:1a3d:ef9f:2d43) has quit (Ping timeout: 245 seconds)
+2018-03-20 23:47:08	<--	kyan (~kyan@cpe-74-75-152-197.maine.res.rr.com) has quit (Quit: Leaving)
+2018-03-20 23:47:57	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 246 seconds)
+2018-03-20 23:53:38	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-20 23:54:19	<--	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has quit (Quit: inabit. zz.)
+2018-03-20 23:54:53	-->	jscriptStudent (~jscriptSt@2601:1c0:5480:cc:b4de:5405:5530:a240) has joined #css
+2018-03-20 23:55:13	-->	SwiftMatt (~Objective@2601:282:4300:3e:b041:303e:79dc:911) has joined #css
+2018-03-20 23:56:42	<--	spaces (~spaces@unaffiliated/spaces) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2018-03-20 23:57:57	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 240 seconds)
+2018-03-21 00:01:10	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 00:01:48	-->	aruns (~indistylo@119.82.105.106) has joined #css
+2018-03-21 00:04:03	<--	electronicmaji (~plpl@107-134-11-5.lightspeed.fyvlar.sbcglobal.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2018-03-21 00:04:30	<--	aruns__ (~indistylo@119.82.105.106) has quit (Ping timeout: 268 seconds)
+2018-03-21 00:06:19	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 256 seconds)
+2018-03-21 00:08:44	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 00:11:22	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 00:12:32	-->	meandi_2 (~meandi_4@dialin-80-228-136-113.ewe-ip-backbone.de) has joined #css
+2018-03-21 00:15:27	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 240 seconds)
+2018-03-21 00:16:31	<--	meandi (~meandi_4@dyndsl-091-249-055-037.ewe-ip-backbone.de) has quit (Ping timeout: 256 seconds)
+2018-03-21 00:20:23	<--	Deusdeorum (~Deusdeoru@unaffiliated/deusdeorum) has quit (Ping timeout: 255 seconds)
+2018-03-21 00:28:25	<--	SwiftMatt (~Objective@2601:282:4300:3e:b041:303e:79dc:911) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2018-03-21 00:28:55	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 246 seconds)
+2018-03-21 00:29:53	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 00:30:17	-->	Keytap (~nicholasr@167.89.254.27) has joined #css
+2018-03-21 00:30:45	<--	hotmessexpress (~hme@c-73-211-49-13.hsd1.il.comcast.net) has quit
+2018-03-21 00:32:12	<--	azx_ (~quassel@2600:8801:b302:8180:c080:985:cf82:9852) has quit (Read error: Connection reset by peer)
+2018-03-21 00:32:18	-->	Nizumzen (~Nizumzen@cpc120314-reig6-2-0-cust190.6-3.cable.virginm.net) has joined #css
+2018-03-21 00:33:25	-->	azx (~quassel@2600:8801:b302:8180:1807:6f38:6178:61aa) has joined #css
+2018-03-21 00:34:15	<--	beatzz (~beatzz@240f:83:d77a:1:94c8:eac4:64bf:5b6f) has quit (Read error: Connection reset by peer)
+2018-03-21 00:34:29	<--	dysfigured (dysfigured@2600:3c01::f03c:91ff:feb4:be75) has quit (Remote host closed the connection)
+2018-03-21 00:34:33	<--	jalnt (~jalnt@2001:19f0:5801:65:5400:ff:fe2e:273b) has quit (Ping timeout: 240 seconds)
+2018-03-21 00:34:43	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 268 seconds)
+2018-03-21 00:34:46	-->	dysfigured (~dysfigure@li588-202.members.linode.com) has joined #css
+2018-03-21 00:34:52	-->	beatzz (~beatzz@240f:83:d77a:1:68d7:b914:be81:baf2) has joined #css
+2018-03-21 00:35:13	<--	Keytap (~nicholasr@167.89.254.27) has quit (Ping timeout: 256 seconds)
+2018-03-21 00:35:14	<--	eldritchreality (irssi@2400:8900::f03c:91ff:fe56:1423) has quit (Ping timeout: 255 seconds)
+2018-03-21 00:35:50	-->	Loserbait (~LB@p763156-ipngn6601souka.saitama.ocn.ne.jp) has joined #css
+2018-03-21 00:36:08	<--	gmh (glenn@hinderaker.com) has quit (Ping timeout: 255 seconds)
+2018-03-21 00:37:11	-->	jalnt (~jalnt@103.43.75.97) has joined #css
+2018-03-21 00:37:40	-->	gmh (glenn@hinderaker.com) has joined #css
+2018-03-21 00:40:12	-->	eldritchreality (irssi@2400:8900::f03c:91ff:fe56:1423) has joined #css
+2018-03-21 00:42:34	<--	daN-R-G (~daN-R-G@2a02:908:d80:58a0:4d62:2b24:e06:4b7) has quit (Ping timeout: 246 seconds)
+2018-03-21 00:43:43	-->	rakm (~rakm@c-24-130-141-146.hsd1.ca.comcast.net) has joined #css
+2018-03-21 00:45:39	-->	mohsen_ (~Mohsen@89.45.57.47) has joined #css
+2018-03-21 00:46:48	<--	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has quit (Remote host closed the connection)
+2018-03-21 00:47:11	-->	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has joined #css
+2018-03-21 00:47:27	-->	SwiftMatt (~Objective@2601:282:4300:3e:b041:303e:79dc:911) has joined #css
+2018-03-21 00:49:04	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 00:52:31	-->	darkSeid (~textual@2a02:c7d:281c:e200:6c96:89c6:78ae:7b0d) has joined #css
+2018-03-21 00:53:21	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 256 seconds)
+2018-03-21 00:53:36	<--	jscriptStudent (~jscriptSt@2601:1c0:5480:cc:b4de:5405:5530:a240) has quit (Remote host closed the connection)
+2018-03-21 00:54:48	<--	SwiftMatt (~Objective@2601:282:4300:3e:b041:303e:79dc:911) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2018-03-21 00:55:13	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 00:59:53	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 240 seconds)
+2018-03-21 01:00:36	<--	dapinitial (~dapinitia@75-172-105-245.tukw.qwest.net) has quit (Remote host closed the connection)
+2018-03-21 01:00:55	-->	dapinitial (~dapinitia@75-172-105-245.tukw.qwest.net) has joined #css
+2018-03-21 01:01:24	<--	dapinitial (~dapinitia@75-172-105-245.tukw.qwest.net) has quit (Remote host closed the connection)
+2018-03-21 01:01:39	-->	dapinitial (~dapinitia@75-172-105-245.tukw.qwest.net) has joined #css
+2018-03-21 01:01:58	-->	egray (~egray@unaffiliated/wethu) has joined #css
+2018-03-21 01:02:10	<--	dapinitial (~dapinitia@75-172-105-245.tukw.qwest.net) has quit (Remote host closed the connection)
+2018-03-21 01:02:26	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 01:02:43	-->	realnot (~realnot@unaffiliated/realnot) has joined #css
+2018-03-21 01:05:10	<--	wethu (~egray@unaffiliated/wethu) has quit (Ping timeout: 264 seconds)
+2018-03-21 01:05:33	<--	Akinator (~AkinatorU@2607:5300:100:200::a97) has quit (Ping timeout: 240 seconds)
+2018-03-21 01:09:21	<--	kriskropd (~kris@unaffiliated/kriskropd) has quit (Ping timeout: 265 seconds)
+2018-03-21 01:09:33	-->	mindpattern (~textual@202-173-165-222.dyn.iinet.net.au) has joined #css
+2018-03-21 01:10:53	<--	opsec (~opsec@opsec/opsec) has quit (Ping timeout: 240 seconds)
+2018-03-21 01:11:59	<--	zodiac (~opsec@opsec/opsec) has quit (Ping timeout: 276 seconds)
+2018-03-21 01:14:19	<--	pertu (~rapa@91.154.185.203) has quit (Ping timeout: 256 seconds)
+2018-03-21 01:14:29	-->	Trekka12 (~Trekka12@81-225-147-168-no2300.tbcn.telia.com) has joined #css
+2018-03-21 01:16:38	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 01:18:19	-->	aruns__ (~indistylo@119.82.105.106) has joined #css
+2018-03-21 01:18:51	-->	kriskropd (~kris@unaffiliated/kriskropd) has joined #css
+2018-03-21 01:19:40	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 246 seconds)
+2018-03-21 01:19:56	-->	MrMeester (~rcooper@bc101189.bendcable.com) has joined #css
+2018-03-21 01:20:05	-->	fission6 (~textual@2601:282:d01:a620:4533:333d:6b39:38f2) has joined #css
+2018-03-21 01:20:57	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 252 seconds)
+2018-03-21 01:21:07	<--	aruns (~indistylo@119.82.105.106) has quit (Ping timeout: 256 seconds)
+2018-03-21 01:23:36	<--	MrMeester (~rcooper@bc101189.bendcable.com) has quit (Quit: Leaving)
+2018-03-21 01:24:39	-->	MrMeester (~rcooper@bc101189.bendcable.com) has joined #css
+2018-03-21 01:25:33	howdoi	`sticky header
+2018-03-21 01:25:48	-->	Keytap (~nicholasr@167.89.254.27) has joined #css
+2018-03-21 01:25:49	howdoi	`search sticky header
+2018-03-21 01:26:09	howdoi	I am trying to do a sticky header with hamburger menu with css grid
+2018-03-21 01:26:13	<--	MrMeester (~rcooper@bc101189.bendcable.com) has quit (Client Quit)
+2018-03-21 01:26:17	<--	ukemi (~ju@unaffiliated/ukemi) has quit (Quit: Leaving)
+2018-03-21 01:26:22	<--	goku (~goku@91-161-181-246.subs.proxad.net) has quit (Quit: leaving)
+2018-03-21 01:26:25	-->	MrMeester (~rcooper@bc101189.bendcable.com) has joined #css
+2018-03-21 01:27:24	<--	MrMeester (~rcooper@bc101189.bendcable.com) has quit (Client Quit)
+2018-03-21 01:30:12	<--	Keytap (~nicholasr@167.89.254.27) has quit (Ping timeout: 245 seconds)
+2018-03-21 01:30:28	<--	Alina-malina (~Alina-mal@37.157.223.65) has quit (Changing host)
+2018-03-21 01:30:28	-->	Alina-malina (~Alina-mal@unaffiliated/alina-malina) has joined #css
+2018-03-21 01:30:54	-->	Keytap (~nicholasr@167.89.254.27) has joined #css
+2018-03-21 01:31:14	<--	darkSeid (~textual@2a02:c7d:281c:e200:6c96:89c6:78ae:7b0d) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 01:32:47	-->	undefined_bob (~undefined@gateway/tor-sasl/undefinedbob/x-54028283) has joined #css
+2018-03-21 01:33:09	<--	ferdna (~ferdna@68-73-71-246.lightspeed.elpstx.sbcglobal.net) has quit (Quit: Leaving)
+2018-03-21 01:35:05	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 01:35:46	<--	Keytap (~nicholasr@167.89.254.27) has quit (Ping timeout: 268 seconds)
+2018-03-21 01:36:59	<--	fission6 (~textual@2601:282:d01:a620:4533:333d:6b39:38f2) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 01:37:27	<--	realnot (~realnot@unaffiliated/realnot) has quit (Ping timeout: 240 seconds)
+2018-03-21 01:39:17	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 252 seconds)
+2018-03-21 01:40:19	-->	kapil___ (uid36151@gateway/web/irccloud.com/x-wyqychnsdetsrbtr) has joined #css
+2018-03-21 01:41:13	-->	MrMeester (~rcooper@bc101189.bendcable.com) has joined #css
+2018-03-21 01:42:22	<--	MrMeester (~rcooper@bc101189.bendcable.com) has quit (Client Quit)
+2018-03-21 01:46:05	-->	MarceeZ (~marcis@212.3.196.171) has joined #css
+2018-03-21 01:46:23	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 01:48:28	-->	lordjancso (~lordjancs@2a01-036d-0110-6794-0d98-93da-1b5b-cef2.pool6.digikabel.hu) has joined #css
+2018-03-21 01:48:36	<--	dspacejs (~de_spajic@2001:8003:a73c:6a00:7083:f0c2:1d0f:28e3) has quit (Read error: Connection reset by peer)
+2018-03-21 01:49:44	-->	dspacejs (~de_spajic@2001:8003:a73c:6a00:7083:f0c2:1d0f:28e3) has joined #css
+2018-03-21 01:49:46	-->	fission6 (~textual@2601:282:d01:a620:c952:8359:9de2:a69b) has joined #css
+2018-03-21 01:50:09	<--	donguston (~AdamPC@cpc139184-sprt3-2-0-cust175.17-2.cable.virginm.net) has quit (Read error: Connection reset by peer)
+2018-03-21 01:50:39	-->	opsec (~opsec@opsec/opsec) has joined #css
+2018-03-21 01:50:39	-->	zodiac (~opsec@opsec/opsec) has joined #css
+2018-03-21 01:51:09	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 256 seconds)
+2018-03-21 01:51:58	-->	Akinator (~AkinatorU@2607:5300:100:200::a97) has joined #css
+2018-03-21 01:53:26	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 01:53:29	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 01:55:59	-->	gingray (~gingray@46.72.83.145) has joined #css
+2018-03-21 01:57:57	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 256 seconds)
+2018-03-21 01:59:26	<--	krystianbajno (~krystianb@2a01:4b00:821f:8600:728b:cdff:fe56:9dc7) has quit (Ping timeout: 276 seconds)
+2018-03-21 02:00:55	-->	jomofcw (~jomofcw@unaffiliated/jomofcw) has joined #css
+2018-03-21 02:01:01	-->	krystianbajno (~krystianb@2a01:4b00:821f:8600:728b:cdff:fe56:9dc7) has joined #css
+2018-03-21 02:04:49	-->	Rhaal (~Rhaal@79.8.0.180) has joined #css
+2018-03-21 02:05:13	<--	philwills (~willsp@c-73-140-55-106.hsd1.wa.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-03-21 02:08:16	<--	Rhaal (~Rhaal@79.8.0.180) has quit (Remote host closed the connection)
+2018-03-21 02:08:17	-->	alxy (uid115853@gateway/web/irccloud.com/x-rxzonklmuctkktxe) has joined #css
+2018-03-21 02:09:21	-->	Audiosauce (~Audiosauc@unaffiliated/audiosauce) has joined #css
+2018-03-21 02:09:54	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 260 seconds)
+2018-03-21 02:10:00	<--	AMcBain (~Art@172-223-225-004.dhcp.chtrptr.net) has quit (Quit: sudio init 0)
+2018-03-21 02:10:37	-->	realnot (~realnot@unaffiliated/realnot) has joined #css
+2018-03-21 02:11:21	-->	Tokku (~tokku@unaffiliated/tokku) has joined #css
+2018-03-21 02:11:34	<--	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has quit (Remote host closed the connection)
+2018-03-21 02:11:58	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 02:12:10	-->	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has joined #css
+2018-03-21 02:13:39	<--	Darren (~textual@wnpgmb0903w-ds01-93-186.dynamic.bellmts.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 02:14:09	<--	Tokku (~tokku@unaffiliated/tokku) has quit (Client Quit)
+2018-03-21 02:16:19	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 252 seconds)
+2018-03-21 02:21:10	<--	azrail (~mailbox@92.255.253.8) has quit (Read error: Connection reset by peer)
+2018-03-21 02:21:33	-->	azrail (~mailbox@92.255.253.8) has joined #css
+2018-03-21 02:26:14	-->	Keytap (~nicholasr@167.89.254.27) has joined #css
+2018-03-21 09:06:49	-->	zzzeyez (~zzzeyez@ss-30-212.pld.com) has joined #css
+2018-03-21 09:06:49		Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2018-03-21 09:06:49		Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 15:44:01
+2018-03-21 09:06:49		Channel #css: 462 nicks (0 ops, 0 voices, 462 normals)
+2018-03-21 09:06:51		Channel created on Sat, 25 Nov 2006 23:42:45
+2018-03-21 09:07:41	zzzeyez	anyone in here familiar with sassc?  i did an upgrade with homebrew and now the values i @import don't expand if they are used inside of variables
+2018-03-21 09:08:13	-->	amelliaa (~amelliaa@46.166.142.216) has joined #css
+2018-03-21 09:10:33	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 264 seconds)
+2018-03-21 09:12:21	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 265 seconds)
+2018-03-21 09:12:34	zzzeyez	for reference: https://github.com/zzzeyez/Pecan/blob/master/scss/style.scss
+2018-03-21 09:13:31	<--	James0r (~James0r@c-71-198-216-89.hsd1.ca.comcast.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 09:21:57	-->	AdamPDotty1 (~Adium@62.217.42.145) has joined #css
+2018-03-21 09:22:11	<--	Stevearzh (~zzzzzzzz@unaffiliated/stevearzh) has quit (Max SendQ exceeded)
+2018-03-21 09:23:01	<--	xall_ (~xall@2600:8800:8882:1c00:f568:c43c:a566:fbf8) has quit (Ping timeout: 246 seconds)
+2018-03-21 09:23:35	<--	AdamPDotty (~Adium@business-90-187-36-85.pool2.vodafone-ip.de) has quit (Ping timeout: 240 seconds)
+2018-03-21 09:23:52	-->	Stevearzh (~zzzzzzzz@unaffiliated/stevearzh) has joined #css
+2018-03-21 09:24:06	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 09:28:50	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 265 seconds)
+2018-03-21 09:33:34	<--	lordjancso (~lordjancs@2a01-036d-0110-6794-103d-6e8a-9e42-4c24.pool6.digikabel.hu) has quit (Quit: Leaving)
+2018-03-21 09:35:47	<--	fission6 (~textual@2601:282:d01:a620:cc20:1235:6ecd:9305) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 09:36:39	-->	Darren (~textual@wnpgmb0903w-ds01-93-186.dynamic.bellmts.net) has joined #css
+2018-03-21 09:37:25	bronzehedwick	zzzeyez: you're saying the sass variables don't expand if they are used as a value of a native css variable?
+2018-03-21 09:37:26	-->	Sappy (~Sappy@92.49.28.13) has joined #css
+2018-03-21 09:38:21	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 09:40:04	-->	maks25 (~maxim@pool-173-56-208-67.nycmny.fios.verizon.net) has joined #css
+2018-03-21 09:41:48	-->	fission6 (~textual@2601:282:d01:a620:c46c:87ad:ef37:2aad) has joined #css
+2018-03-21 09:41:55	<--	Darren (~textual@wnpgmb0903w-ds01-93-186.dynamic.bellmts.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 09:42:12	zzzeyez	here's a better description of my problem: https://www.reddit.com/r/Sass/comments/8631j3/sassc_no_longer_expanding_import_values_in/
+2018-03-21 09:42:17	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 09:42:46	-->	cagomez (~cagomez@rrcs-76-80-215-115.west.biz.rr.com) has joined #css
+2018-03-21 09:43:29	<--	cagomez (~cagomez@rrcs-76-80-215-115.west.biz.rr.com) has quit (Read error: Connection reset by peer)
+2018-03-21 09:43:29	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 248 seconds)
+2018-03-21 09:43:41	-->	cagomez (~cagomez@rrcs-76-80-215-115.west.biz.rr.com) has joined #css
+2018-03-21 09:43:46	zzzeyez	i believe that is what i mean bronzehedwick, i might have my terminology mixed up "native css variable"
+2018-03-21 09:43:50	stennowork	reddit is not a good community regarding such questions
+2018-03-21 09:43:52	-->	indistylo (~indistylo@106.51.28.161) has joined #css
+2018-03-21 09:43:57	stennowork	or programming questions in general
+2018-03-21 09:44:02	lmat	wrinkledcheese: https://jsfiddle.net/t03r5c26/29/ ?
+2018-03-21 09:44:31	lmat	wrinkledcheese: Change the em measurement to 90px or whatever.
+2018-03-21 09:44:37	bronzehedwick	zzzeyez: i'm not familiar with the particular sassc issue, but have you tried interpolating the variables?
+2018-03-21 09:44:47	bronzehedwick	e.g. #{$my_var}
+2018-03-21 09:44:54	-->	Suchorski (~regex@unaffiliated/suchorski) has joined #css
+2018-03-21 09:45:41	zzzeyez	so in style.scss use #{$my_var} rather than --my_var ?
+2018-03-21 09:45:41	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 09:45:47	<--	floppydh (floppydh@gateway/vpn/privateinternetaccess/floppydh) has quit (Remote host closed the connection)
+2018-03-21 09:46:00	<--	undefined_bob (~undefined@gateway/tor-sasl/undefinedbob/x-54028283) has quit (Quit: WeeChat 1.5)
+2018-03-21 09:46:12	-->	floppydh (floppydh@gateway/vpn/privateinternetaccess/floppydh) has joined #css
+2018-03-21 09:46:39	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 260 seconds)
+2018-03-21 09:46:39	bronzehedwick	zzzeyez: no, use --my_var: #{$my_var} vs --my_var: $my_var
+2018-03-21 09:46:55	zzzeyez	i'll try that real quick
+2018-03-21 09:48:08	zzzeyez	it worked :) thank you so much bronzehedwick 
+2018-03-21 09:49:01	bronzehedwick	np, cheers :)
+2018-03-21 09:49:49	-->	junktext (junktext@fsf/member/junktext) has joined #css
+2018-03-21 09:51:43	<--	WishBoy (~WishBoy@unaffiliated/wishboy) has quit
+2018-03-21 09:57:59	<--	galileo_ (~QUJAAAAAA@d216-108-171-73.nt.northwestel.net) has quit (Read error: Connection reset by peer)
+2018-03-21 09:58:36	-->	Murii|osx (~Murii@86.125.209.237) has joined #css
+2018-03-21 09:59:22	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 256 seconds)
+2018-03-21 09:59:39	-->	mohsen_ (~Mohsen@89.45.57.47) has joined #css
+2018-03-21 10:00:27	-->	bilb_ono (~alex@ip98-171-161-134.sb.sd.cox.net) has joined #css
+2018-03-21 10:00:42	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 10:01:25	-->	alxy (uid115853@gateway/web/irccloud.com/x-gjzdtsvdoiqfzwvz) has joined #css
+2018-03-21 10:05:02	<--	indistylo (~indistylo@106.51.28.161) has quit (Ping timeout: 256 seconds)
+2018-03-21 10:05:19	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 260 seconds)
+2018-03-21 10:06:49	-->	tiwula (~lane@70.89.246.241-Busname-UT.hfc.comcastbusiness.net) has joined #css
+2018-03-21 10:08:40	<--	Guest53066 (~pd@14.139.61.129) has quit (Read error: Connection reset by peer)
+2018-03-21 10:08:53	-->	MACscr (~MACscr@c-73-9-230-5.hsd1.il.comcast.net) has joined #css
+2018-03-21 10:09:04	<--	azx (~quassel@2600:8801:b302:8180:1807:6f38:6178:61aa) has quit (Read error: Connection reset by peer)
+2018-03-21 10:09:06	-->	Guest53066 (~pd@14.139.61.129) has joined #css
+2018-03-21 10:10:19	-->	azx (~quassel@2600:8801:b302:8180:1807:6f38:6178:61aa) has joined #css
+2018-03-21 10:11:12	lmat	keveloper: Thanks for the link. I am enlightened now.
+2018-03-21 10:11:18	keveloper	\o/
+2018-03-21 10:11:27	<--	brief (d5c4dde6@gateway/web/freenode/ip.213.196.221.230) has quit (Quit: Page closed)
+2018-03-21 10:14:24	AdamPDotty1	secretly helping people again?
+2018-03-21 10:15:07	lmat	AdamPDotty1: heh; publicly, vide supra.
+2018-03-21 10:15:26	<--	aymanw______ (uid5092@gateway/web/irccloud.com/x-qjyrzivytmdlehvb) has quit (Quit: Connection closed for inactivity)
+2018-03-21 10:17:59	<--	cpt-oblivious (~quassel@freebsd/user/cpt-oblivious) has quit (Read error: Connection reset by peer)
+2018-03-21 10:18:59	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 10:20:05	<--	Stevearzh (~zzzzzzzz@unaffiliated/stevearzh) has quit (Ping timeout: 240 seconds)
+2018-03-21 10:20:09	<--	amelliaa (~amelliaa@46.166.142.216) has quit (Quit: -)
+2018-03-21 10:20:10	-->	xall_ (~xall@2600:8800:8882:1c00:f568:c43c:a566:fbf8) has joined #css
+2018-03-21 10:20:42	-->	al-damiri (uid142631@gateway/web/irccloud.com/x-uyslublffngyubof) has joined #css
+2018-03-21 10:21:13	<--	beerdrop (~beerdrop@c-107-2-115-62.hsd1.mn.comcast.net) has quit (Ping timeout: 240 seconds)
+2018-03-21 10:21:32	-->	uksio (~uksio@p2003008DAC0F2D7C84E535547C0FB686.dip0.t-ipconnect.de) has joined #css
+2018-03-21 10:23:29	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 248 seconds)
+2018-03-21 10:23:35	<--	strike_ (~strike@95.151.48.215) has quit (Remote host closed the connection)
+2018-03-21 10:24:03	-->	strike_ (~strike@95.151.48.215) has joined #css
+2018-03-21 10:24:53	<--	xall_ (~xall@2600:8800:8882:1c00:f568:c43c:a566:fbf8) has quit (Ping timeout: 240 seconds)
+2018-03-21 10:24:54	<--	uks (~uksio@p2003008DAC0F2DF5A46519E52112D78C.dip0.t-ipconnect.de) has quit (Ping timeout: 265 seconds)
+2018-03-21 10:25:18	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 10:25:37	<--	Guest53066 (~pd@14.139.61.129) has quit (Read error: Connection reset by peer)
+2018-03-21 10:27:45	-->	cpt-oblivious (~quassel@freebsd/user/cpt-oblivious) has joined #css
+2018-03-21 10:28:18	-->	iamdb (~iamdb@cpe-23-241-246-162.socal.res.rr.com) has joined #css
+2018-03-21 10:30:25	-->	Deusdeorum (~Deusdeoru@h-72-198.A230.priv.bahnhof.se) has joined #css
+2018-03-21 10:30:40	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 256 seconds)
+2018-03-21 10:32:28	-->	energizer (~energizer@unaffiliated/energizer) has joined #css
+2018-03-21 10:32:58	<--	fission6 (~textual@2601:282:d01:a620:c46c:87ad:ef37:2aad) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 10:34:09	<--	zlsyx (~zlsyx@193.2.224.100) has quit (Remote host closed the connection)
+2018-03-21 10:34:37	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 10:35:04	<--	RusAlex (~Chel@unaffiliated/rusalex) has quit (Read error: Connection reset by peer)
+2018-03-21 10:35:28	-->	AdamPDotty (~Adium@business-90-187-36-85.pool2.vodafone-ip.de) has joined #css
+2018-03-21 10:37:28	<--	AdamPDotty1 (~Adium@62.217.42.145) has quit (Ping timeout: 256 seconds)
+2018-03-21 10:37:29	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 10:38:43	-->	JosDzG (~Thunderbi@137.189-204-196.bestel.com.mx) has joined #css
+2018-03-21 10:39:35	<--	qwebirc71712 (183c4402@gateway/web/freenode/ip.24.60.68.2) has quit (Ping timeout: 260 seconds)
+2018-03-21 10:40:04	-->	zlsyx (~zlsyx@193.2.224.100) has joined #css
+2018-03-21 10:40:57	-->	AdamPDotty1 (~Adium@62.217.42.145) has joined #css
+2018-03-21 10:42:08	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 268 seconds)
+2018-03-21 10:42:13	<--	Popzi (~Thunderbi@unaffiliated/popzi) has quit (Quit: Popzi)
+2018-03-21 10:42:32	-->	Popzi (~Thunderbi@unaffiliated/popzi) has joined #css
+2018-03-21 10:42:39	<--	AdamPDotty (~Adium@business-90-187-36-85.pool2.vodafone-ip.de) has quit (Ping timeout: 260 seconds)
+2018-03-21 10:43:05	-->	SwiftMatt (~Objective@2601:282:4300:3e:b041:303e:79dc:911) has joined #css
+2018-03-21 10:45:31	-->	xall_ (~xall@2600:8800:8882:1c00:f568:c43c:a566:fbf8) has joined #css
+2018-03-21 10:47:01	<--	daN-R-G (~daN-R-G@ip-109-40-3-154.web.vodafone.de) has quit (Remote host closed the connection)
+2018-03-21 10:47:30	-->	daN-R-G (~daN-R-G@ip-109-40-3-154.web.vodafone.de) has joined #css
+2018-03-21 10:47:54	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 260 seconds)
+2018-03-21 10:49:27	<--	zlsyx (~zlsyx@193.2.224.100) has quit (Ping timeout: 240 seconds)
+2018-03-21 10:50:15	<--	xall_ (~xall@2600:8800:8882:1c00:f568:c43c:a566:fbf8) has quit (Ping timeout: 256 seconds)
+2018-03-21 10:50:43	-->	xall_ (~xall@2600:8800:8882:1c00:f568:c43c:a566:fbf8) has joined #css
+2018-03-21 10:51:14	-->	zlsyx (~zlsyx@193.2.224.100) has joined #css
+2018-03-21 10:52:34	<--	obert (~quassel@host51-135-dynamic.7-87-r.retail.telecomitalia.it) has quit (Ping timeout: 260 seconds)
+2018-03-21 10:54:02	-->	obert (~quassel@host29-18-dynamic.27-79-r.retail.telecomitalia.it) has joined #css
+2018-03-21 10:55:50	<--	xall_ (~xall@2600:8800:8882:1c00:f568:c43c:a566:fbf8) has quit (Ping timeout: 265 seconds)
+2018-03-21 10:56:03	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 10:56:58	-->	beerdrop (~beerdrop@c-107-2-115-62.hsd1.mn.comcast.net) has joined #css
+2018-03-21 10:58:05	-->	Fexco (~alex.fex@76.77.80.103) has joined #css
+2018-03-21 10:59:08	-->	Hu0p (~Hu0p@cpe-74-136-232-230.kya.res.rr.com) has joined #css
+2018-03-21 10:59:29	-->	xall_ (~xall@ip72-223-14-166.ph.ph.cox.net) has joined #css
+2018-03-21 11:00:37	<--	daN-R-G (~daN-R-G@ip-109-40-3-154.web.vodafone.de) has quit (Remote host closed the connection)
+2018-03-21 11:00:50	<--	Hu0p (~Hu0p@cpe-74-136-232-230.kya.res.rr.com) has quit (Client Quit)
+2018-03-21 11:00:58	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 264 seconds)
+2018-03-21 11:01:05	<--	neutraltone (~neutralto@139.59.186.35) has quit (Quit: ZNC 1.6.5 - http://znc.in)
+2018-03-21 11:03:52	<--	Nizumzen (~Nizumzen@cpc120314-reig6-2-0-cust190.6-3.cable.virginm.net) has quit (Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/)
+2018-03-21 11:04:03	-->	raynold (uid201163@gateway/web/irccloud.com/x-fdcmhobzwvcxntlu) has joined #css
+2018-03-21 11:04:06	-->	Nizumzen (~Nizumzen@cpc120314-reig6-2-0-cust190.6-3.cable.virginm.net) has joined #css
+2018-03-21 11:09:58	<--	realnot (~realnot@unaffiliated/realnot) has quit (Ping timeout: 240 seconds)
+2018-03-21 11:09:59	<--	morenoh149 (~hmoreno@ool-435618ca.dyn.optonline.net) has quit (Ping timeout: 276 seconds)
+2018-03-21 11:10:43	<--	azrail (~mailbox@92.255.253.8) has quit (Read error: Connection reset by peer)
+2018-03-21 11:11:05	-->	azrail (~mailbox@92.255.253.8) has joined #css
+2018-03-21 11:11:51	-->	Darren (~textual@wnpgmb0903w-ds01-93-186.dynamic.bellmts.net) has joined #css
+2018-03-21 11:14:28	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 11:17:14	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 11:18:48	-->	Mattiaslndstrm (~Mattiasln@2806:103e:9:98ab:d8cc:161d:c7ae:a148) has joined #css
+2018-03-21 11:18:58	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 264 seconds)
+2018-03-21 11:19:05	-->	no_gravity (~no_gravit@unaffiliated/no-gravity/x-0632109) has joined #css
+2018-03-21 11:19:26	no_gravity	Is there meanwhile a solution to scale a word so it fits into a container?
+2018-03-21 11:20:22	<--	jomofcw (~jomofcw@unaffiliated/jomofcw) has quit
+2018-03-21 11:22:10	-->	carro7 (~salad@unaffiliated/salad) has joined #css
+2018-03-21 11:23:19	<--	Mattiaslndstrm (~Mattiasln@2806:103e:9:98ab:d8cc:161d:c7ae:a148) has quit (Client Quit)
+2018-03-21 11:23:33	<--	Neo4 (~Thunderbi@0-150-200-46.pool.ukrtel.net) has quit (Quit: Neo4)
+2018-03-21 11:25:33	<--	salad (~salad@unaffiliated/salad) has quit (Ping timeout: 240 seconds)
+2018-03-21 11:26:00	<--	johnflux (~johnflux@konversation/developer/JohnFlux) has quit
+2018-03-21 11:26:06	bin_bash	font-size?
+2018-03-21 11:26:12	bin_bash	oh you mean like
+2018-03-21 11:26:17	bin_bash	max-size:100% or something
+2018-03-21 11:26:26	-->	brontosaurusrex (~ticho@unaffiliated/brontosaurusrex) has joined #css
+2018-03-21 11:26:38	-->	bradfordli123 (~bradfordl@65.204.229.97) has joined #css
+2018-03-21 11:26:53	<--	Rhaal (~Rhaal@79.8.0.180) has quit (Ping timeout: 256 seconds)
+2018-03-21 11:26:55	stennowork	i don't think there is one
+2018-03-21 11:27:03	stennowork	at least no straightforward one
+2018-03-21 11:27:13	<--	Popzi (~Thunderbi@unaffiliated/popzi) has quit (Quit: Popzi)
+2018-03-21 11:27:17	bin_bash	yea i dont think so
+2018-03-21 11:27:45	stennowork	hunboy showed a hack for this using element magicery
+2018-03-21 11:27:47	no_gravity	I mean make a text as big as its container.
+2018-03-21 11:27:50	stennowork	but its like only for ff
+2018-03-21 11:27:57	<--	floppydh_ (floppydh@gateway/vpn/privateinternetaccess/floppydh) has quit (Ping timeout: 264 seconds)
+2018-03-21 11:28:24	-->	buff3r (~andrew@75-175-15-91.ptld.qwest.net) has joined #css
+2018-03-21 11:28:57	stennowork	it maybe works if the container has a rem width/height?
+2018-03-21 11:29:37	preaction	SVG
+2018-03-21 11:29:40	no_gravity	Via JS one could measure the width and then calculate a new width.
+2018-03-21 11:30:10	stennowork	oh yeah svg is one that it is at least compatible with modern browsers
+2018-03-21 11:30:19	stennowork	but thats probably not what no_gravity wants
+2018-03-21 11:30:42	no_gravity	Hmm... feels a bit ugly to use SVG. But maybe it's a nice solution.
+2018-03-21 11:30:50	preaction	i tend to use vw/vmax to get some responsiveness out of font sizes, but svg is the current best practice
+2018-03-21 11:30:58	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 264 seconds)
+2018-03-21 11:31:29	garyserj	I am looking at this website, http://lbh.neowebservices.co.uk/ there is a widget at the top for changing font size and colour.  I can't find the css file that has the styling for that thing
+2018-03-21 11:31:34	stennowork	vw would work only if the container is also vw - it basically leads to having to set the height specifically anyway
+2018-03-21 11:32:10	no_gravity	Whats the shortest code to show a text via svg?
+2018-03-21 11:32:56	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 11:33:08	preaction	garyserj: <link id="themecss_primary"
+2018-03-21 11:33:26	preaction	garyserj: click the button and see that element change
+2018-03-21 11:33:41	-->	sammyg (~sammyg@unaffiliated/sammyg) has joined #css
+2018-03-21 11:33:50	<--	xall_ (~xall@ip72-223-14-166.ph.ph.cox.net) has quit (Quit: xall_)
+2018-03-21 11:33:52	preaction	not the way i'd've done it, but it works fine. i'd've went with a class on <body> that changes based on the theme
+2018-03-21 11:34:12	stennowork	<svg><text>hello</text></svg>
+2018-03-21 11:34:21	-->	Mattiaslndstrm (~Mattiasln@2806:103e:9:98ab:d8cc:161d:c7ae:a148) has joined #css
+2018-03-21 11:34:32	<--	mohsen_ (~Mohsen@89.45.57.47) has quit (Remote host closed the connection)
+2018-03-21 11:35:06	<--	ferdna (~ferdna@68.73.71.246) has quit (Quit: Leaving)
+2018-03-21 11:35:13	-->	DrMedRasen_ (~DrMedRase@200116b822f313004018fb3a70fe0746.dip.versatel-1u1.de) has joined #css
+2018-03-21 11:35:32	<--	AdamPDotty1 (~Adium@62.217.42.145) has quit (Quit: Leaving.)
+2018-03-21 11:35:54	<--	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has quit (Quit: inabit. zz.)
+2018-03-21 11:35:59	no_gravity	stennowork: Does not show anything in Chromium.
+2018-03-21 11:36:10	-->	realnot (~realnot@unaffiliated/realnot) has joined #css
+2018-03-21 11:36:13	-->	beatzz_ (~beatzz@240f:83:d77a:1:a89a:9360:2e39:a97a) has joined #css
+2018-03-21 11:36:33	stennowork	no_gravity, https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text
+2018-03-21 11:36:47	stennowork	needs some dimensions i guess
+2018-03-21 11:36:57	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 240 seconds)
+2018-03-21 11:37:08	stennowork	you should be able to set those with css but not sure
+2018-03-21 11:37:17	-->	Akinator (~AkinatorU@2607:5300:100:200::a97) has joined #css
+2018-03-21 11:37:17	<--	DrMedRasen (~DrMedRase@200116b822f313004018fb3a70fe0746.dip.versatel-1u1.de) has quit (Ping timeout: 276 seconds)
+2018-03-21 11:37:24	-->	Onwarion (~Onwarion@unaffiliated/onwarion) has joined #css
+2018-03-21 11:37:51	-->	mohsen_ (~Mohsen@89.45.57.47) has joined #css
+2018-03-21 11:37:57	<--	eldritchreality (irssi@2400:8900::f03c:91ff:fe56:1423) has quit (Ping timeout: 276 seconds)
+2018-03-21 11:37:57	<--	TheCowboy (sid130777@gateway/web/irccloud.com/x-tgzqegqehlavsfcc) has quit (Ping timeout: 276 seconds)
+2018-03-21 11:38:05	<--	sparr (~sparr@2604:a880:800:10::103:f001) has quit (Changing host)
+2018-03-21 11:38:05	-->	sparr (~sparr@pdpc/supporter/active/sparr) has joined #css
+2018-03-21 11:38:17	-->	eldritchreality (irssi@2400:8900::f03c:91ff:fe56:1423) has joined #css
+2018-03-21 11:38:35	<--	raynold (uid201163@gateway/web/irccloud.com/x-fdcmhobzwvcxntlu) has quit (Ping timeout: 276 seconds)
+2018-03-21 11:38:36	<--	beatzz (~beatzz@240f:83:d77a:1:68d7:b914:be81:baf2) has quit (Ping timeout: 276 seconds)
+2018-03-21 11:38:36	<--	zack6849 (zack6849@unaffiliated/zack6849) has quit (Ping timeout: 276 seconds)
+2018-03-21 11:38:44	<--	mohsen_ (~Mohsen@89.45.57.47) has quit (Max SendQ exceeded)
+2018-03-21 11:39:01	-->	zack6849 (zack6849@zack6849.com) has joined #css
+2018-03-21 11:39:01	<--	zack6849 (zack6849@zack6849.com) has quit (Changing host)
+2018-03-21 11:39:01	-->	zack6849 (zack6849@unaffiliated/zack6849) has joined #css
+2018-03-21 11:39:42	-->	mohsen_ (~Mohsen@89.45.57.47) has joined #css
+2018-03-21 11:39:53	no_gravity	Hmm.. not so happy to go the route of SVG.
+2018-03-21 11:40:05	-->	raynold (uid201163@gateway/web/irccloud.com/x-aisuhbxuykfvuwct) has joined #css
+2018-03-21 11:40:13	preaction	your other choice is JS, like you already said
+2018-03-21 11:40:14	no_gravity	Can I detect if overflow happens?
+2018-03-21 11:40:20	-->	TheCowboy (sid130777@gateway/web/irccloud.com/x-zfpouzkyzrhurvvz) has joined #css
+2018-03-21 11:40:21	stennowork	then, yes, your question must be answered that there is no decent way to achieve with css what you want
+2018-03-21 11:40:34	no_gravity	Then I could scale it downward unless it fits. Might even look nice in this case.
+2018-03-21 11:41:32	<--	strike_ (~strike@95.151.48.215) has quit (Remote host closed the connection)
+2018-03-21 11:42:05	-->	strike_ (~strike@95.151.48.215) has joined #css
+2018-03-21 11:42:49	<--	Suchorski (~regex@unaffiliated/suchorski) has quit
+2018-03-21 11:43:24	-->	Meteor0ID (~Prometeor@2001:980:70f6:1:cae:23d7:7a00:705e) has joined #css
+2018-03-21 11:45:07	<--	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has quit (Remote host closed the connection)
+2018-03-21 11:45:31	-->	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has joined #css
+2018-03-21 11:48:48	<--	Northwoods (~Northwood@103.223.9.218) has quit (Remote host closed the connection)
+2018-03-21 11:49:28	-->	Northwoods (~Northwood@103.223.9.218) has joined #css
+2018-03-21 11:51:12	<--	realnot (~realnot@unaffiliated/realnot) has quit (Ping timeout: 268 seconds)
+2018-03-21 11:52:17	<--	dr3w_ (~dr3w_@abercs/dr3w) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 11:52:27	<--	Northwoods (~Northwood@103.223.9.218) has quit (Client Quit)
+2018-03-21 11:53:17	<--	innovati (~innovati@209-195-85-150.cpe.distributel.net) has quit (Quit: My MacBook Air has gone to sleep. ZZZzzz…)
+2018-03-21 11:55:49	-->	rakm (~rakm@17.45.126.229) has joined #css
+2018-03-21 11:57:26	-->	realnot (~realnot@unaffiliated/realnot) has joined #css
+2018-03-21 11:57:58	-->	CodeMouse92__ (~JasonMc92@unaffiliated/codemouse) has joined #css
+2018-03-21 11:59:13	<--	stennowork (~stenno@unaffiliated/chao) has quit (Quit: Leaving)
+2018-03-21 11:59:21	<--	mohsen_ (~Mohsen@89.45.57.47) has quit (Quit: Leaving)
+2018-03-21 12:00:39	<--	no_gravity (~no_gravit@unaffiliated/no-gravity/x-0632109) has quit (Quit: leaving)
+2018-03-21 12:01:23	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 12:02:06	-->	Xatenev (~Xatenev@business-90-187-21-89.pool2.vodafone-ip.de) has joined #css
+2018-03-21 12:04:07	garyserj	say I have a row of links .. how can I make them all centralized?
+2018-03-21 12:05:29	garyserj	https://jsfiddle.net/mj9qbcfe/
+2018-03-21 12:05:42	Xatenev	hello
+2018-03-21 12:09:26	<--	SwiftMatt (~Objective@2601:282:4300:3e:b041:303e:79dc:911) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2018-03-21 12:09:40	-->	innovati (~innovati@205.189.187.4) has joined #css
+2018-03-21 12:09:45	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 12:09:57	Xatenev	https://bpaste.net/show/5795175529ed
+2018-03-21 12:09:59	-->	darkSeid (~textual@2a02:c7d:281c:e200:f86c:1289:6651:3e00) has joined #css
+2018-03-21 12:10:04	Xatenev	dev tools dont show the keyframes
+2018-03-21 12:10:41	Xatenev	whys that
+2018-03-21 12:10:51	Xatenev	I tried to copy an effect from here https://www.minimamente.com/example/magic_animations/
+2018-03-21 12:10:52	Xatenev	(magic)
+2018-03-21 12:13:19	Xatenev	thykka, halp!
+2018-03-21 12:13:21	Xatenev	thykka, :P
+2018-03-21 12:14:29	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 256 seconds)
+2018-03-21 12:15:57	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 264 seconds)
+2018-03-21 12:15:59	<--	dreh (~dreh@205.210.184.16) has quit (Ping timeout: 260 seconds)
+2018-03-21 12:17:33	-->	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has joined #css
+2018-03-21 12:18:01	<--	Meteor0ID (~Prometeor@2001:980:70f6:1:cae:23d7:7a00:705e) has quit (Ping timeout: 252 seconds)
+2018-03-21 12:18:15	V7	Could anyone help with this one ? https://jsfiddle.net/k20za7yz/3/
+2018-03-21 12:18:16	V7	Is it possible to leave paddings, but also don't let edit be out of div ?
+2018-03-21 12:18:59	-->	Ridley5 (~kvirc@197.2.53.114) has joined #css
+2018-03-21 12:18:59	<--	Ridley5 (~kvirc@197.2.53.114) has quit (Changing host)
+2018-03-21 12:18:59	-->	Ridley5 (~kvirc@unaffiliated/ridley5) has joined #css
+2018-03-21 12:20:11	<--	philwills (~willsp@c-73-140-55-106.hsd1.wa.comcast.net) has quit (Ping timeout: 268 seconds)
+2018-03-21 12:21:27	-->	daN-R-G (~daN-R-G@2a02:908:d80:58a0:4d62:2b24:e06:4b7) has joined #css
+2018-03-21 12:27:40	<--	Fexco (~alex.fex@76.77.80.103) has quit (Ping timeout: 265 seconds)
+2018-03-21 12:28:15	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 12:28:39	<--	Mattiaslndstrm (~Mattiasln@2806:103e:9:98ab:d8cc:161d:c7ae:a148) has quit (Ping timeout: 252 seconds)
+2018-03-21 12:29:06	hunboy	V7, https://jsfiddle.net/k20za7yz/7/
+2018-03-21 12:31:35	<--	x2xx3x (~x2xx3x@2a02:8388:580:3400:6cd9:24ae:aa1b:58e1) has quit (Remote host closed the connection)
+2018-03-21 12:32:40	-->	tpanarch1st (~tpanarch1@unaffiliated/tpanarch1st) has joined #css
+2018-03-21 12:33:02	-->	Mattiaslndstrm (~Mattiasln@189.162.185.53) has joined #css
+2018-03-21 12:33:11	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 276 seconds)
+2018-03-21 12:34:34	V7	Uh, hunboy, thank you very much
+2018-03-21 12:34:44	V7	Btw why this box-sizing is so necessary ?
+2018-03-21 12:34:53	<--	damian (~damian@unaffiliated/damian) has quit (Ping timeout: 252 seconds)
+2018-03-21 12:36:18	preaction	garyserj: https://jsfiddle.net/mj9qbcfe/48/
+2018-03-21 12:37:12	-->	James0r (~James0r@c-71-198-216-89.hsd1.ca.comcast.net) has joined #css
+2018-03-21 12:37:37	preaction	`live @ Xatenev
+2018-03-21 12:37:38	Selvvir	Xatenev, Please provide a live page or a working demonstration of your problem to make it possible to debug. If it's local or private, copy your HTML and CSS into a `testcase in a `paste server like http://jsfiddle.net or http://codepen.io. Screenshots and plain text code pastes are difficult to debug.
+2018-03-21 12:37:57	<--	mezod (~mezod@unaffiliated/mezod) has quit (Remote host closed the connection)
+2018-03-21 12:37:57	preaction	`css box @ V7
+2018-03-21 12:37:57	Selvvir	V7, The CSS Box Model https://developer.mozilla.org/en-US/docs/Web/CSS/box_model
+2018-03-21 12:38:06	<--	Xatenev (~Xatenev@business-90-187-21-89.pool2.vodafone-ip.de) has quit (Quit: Leaving)
+2018-03-21 12:38:25	V7	Thank you preaction
+2018-03-21 12:38:41	<--	bongjovi (~bongjovi@87.224.97.75) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2018-03-21 12:39:27	-->	qwebirc66746 (c0ded767@gateway/web/freenode/ip.192.222.215.103) has joined #css
+2018-03-21 12:40:52	qwebirc66746	Hey folks :) I have a division that contains an img floated left and a p floated right, but since the image is too wide, it pushes the p text out of the division. How can I make the img basically "intangible" it's there and visible but doesn't affect the positioning of the other elements in the division? https://i.imgur.com/ijteyJR.png
+2018-03-21 12:40:59	qwebirc66746	Basically, letting the text overlap the image.
+2018-03-21 12:41:06	-->	\void (~void@unaffiliated/ctrlaltdev) has joined #css
+2018-03-21 12:42:08	preaction	make it a background
+2018-03-21 12:42:25	bin_bash	is that a screenshot for ants
+2018-03-21 12:42:28	-->	qwebirc90811 (c0ded767@gateway/web/freenode/ip.192.222.215.103) has joined #css
+2018-03-21 12:42:35	preaction	i'm thinking it's really that small
+2018-03-21 12:42:45	qwebirc66746	I canèt make it a background because I want the image to overlap the division sometimes. Here's a better example;https://i.imgur.com/gx8t2PN.png
+2018-03-21 12:43:03	qwebirc66746	Sec, changing browser
+2018-03-21 12:43:04	<--	qwebirc66746 (c0ded767@gateway/web/freenode/ip.192.222.215.103) has quit (Client Quit)
+2018-03-21 12:43:05		qwebirc90811 is now known as qwebirc66746
+2018-03-21 12:43:13	qwebirc66746	Back :)
+2018-03-21 12:43:29	bin_bash	you should have it one way or the other
+2018-03-21 12:43:34	bin_bash	or
+2018-03-21 12:43:36	qwebirc66746	What do you mean?
+2018-03-21 12:43:41	bin_bash	you can have a class that allows overflow, and one that doesnt
+2018-03-21 12:43:52	qwebirc66746	So overflow is what I'm looking for?
+2018-03-21 12:44:29	<--	James0r (~James0r@c-71-198-216-89.hsd1.ca.comcast.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 12:44:29	bin_bash	oh wait im looking at the wrong thing
+2018-03-21 12:44:38	bin_bash	youre talking about that circle?
+2018-03-21 12:44:46	qwebirc66746	The circle is a zero, yes.
+2018-03-21 12:44:53	qwebirc66746	It's my <p> tag :)
+2018-03-21 12:45:10	<--	brontosaurusrex (~ticho@unaffiliated/brontosaurusrex) has quit (Quit: brontosaurusrex)
+2018-03-21 12:45:17	bin_bash	well then set the parent to be display:flex
+2018-03-21 12:45:21	qwebirc66746	My HTML looks like; <div><img src="bolt.png" /><p>0</p></div>
+2018-03-21 12:45:31	qwebirc66746	OK, I'll try that - is that friendly with all modern browsers?
+2018-03-21 12:45:36	<--	luisdavidgd (~Thunderbi@190.236.206.116) has quit (Quit: luisdavidgd)
+2018-03-21 12:45:37	bin_bash	yes
+2018-03-21 12:45:40	bin_bash	`flexbox @ qwebirc66746
+2018-03-21 12:45:41	Selvvir	qwebirc66746, Read all about flexbox: http://css-tricks.com/snippets/css/a-guide-to-flexbox/ & http://jonibologna.com/flexbox-cheatsheet/ - Play with flexbox: http://flexboxin5.com/ - Game/tutorial: http://flexboxfroggy.com/
+2018-03-21 12:46:18	qwebirc66746	Hey, that did it! Kinda. I can work with this. Thanks :)
+2018-03-21 12:46:28	qwebirc66746	Actually, probably not haha. One sec.
+2018-03-21 12:48:11	qwebirc66746	Is it normal display: flex is stretching/blurring my images?
+2018-03-21 12:48:30	bin_bash	you should have img{max-width:100%;}
+2018-03-21 12:48:32	<--	kapil___ (uid36151@gateway/web/irccloud.com/x-wyqychnsdetsrbtr) has quit (Quit: Connection closed for inactivity)
+2018-03-21 12:48:35	-->	dr3w_ (~dr3w_@abercs/dr3w) has joined #css
+2018-03-21 12:48:36	-->	schooner (~schooner@24.142.48.197) has joined #css
+2018-03-21 12:49:37	-->	mjones (uid180508@gateway/web/irccloud.com/x-wwpleonshmguzkkm) has joined #css
+2018-03-21 12:49:44	-->	gingray (~gingray@46.72.83.145) has joined #css
+2018-03-21 12:50:15	-->	salad (~salad@unaffiliated/salad) has joined #css
+2018-03-21 12:50:55	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 12:52:51	-->	philwills (~willsp@c-73-140-55-106.hsd1.wa.comcast.net) has joined #css
+2018-03-21 12:53:47	<--	carro7 (~salad@unaffiliated/salad) has quit (Ping timeout: 256 seconds)
+2018-03-21 12:54:02	-->	Rhaal (~Rhaal@net-93-147-1-177.cust.vodafonedsl.it) has joined #css
+2018-03-21 12:55:54	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 12:56:52	<--	karstensrage (~karstensr@unaffiliated/karstensrage) has quit (Quit: ZNC - http://znc.in)
+2018-03-21 12:59:15	-->	x2xx3x (~x2xx3x@2a02:8388:580:3400:6cd9:24ae:aa1b:58e1) has joined #css
+2018-03-21 12:59:18	Murii|osx	Hey, how can I make a tree like this: https://hastebin.com/remulohapa.xml ?
+2018-03-21 12:59:37	-->	Stevearzh (~zzzzzzzz@unaffiliated/stevearzh) has joined #css
+2018-03-21 12:59:50	<--	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has quit (Remote host closed the connection)
+2018-03-21 13:00:11	-->	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has joined #css
+2018-03-21 13:00:19	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 260 seconds)
+2018-03-21 13:01:12	bin_bash	Murii|osx: what do youy mean...
+2018-03-21 13:01:35	Murii|osx	bin_bash I want to make a tree which will contain entries for my blog
+2018-03-21 13:01:38	Murii|osx	ROOT1 -> year
+2018-03-21 13:01:42	Murii|osx	ROOT2 -> month
+2018-03-21 13:01:57	bin_bash	uh huh
+2018-03-21 13:02:02	Murii|osx	makes sense?
+2018-03-21 13:02:10	bin_bash	what's your css question?
+2018-03-21 13:02:11	-->	carro7 (~salad@unaffiliated/salad) has joined #css
+2018-03-21 13:02:37	Murii|osx	How can I customize the ul in order to achieve that?
+2018-03-21 13:02:53	Murii|osx	Or perhaps I need something else?
+2018-03-21 13:03:21	bin_bash	use nested uls
+2018-03-21 13:03:38	Murii|osx	ok
+2018-03-21 13:05:21	-->	AtumT_ (~IRC@177.17.235.251.dynamic.adsl.gvt.net.br) has joined #css
+2018-03-21 13:05:48	<--	salad (~salad@unaffiliated/salad) has quit (Ping timeout: 256 seconds)
+2018-03-21 13:05:56	<--	callum-freenode (~callum-fr@46.101.91.197) has quit (Quit: ZNC 1.6.3 - http://znc.in)
+2018-03-21 13:06:57	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 240 seconds)
+2018-03-21 13:08:13	<--	AtumT (~IRC@177.17.235.251.dynamic.adsl.gvt.net.br) has quit (Ping timeout: 240 seconds)
+2018-03-21 13:09:31	-->	mohsen_ (~Mohsen@89.45.57.47) has joined #css
+2018-03-21 13:09:37	-->	SwiftMatt (~Objective@2601:282:4300:3e:b041:303e:79dc:911) has joined #css
+2018-03-21 13:10:14	<--	Haxxa (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has quit (Ping timeout: 260 seconds)
+2018-03-21 13:10:38	-->	Haxxa (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has joined #css
+2018-03-21 13:10:40	-->	Fexco (~alex.fex@76.77.80.103) has joined #css
+2018-03-21 13:11:41	<--	dr3w_ (~dr3w_@abercs/dr3w) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 13:13:07	-->	mezod (~mezod@unaffiliated/mezod) has joined #css
+2018-03-21 13:14:14	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 13:14:17	-->	dr3w_ (~dr3w_@abercs/dr3w) has joined #css
+2018-03-21 13:16:25	-->	degenerate (~degenerat@S0106689e199caaf4.no.shawcable.net) has joined #css
+2018-03-21 13:17:03	<--	re1 (~reiser@183.89.37.203) has quit (Read error: Connection reset by peer)
+2018-03-21 13:17:20	-->	strike__ (~strike@95.151.46.154) has joined #css
+2018-03-21 13:17:57	<--	marshall9779 (~marshall9@2603:3003:1306:7400:28c2:aa37:ffb4:3ea5) has quit (Read error: Connection reset by peer)
+2018-03-21 13:18:20	-->	marshall9779 (~marshall9@2603:3003:1306:7400:28c2:aa37:ffb4:3ea5) has joined #css
+2018-03-21 13:18:25	<--	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has quit (Ping timeout: 248 seconds)
+2018-03-21 13:18:30	<--	junktext (junktext@fsf/member/junktext) has quit (Remote host closed the connection)
+2018-03-21 13:18:57	<--	strike_ (~strike@95.151.48.215) has quit (Ping timeout: 240 seconds)
+2018-03-21 13:19:16	-->	junktext (junktext@fsf/member/junktext) has joined #css
+2018-03-21 13:19:28	-->	naki444 (~naki444@103-8-235-221.primowireless.co.nz) has joined #css
+2018-03-21 13:23:57	-->	grid- (~grid@dhcp-089-099-194-232.chello.nl) has joined #css
+2018-03-21 13:24:45	<--	drej (~drej@unaffiliated/jedimind) has quit (Ping timeout: 256 seconds)
+2018-03-21 13:24:49	<--	Fexco (~alex.fex@76.77.80.103) has quit (Ping timeout: 248 seconds)
+2018-03-21 13:26:01	<--	\void (~void@unaffiliated/ctrlaltdev) has quit (Remote host closed the connection)
+2018-03-21 13:26:09	-->	easzero (~quassel@p200300C343D97500743A4353AE1C164F.dip0.t-ipconnect.de) has joined #css
+2018-03-21 13:26:30	-->	coellobranco (~FoRcEr@240.119.165.83.dynamic.reverse-mundo-r.com) has joined #css
+2018-03-21 13:28:59	-->	\void (~void@unaffiliated/ctrlaltdev) has joined #css
+2018-03-21 13:31:57	<--	Rhaal (~Rhaal@net-93-147-1-177.cust.vodafonedsl.it) has quit (Ping timeout: 240 seconds)
+2018-03-21 13:34:39	-->	LooneyToons (63e626b4@gateway/web/freenode/ip.99.230.38.180) has joined #css
+2018-03-21 13:34:55	LooneyToons	heya folks need some help with bootstrap what does bg1, bg2, bg3 and so mean at the end of a tag?
+2018-03-21 13:36:26	<--	maks25 (~maxim@pool-173-56-208-67.nycmny.fios.verizon.net) has quit (Read error: No route to host)
+2018-03-21 13:36:31	<--	Nizumzen (~Nizumzen@cpc120314-reig6-2-0-cust190.6-3.cable.virginm.net) has quit (Quit: KVIrc 4.2.0 Equilibrium http://www.kvirc.net/)
+2018-03-21 13:36:59	<--	easzero (~quassel@p200300C343D97500743A4353AE1C164F.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2018-03-21 13:38:58	-->	junktext_ (junktext@fsf/member/junktext) has joined #css
+2018-03-21 13:39:12	Murii|osx	When I set an image as background using "url" will it autoscale based on the width of the device?
+2018-03-21 13:39:47	preaction	LooneyToons: ##bootstrap can help better with bootstrap issues, but i don't think bg1 bg2 bg3 are part of bootstrap tags
+2018-03-21 13:40:32	preaction	Murii|osx: do you mean will it resize based on the screen size? not by default. or do you mean will it download different versions based on the size? not automatically
+2018-03-21 13:40:52	<--	cagomez (~cagomez@rrcs-76-80-215-115.west.biz.rr.com) has quit (Remote host closed the connection)
+2018-03-21 13:40:59	Murii|osx	I want it to resize based on the screen size
+2018-03-21 13:41:09	<--	junktext (junktext@fsf/member/junktext) has quit (Ping timeout: 264 seconds)
+2018-03-21 13:41:20	Murii|osx	so I put a default background which is full hd but if someone who has 4k I want it to autoscale to that
+2018-03-21 13:41:51	preaction	`css background-size @ Murii|osx
+2018-03-21 13:41:51	Selvvir	Murii|osx, CSS 'background-size' property: http://www.w3.org/TR/css3-background/#the-background-size MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images
+2018-03-21 13:42:52	-->	easzero (~quassel@p200300C343D97500B8E6096EC00E0151.dip0.t-ipconnect.de) has joined #css
+2018-03-21 13:43:13	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 13:44:04	Murii|osx	preaction I did: background-size: cover
+2018-03-21 13:45:53	<--	Akinator (~AkinatorU@2607:5300:100:200::a97) has quit (Ping timeout: 240 seconds)
+2018-03-21 13:49:15	-->	morenoh14 (~harrymore@ool-435618ca.dyn.optonline.net) has joined #css
+2018-03-21 13:49:18	-->	drej (~drej@unaffiliated/jedimind) has joined #css
+2018-03-21 13:51:25	-->	Suchorski (~regex@unaffiliated/suchorski) has joined #css
+2018-03-21 13:51:53	<--	easzero (~quassel@p200300C343D97500B8E6096EC00E0151.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2018-03-21 13:53:37	<--	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has quit (Remote host closed the connection)
+2018-03-21 13:53:59	-->	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has joined #css
+2018-03-21 13:54:57	<--	kneeki (~kneeki@c-76-28-253-109.hsd1.wa.comcast.net) has quit (Ping timeout: 264 seconds)
+2018-03-21 13:56:00	<--	buff3r (~andrew@75-175-15-91.ptld.qwest.net) has quit (Ping timeout: 246 seconds)
+2018-03-21 13:56:15	-->	nahtnam (uid22411@gateway/web/irccloud.com/x-quheezdvndisoesp) has joined #css
+2018-03-21 13:56:17	-->	cagomez (~cagomez@rrcs-76-80-215-115.west.biz.rr.com) has joined #css
+2018-03-21 13:56:32	<--	cagomez (~cagomez@rrcs-76-80-215-115.west.biz.rr.com) has quit (Read error: Connection reset by peer)
+2018-03-21 13:57:17	-->	cagomez (~cagomez@rrcs-76-80-215-115.west.biz.rr.com) has joined #css
+2018-03-21 13:57:34	-->	easzero (~quassel@p200300C343D9750089DB28A129AA4C69.dip0.t-ipconnect.de) has joined #css
+2018-03-21 13:58:27	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 240 seconds)
+2018-03-21 13:58:47	-->	Meteor0ID (~Prometeor@2001:980:70f6:1:cae:23d7:7a00:705e) has joined #css
+2018-03-21 14:00:21	<--	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has quit (Remote host closed the connection)
+2018-03-21 14:00:36	<--	easzero (~quassel@p200300C343D9750089DB28A129AA4C69.dip0.t-ipconnect.de) has quit (Killed (Sigyn (Spam is off topic on freenode.)))
+2018-03-21 14:00:46	-->	Volund (~Volund@66-227-132-243.dhcp.trcy.mi.charter.com) has joined #css
+2018-03-21 14:01:52	-->	easzero (~quassel@p200300C343D9750089DB28A129AA4C69.dip0.t-ipconnect.de) has joined #css
+2018-03-21 14:02:19	-->	malc_ (~user@ppp79-139-179-26.pppoe.spdop.ru) has joined #css
+2018-03-21 14:03:10	-->	kneeki (~kneeki@c-76-28-253-109.hsd1.wa.comcast.net) has joined #css
+2018-03-21 14:03:22	<--	Meteor0ID (~Prometeor@2001:980:70f6:1:cae:23d7:7a00:705e) has quit (Ping timeout: 265 seconds)
+2018-03-21 14:03:28	<--	easzero (~quassel@p200300C343D9750089DB28A129AA4C69.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2018-03-21 14:03:44	-->	TheFuzzball (~TheFuzzba@cpc130782-camd17-2-0-cust454.know.cable.virginm.net) has joined #css
+2018-03-21 14:03:49	<--	TheFuzzball (~TheFuzzba@cpc130782-camd17-2-0-cust454.know.cable.virginm.net) has quit (Client Quit)
+2018-03-21 14:04:01	-->	easzero (~quassel@p200300C343D9750089DB28A129AA4C69.dip0.t-ipconnect.de) has joined #css
+2018-03-21 14:04:28	malc_	Perhaps someone knows how to convince PrinceXML not to break pages, I have tried @page { size ...) but with this i can only make very tall page.. is this possible at all?
+2018-03-21 14:06:41	<--	Haxxa (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has quit (Ping timeout: 256 seconds)
+2018-03-21 14:07:01	<--	kneeki (~kneeki@c-76-28-253-109.hsd1.wa.comcast.net) has quit (Read error: Connection reset by peer)
+2018-03-21 14:07:08	LooneyToons	anyknow how to make bootstrap containers take on page background?
+2018-03-21 14:07:27	preaction	LooneyToons: what do you mean "take on"? do you mean background: transparent?
+2018-03-21 14:08:06	LooneyToons	https://jsfiddle.net/h0vf8um7/1/
+2018-03-21 14:08:08	<--	Onwarion (~Onwarion@unaffiliated/onwarion) has quit (Read error: Connection reset by peer)
+2018-03-21 14:08:17	LooneyToons	see the breadcrumbs and navbar they have white, it should be the gradient
+2018-03-21 14:08:45	preaction	i'm guessing that looks nothing like your actual page
+2018-03-21 14:08:58	LooneyToons	uh yeah
+2018-03-21 14:09:02	LooneyToons	how can ya tell LOLOL
+2018-03-21 14:09:12	preaction	because there's no gradient, for one
+2018-03-21 14:09:39	-->	Haxxa (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has joined #css
+2018-03-21 14:10:22	preaction	so, the breadcrumb won't show whatever background because it sets "background: #f5f5f5. you need to set your own background on .breadcrumb
+2018-03-21 14:10:28	<--	spossiba_ (~spossiba@unaffiliated/stryx/x-3871776) has quit (Excess Flood)
+2018-03-21 14:10:56	LooneyToons	background is auto-white
+2018-03-21 14:11:05	preaction	what does that mean?
+2018-03-21 14:11:06	LooneyToons	background
+2018-03-21 14:11:23	-->	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has joined #css
+2018-03-21 14:11:59	preaction	what does "auto-white" mean?
+2018-03-21 14:12:20	-->	Fexco (~alex.fex@76.77.80.103) has joined #css
+2018-03-21 14:12:23	LooneyToons	default i'm guessing bootstrap background color
+2018-03-21 14:13:10	preaction	okay, so, like i said, you have to override the background to what you want
+2018-03-21 14:13:18	preaction	(which is transparent)
+2018-03-21 14:13:33	<--	junktext_ (junktext@fsf/member/junktext) has quit (Ping timeout: 240 seconds)
+2018-03-21 14:16:29	LooneyToons	background: transparent:?
+2018-03-21 14:16:43	preaction	yes
+2018-03-21 14:17:35	LooneyToons	nope
+2018-03-21 14:17:37	LooneyToons	won't let me
+2018-03-21 14:17:38	LooneyToons	https://jsfiddle.net/h0vf8um7/14/
+2018-03-21 14:17:42	-->	Phloxx_ (~Phloxx@200116b80a41aa00c1b4536461b7e9ae.dip.versatel-1u1.de) has joined #css
+2018-03-21 14:17:52	preaction	it still looks nothing like your page, so i can't really help
+2018-03-21 14:18:21	preaction	also, where did you put background: transparent? there is a lot of code here
+2018-03-21 14:18:42	-->	amelliaa (~amelliaa@46.166.142.216) has joined #css
+2018-03-21 14:19:09	LooneyToons	lines 303 and 306
+2018-03-21 14:19:59	preaction	neither of those are .breadcrumb
+2018-03-21 14:20:09	<--	ikcerog (~ikcerog@12.165.188.175) has quit (Quit: (⚆_⚆))
+2018-03-21 14:20:19	preaction	nor will any of this work in jsfiddle because bootstrap is in the HTML section instead of as one of the Resources
+2018-03-21 14:20:20	<--	easzero (~quassel@p200300C343D9750089DB28A129AA4C69.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2018-03-21 14:20:38	preaction	you also have to override what the .breadcrumb sets, which isn't background, it's background-color
+2018-03-21 14:22:10	-->	derstrom (~derstrom@179.189.189.80.dyn.plus.net) has joined #css
+2018-03-21 14:22:55	<--	\void (~void@unaffiliated/ctrlaltdev) has quit (Remote host closed the connection)
+2018-03-21 14:23:01	-->	Akinator (~AkinatorU@2607:5300:100:200::a97) has joined #css
+2018-03-21 14:23:23	LooneyToons	is opacity the same thing?
+2018-03-21 14:24:17	-->	salad (~salad@unaffiliated/salad) has joined #css
+2018-03-21 14:24:33	-->	\void (~void@unaffiliated/ctrlaltdev) has joined #css
+2018-03-21 14:25:39	preaction	no
+2018-03-21 14:25:50	preaction	`css opacity @ LooneyToons
+2018-03-21 14:25:51	Selvvir	LooneyToons, CSS 'opacity' property: http://www.w3.org/TR/css3-color/#transparency https://developer.mozilla.org/en-US/docs/Web/CSS/opacity
+2018-03-21 14:26:47	-->	Algebr (~user@76-14-116-229.rk.wavecable.com) has joined #css
+2018-03-21 14:27:37		morenoh14 is now known as morenoh149
+2018-03-21 14:27:47	morenoh149	is there an outline radius?
+2018-03-21 14:27:58	<--	carro7 (~salad@unaffiliated/salad) has quit (Ping timeout: 256 seconds)
+2018-03-21 14:28:04	morenoh149	I"m animating a border away and it causes the contents to grow slightly
+2018-03-21 14:28:07	morenoh149	I don't want that
+2018-03-21 14:28:36	-->	gambl0re (~gambl0re@unaffiliated/gambl0re) has joined #css
+2018-03-21 14:29:18	-->	doneus5 (~User@ppp-2-85-201-177.home.otenet.gr) has joined #css
+2018-03-21 14:29:19	-->	GreenJello (~Guest18@unaffiliated/greenjello) has joined #css
+2018-03-21 14:29:50	LooneyToons	don't apply the transition to it
+2018-03-21 14:30:07	LooneyToons	that's the only thing that would make it grow, unless its now enlarging to the size of the div its in
+2018-03-21 14:30:21	LooneyToons	so check your html tags, make sure a closing div ain't out of place
+2018-03-21 14:31:28	preaction	LooneyToons: borders are added to the width of a box, so the box takes up more space
+2018-03-21 14:31:44	preaction	morenoh149: you could probably do better with pseudo-elements, absolutely-positioned inside the box
+2018-03-21 14:32:15	morenoh149	I want to animate away the border
+2018-03-21 14:32:30	morenoh149	looks like there are a couple of solutions floating around online
+2018-03-21 14:32:51	preaction	so make the border take up no space by making it part of an absolutely-positioned element
+2018-03-21 14:33:08	-->	buff3r (~andrew@75-175-15-91.ptld.qwest.net) has joined #css
+2018-03-21 14:33:17	<--	buff3r (~andrew@75-175-15-91.ptld.qwest.net) has quit (Client Quit)
+2018-03-21 14:36:18	-->	devi8 (~jase@c-73-207-131-50.hsd1.ga.comcast.net) has joined #css
+2018-03-21 14:37:03	<--	CodeMouse92__ (~JasonMc92@unaffiliated/codemouse) has quit (Quit: Oh freddled gruntbuggly | Thy micturations are to me | As plurdled gabbleblotchits | On a lurgid bee)
+2018-03-21 14:37:18	devi8	Can someone explain why my flex-box section elements are overlapping? https://codepen.io/Devi8in/pen/JLNbXP
+2018-03-21 14:38:20	<--	Sappy (~Sappy@92.49.28.13) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2018-03-21 14:40:03	-->	tatta (2ec29043@gateway/web/freenode/ip.46.194.144.67) has joined #css
+2018-03-21 14:40:47	<--	gingray (~gingray@46.72.83.145) has quit (Remote host closed the connection)
+2018-03-21 14:42:17	preaction	devi8: mostly because main is position: absolute
+2018-03-21 14:42:26	<--	malc_ (~user@ppp79-139-179-26.pppoe.spdop.ru) has left #css ("ERC (IRC client for Emacs 27.0.50)")
+2018-03-21 14:43:10	-->	tymczenko (~tymczenko@unaffiliated/tymczenko) has joined #css
+2018-03-21 14:43:26	devi8	Okay. I can change that, but I would like to know why so I don't do it again. Any idea where to look for more info?
+2018-03-21 14:44:16	devi8	That fixed it, thanks. I'll google position:absolute and flexbox?
+2018-03-21 14:44:16	preaction	the flexboxes weren't overlapping, they were overflowing
+2018-03-21 14:45:09	tatta	Hello! I want to embed a youtube video, have it muted and autoplayed (that part I fixed with adding &mute=1&autoplay=1). But when I click it I want it to start from the beginning with sound. I hope you understand and might have a suggestion for me. :)
+2018-03-21 14:45:41	<--	dr3w_ (~dr3w_@abercs/dr3w) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 14:46:18	preaction	tatta: that's not going to work with css, and if you're using the iframe, it's not going to work at all, i suspect. you could javascript and perhaps add/remove the iframe with/without the mute=1 option
+2018-03-21 14:47:10	tatta	preaction: Currently using the iframe.
+2018-03-21 14:47:48	<--	Algebr (~user@76-14-116-229.rk.wavecable.com) has quit (Read error: Connection reset by peer)
+2018-03-21 14:48:45	<--	innovati (~innovati@205.189.187.4) has quit (Quit: My MacBook Air has gone to sleep. ZZZzzz…)
+2018-03-21 14:48:50	-->	sammyg2 (~sammyg@unaffiliated/sammyg) has joined #css
+2018-03-21 14:49:37	<--	sammyg2 (~sammyg@unaffiliated/sammyg) has quit (Remote host closed the connection)
+2018-03-21 14:50:09	tatta	preaction: I have tried to find a solution with https://developers.google.com/youtube/iframe_api_reference but I'm very new to javascript
+2018-03-21 14:51:26	-->	dr3w_ (~dr3w_@abercs/dr3w) has joined #css
+2018-03-21 14:52:16	preaction	the ##javascript channel can help you with javascript
+2018-03-21 14:52:30	<--	sammyg (~sammyg@unaffiliated/sammyg) has quit (Ping timeout: 268 seconds)
+2018-03-21 14:52:48	tatta	Thx, I'll try to post there.
+2018-03-21 14:54:49	<--	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has quit (Ping timeout: 246 seconds)
+2018-03-21 14:55:30	<--	mohsen_ (~Mohsen@89.45.57.47) has quit (Quit: Leaving)
+2018-03-21 14:55:46	-->	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has joined #css
+2018-03-21 14:56:06	<--	coellobranco (~FoRcEr@240.119.165.83.dynamic.reverse-mundo-r.com) has quit (Quit: Arch User...)
+2018-03-21 14:56:50	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 14:59:24	<--	dr3w_ (~dr3w_@abercs/dr3w) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 15:00:17	<--	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has quit (Ping timeout: 248 seconds)
+2018-03-21 15:01:45	-->	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has joined #css
+2018-03-21 15:03:49	-->	smoke_fumus (~smoke_fum@188.35.176.90) has joined #css
+2018-03-21 15:05:36	<--	tatta (2ec29043@gateway/web/freenode/ip.46.194.144.67) has quit (Quit: Page closed)
+2018-03-21 15:05:59	<--	Doginal (~agriggs@unaffiliated/doginal) has quit (Quit: Doginal)
+2018-03-21 15:06:15	raynold	ahh it's a wonderful day
+2018-03-21 15:09:45	<--	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has quit (Remote host closed the connection)
+2018-03-21 15:10:34	-->	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has joined #css
+2018-03-21 15:12:01	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 248 seconds)
+2018-03-21 15:13:52	<--	Farore (~Farore@2a04:ae0c:1802:d00:109b:136b:78b4:c783) has quit (Read error: Connection reset by peer)
+2018-03-21 15:16:06	<--	strike__ (~strike@95.151.46.154) has quit (Remote host closed the connection)
+2018-03-21 15:16:32	-->	strike__ (~strike@95.151.46.154) has joined #css
+2018-03-21 15:16:42	<--	doneus5 (~User@ppp-2-85-201-177.home.otenet.gr) has quit (Quit: Leaving)
+2018-03-21 15:17:40	-->	easzero (~easzero@p200300C343D97500E1A1A238CF2FF0E3.dip0.t-ipconnect.de) has joined #css
+2018-03-21 15:17:49	LooneyToons	i'm totally gonna smack my head against a wall
+2018-03-21 15:18:01	preaction	good luck
+2018-03-21 15:18:02	-->	innovati (~innovati@209-195-85-150.cpe.distributel.net) has joined #css
+2018-03-21 15:18:14	LooneyToons	ugh
+2018-03-21 15:18:20	bin_bash	have fun
+2018-03-21 15:18:26	LooneyToons	your allowed 12 columns in bootstrap right ?
+2018-03-21 15:18:34	preaction	##bootstrap would know
+2018-03-21 15:20:50	<--	CrypticSquared (~CrypticS_@unaffiliated/crypticsquared) has quit (Quit: Leaving...)
+2018-03-21 15:21:20	-->	CrypticSquared (~CrypticS_@unaffiliated/crypticsquared) has joined #css
+2018-03-21 15:23:02	<--	easzero (~easzero@p200300C343D97500E1A1A238CF2FF0E3.dip0.t-ipconnect.de) has quit (Quit: Leaving)
+2018-03-21 15:24:35	-->	easzero (~easzero@p200300C343D97500E1A1A238CF2FF0E3.dip0.t-ipconnect.de) has joined #css
+2018-03-21 15:24:44	-->	fission6 (~textual@2601:282:d01:a620:6098:4fdd:7f38:c64) has joined #css
+2018-03-21 15:26:03	-->	luisdavidgd (~Thunderbi@190.236.206.116) has joined #css
+2018-03-21 15:27:00	-->	leptone (~leptone@4.7.12.50) has joined #css
+2018-03-21 15:27:38	<--	\void (~void@unaffiliated/ctrlaltdev) has quit (Quit: So long, and thanks for all the fish.)
+2018-03-21 15:28:46	-->	jottr (~jottr@unaffiliated/jottr) has joined #css
+2018-03-21 15:29:51	<--	darkSeid (~textual@2a02:c7d:281c:e200:f86c:1289:6651:3e00) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-03-21 15:30:45	<--	strike__ (~strike@95.151.46.154) has quit (Remote host closed the connection)
+2018-03-21 15:30:55	-->	easzero_ (~easzero@91.109.28.153) has joined #css
+2018-03-21 15:31:06	-->	lucas_ai (~lucas_ai@181.167.127.38) has joined #css
+2018-03-21 15:31:08	<--	Rob235 (~Rob235@pool-100-35-64-150.nwrknj.fios.verizon.net) has quit (Quit: Gone to sleep...)
+2018-03-21 15:31:09	<--	OnkelTem (~onkeltem@unaffiliated/fantomas) has quit (Quit: WeeChat 1.9.1)
+2018-03-21 15:31:12	<--	easzero_ (~easzero@91.109.28.153) has quit (Read error: Connection reset by peer)
+2018-03-21 15:31:12	-->	strike__ (~strike@95.151.46.154) has joined #css
+2018-03-21 15:31:17	lucas_ai	How can I keep an image height to 51% of its width independent of its current width?
+2018-03-21 15:32:05	bin_bash	with javascript
+2018-03-21 15:32:53	preaction	is that not its aspect ratio?
+2018-03-21 15:34:05	-->	Rob235 (~Rob235@pool-100-35-64-150.nwrknj.fios.verizon.net) has joined #css
+2018-03-21 15:34:28	<--	mezod (~mezod@unaffiliated/mezod) has quit (Remote host closed the connection)
+2018-03-21 15:34:48	-->	Kocho (~Kocho@unaffiliated/kocho) has joined #css
+2018-03-21 15:34:55	<--	easzero (~easzero@p200300C343D97500E1A1A238CF2FF0E3.dip0.t-ipconnect.de) has quit (Ping timeout: 252 seconds)
+2018-03-21 15:36:24	-->	LooneyToons_ (63e626b4@gateway/web/freenode/ip.99.230.38.180) has joined #css
+2018-03-21 15:37:25	<--	dreamcat4 (uid157427@gateway/web/irccloud.com/x-njrbzwkqbfslujsu) has quit (Quit: Connection closed for inactivity)
+2018-03-21 15:37:48	-->	javlens (~javlens@66.77.82.186) has joined #css
+2018-03-21 15:38:08	<--	Phloxx_ (~Phloxx@200116b80a41aa00c1b4536461b7e9ae.dip.versatel-1u1.de) has quit (Quit: Phloxx_)
+2018-03-21 15:39:13	-->	galileo_ (~QUJAAAAAA@d216-108-171-73.nt.northwestel.net) has joined #css
+2018-03-21 15:39:22	<--	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has quit (Ping timeout: 264 seconds)
+2018-03-21 15:40:00	-->	spossiba (~spossiba@unaffiliated/stryx/x-3871776) has joined #css
+2018-03-21 15:43:05	<--	jottr (~jottr@unaffiliated/jottr) has quit (Ping timeout: 240 seconds)
+2018-03-21 15:47:13	<--	AndresInSpace (~AndresInS@50-234-15-190-static.hfc.comcastbusiness.net) has quit (Quit: Leaving)
+2018-03-21 15:48:13	<--	strike__ (~strike@95.151.46.154) has quit (Read error: Connection reset by peer)
+2018-03-21 15:48:18	innovati	lucas_ai what does your code look like - in general images usually scale in proportion
+2018-03-21 15:48:39	-->	strike__ (~strike@95.151.46.154) has joined #css
+2018-03-21 15:48:58	bin_bash	preaction: can you define aspect ratio with css?
+2018-03-21 15:49:15	preaction	not directly, not yet that i'm aware
+2018-03-21 15:49:21	innovati	indirectly via the 'padding hack', there's no 'aspect-ratio' property for CSS
+2018-03-21 15:49:46	bin_bash	would be neat if there was though
+2018-03-21 15:49:49	innovati	:3
+2018-03-21 15:50:06	-->	dr3w_ (~dr3w_@abercs/dr3w) has joined #css
+2018-03-21 15:50:18	innovati	https://jonathantneal.github.io/css-db/#aspect-ratio
+2018-03-21 15:50:26	innovati	there's a dream spec, but nothing official
+2018-03-21 15:50:28	<--	bolovanos (~bolovanos@91.201.22.5) has quit (Quit: Leaving)
+2018-03-21 15:50:37	<--	dr3w_ (~dr3w_@abercs/dr3w) has quit (Client Quit)
+2018-03-21 15:50:55	<--	dirhael (~dirhael@defreitas.no) has quit (Quit: dirhael)
+2019-04-05 22:24:09	-->	zzzeyez (~zzzeyez@ip-173-126-1-6.ftwttx.spcsdns.net) has joined #css
+2019-04-05 22:24:09		Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend :: Arbitrary chat? ##css-ot"
+2019-04-05 22:24:09		Topic set by AMcBain (~Art@047-006-242-094.res.spectrum.com) on Sat, 16 Mar 2019 15:43:59
+2019-04-05 22:24:09		Channel #css: 232 nicks (0 ops, 0 voices, 232 normals)
+2019-04-05 22:24:11		Channel created on Sat, 25 Nov 2006 23:42:45
+2019-04-05 22:26:36	<--	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has quit (Quit: maks25)
+2019-04-05 22:27:05	-->	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has joined #css
+2019-04-05 22:27:42	<--	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has quit (Client Quit)
+2019-04-05 22:28:05	-->	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has joined #css
+2019-04-05 22:28:28	<--	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has quit (Client Quit)
+2019-04-05 22:28:51	-->	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has joined #css
+2019-04-05 22:29:13	<--	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has quit (Client Quit)
+2019-04-05 22:29:36	-->	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has joined #css
+2019-04-05 22:30:00	<--	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has quit (Client Quit)
+2019-04-05 22:30:35	-->	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has joined #css
+2019-04-05 22:30:46	<--	maks25 (~maxim@222-155-104-149-fibre.sparkbb.co.nz) has quit (Client Quit)
+2019-04-05 23:00:47	-->	VioletPixel (~VioletPix@24.35.69.203) has joined #css

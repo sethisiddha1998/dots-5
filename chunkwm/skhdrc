@@ -1,17 +1,19 @@
 # new terminal
 cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "t" using command down'
 
-# wal
-rcmd + shift - e : wal -i ~/Pictures/Wallpapers -q -e -o wal-set --saturate 0.3 --backend wal & darkmode true
-lcmd + shift - e : new-roses -cq && darkmode true
-rcmd + shift - w : wal -i ~/Pictures/Wallpapers -l -q -e -o wal-set --saturate 0.4 --backend wal & darkmode false
-lcmd + shift - w : new-roses -qcl && darkmode false
-cmd + shift - s : new-roses -nq -d ~/Pictures/Wallpapers
-cmd + shift - 0 : new-roses -wq
-cmd - 0 : wallpaper 8
+# colorlovers
+lcmd + shift - e : colorlovers -n && wal-set && darkmode true
+lcmd + shift - w : colorlovers -nl && wal-set && darkmode false
+lcmd + shift - s : colorlovers -ns
+lcmd + shift - r : colorlovers -nr && wal-set
 
-# reload chunkwm
-cmd + shift - r : wal-set & chunkc core::unload tiling.so && chunkc core::load tiling.so
+# wallpaper
+rcmd + shift - e : wal -i ~/Pictures/Wallpapers -q -e -o wal-set --saturate 0.3 --backend wal & darkmode true
+rcmd + shift - w : wal -i ~/Pictures/Wallpapers -l -q -e -o wal-set --saturate 0.4 --backend wal & darkmode false
+rcmd + shift - s : new-roses -ns ~/Pictures/Wallpapers
+rcmd + shift - r : wallpaper ~/pictures/wallpapers
+cmd + shift - 0 : new-roses
+cmd - 0 : wallpaper 2
 
 # focus window
 cmd - left : chunkc tiling::window --focus west

@@ -1,0 +1,3 @@
+2018-05-03 02:00:10	sobrieti	(ud [term]) -- Look up <term> on Urban Dictionary.
+2018-05-03 02:00:21	zzzeyez	.help dict
+2018-05-03 02:00:21	sobrieti	(dict [<dictionary>] <word>) -- Looks up the definition of <word> on the dictd server specified by the supybot.plugins.Dict.server config variable. 

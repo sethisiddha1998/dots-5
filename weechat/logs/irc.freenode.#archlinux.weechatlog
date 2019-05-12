@@ -1,0 +1,413 @@
+2019-04-06 19:35:31	-->	zzzeyez (~zzzeyez@ip-173-126-102-254.ftwttx.spcsdns.net) has joined #archlinux
+2019-04-06 19:35:31		Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | https://i.imgflip.com/nwm8q.jpg | Happy 17th birthday Arch - may you have the great feature of many more broken installations"
+2019-04-06 19:35:31		Topic set by alad (~alad@archlinux/trusteduser/alad) on Mon, 11 Mar 2019 09:44:32
+2019-04-06 19:35:31		Channel #archlinux: 1784 nicks (2 ops, 0 voices, 1782 normals)
+2019-04-06 19:35:32		Channel created on Sat, 14 Feb 2004 22:08:31
+2019-04-06 19:36:43	-->	Ruxnor (~ruxnor@lopez-snowhill.net) has joined #archlinux
+2019-04-06 19:36:47	-->	blu3r4d0n (~philip@qutebrowser/user/blu3r4d0n) has joined #archlinux
+2019-04-06 19:36:48	yans	What's up, archwizard & sm0g.
+2019-04-06 19:37:25	-->	brendyyn (~brendyn@14.2.177.164) has joined #archlinux
+2019-04-06 19:37:27	<--	hardfalcon_ (~hardfalco@x4e314a65.dyn.telefonica.de) has quit (Ping timeout: 240 seconds)
+2019-04-06 19:39:43	<--	mquy90 (~textual@78-73-133-207-no92.tbcn.telia.com) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2019-04-06 19:39:44	-->	homerj (~homerj@april-fools/2013/second/homerj) has joined #archlinux
+2019-04-06 19:40:15	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Read error: Connection reset by peer)
+2019-04-06 19:41:15	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #archlinux
+2019-04-06 19:41:20	<--	mrbanie (~mrbanie@unaffiliated/mrbanie) has quit (Ping timeout: 258 seconds)
+2019-04-06 19:42:12	sm0g	Just hanging out yans, you?
+2019-04-06 19:43:37	yans	sm0g, I just back from work. So im chillin as well. Almost 4 AM btw.
+2019-04-06 19:44:31	-->	Plasma_000 (~textual@hassia.lnk.telstra.net) has joined #archlinux
+2019-04-06 19:45:20	sm0g	Oof. Maybe go to bed? lol
+2019-04-06 19:45:30	Edu4rdSHL	What should be the proper kind of bond network in order to take advantaje in speed terms of two (wired and wireless) cards?
+2019-04-06 19:45:32	-->	flippy (~jerwin@2604:2d80:8418:8767::1000) has joined #archlinux
+2019-04-06 19:46:16	<--	Zorton_ (~Zorton@unaffiliated/zorton) has quit (Quit: PLL Unlocked)
+2019-04-06 19:46:24	Edu4rdSHL	Probably broadcast?
+2019-04-06 19:46:38	<--	sm0g (~sm0g@unaffiliated/sm0g) has quit (Quit: WeeChat 2.3-dev)
+2019-04-06 19:47:01	-->	sm0g (~sm0g@unaffiliated/sm0g) has joined #archlinux
+2019-04-06 19:47:07	<--	woshty (~woshty@unaffiliated/woshty) has quit (Ping timeout: 245 seconds)
+2019-04-06 19:47:15	 *	yans listening Eric Clapton.
+2019-04-06 19:47:27	yans	sm0g, so i can't :)
+2019-04-06 19:47:59	Plasma_000	my arch install has stopped being able to resolve hostnames. is anyone able to help me?
+2019-04-06 19:48:48	<--	charlie5 (~rod@pa49-181-206-73.pa.nsw.optusnet.com.au) has quit (Ping timeout: 245 seconds)
+2019-04-06 19:49:09	Edu4rdSHL	What network manager are you using?
+2019-04-06 19:50:29	Plasma_000	i am connected through ethernet, but i have networknamager installed
+2019-04-06 19:51:00	Plasma_000	i have an ip, and can ping 1.1.1.1
+2019-04-06 19:51:03	-->	Zorton-1 (~Zorton@unaffiliated/zorton) has joined #archlinux
+2019-04-06 19:51:04	Plasma_000	but not resolve any hostnames
+2019-04-06 19:51:25	Plasma_000	everything else on the network can
+2019-04-06 19:51:53	<--	Zorton-1 (~Zorton@unaffiliated/zorton) has quit (Client Quit)
+2019-04-06 19:52:06	-->	zorton (~zorton@unaffiliated/zorton) has joined #archlinux
+2019-04-06 19:52:36	Edu4rdSHL	Restart the network manager service and see journalctl -r logs
+2019-04-06 19:52:42	-->	DoXer (~DoXer67@p54A3EB33.dip0.t-ipconnect.de) has joined #archlinux
+2019-04-06 19:52:42	Edu4rdSHL	You've DNSSEC enabled?
+2019-04-06 19:53:14	Edu4rdSHL	Plasma_000, try: drill @9.9.9.9 archlinux.org
+2019-04-06 19:53:51	Plasma_000	Edu4rdSHL that worked
+2019-04-06 19:54:03	Plasma_000	the drill
+2019-04-06 19:54:08	coderobe	what's in /etc/resolv.conf
+2019-04-06 19:54:11	Edu4rdSHL	It's a DNS issue.
+2019-04-06 19:54:32	Plasma_000	coderobe it just has my router as nameserver
+2019-04-06 19:54:37	Plasma_000	my router is pointing to 1.1.1.1
+2019-04-06 19:54:47	-->	hardfalcon (~hardfalco@x5d857384.dyn.telefonica.de) has joined #archlinux
+2019-04-06 19:55:04	Edu4rdSHL	Still you need to use a DNS in your system
+2019-04-06 19:55:25	Edu4rdSHL	s/use/set
+2019-04-06 19:55:44	Plasma_000	how?
+2019-04-06 19:55:54	<--	DoXer67 (~DoXer67@p2E52D64A.dip0.t-ipconnect.de) has quit (Ping timeout: 258 seconds)
+2019-04-06 19:56:02	Edu4rdSHL	!give Plasma_000 aw NetworkManager
+2019-04-06 19:56:03	@phrik	Plasma_000: NetworkManager - https://wiki.archlinux.org/index.php/NetworkManager
+2019-04-06 19:57:00	-->	DrD33M (~DrD33M@16.165.141.112.sta.dodo.net.au) has joined #archlinux
+2019-04-06 19:57:48	Plasma_000	i dont have networkmanager.service...
+2019-04-06 19:58:46	Edu4rdSHL	It's NetworkManager.service
+2019-04-06 19:59:13	-->	mrbanie (~mrbanie@unaffiliated/mrbanie) has joined #archlinux
+2019-04-06 19:59:27	Plasma_000	oh
+2019-04-06 19:59:34	<--	goodafternoon (~goodafter@185.93.183.164) has quit (Remote host closed the connection)
+2019-04-06 20:00:31	<--	Ruxnor (~ruxnor@lopez-snowhill.net) has quit (Quit: The Lounge - https://thelounge.chat)
+2019-04-06 20:00:39	<--	protosoul (~protosoul@host109-150-70-220.range109-150.btcentralplus.com) has quit (Ping timeout: 244 seconds)
+2019-04-06 20:00:49	-->	Ruxnor (~ruxnor@lopez-snowhill.net) has joined #archlinux
+2019-04-06 20:00:57	<--	jkowalski (uid171740@gateway/web/irccloud.com/x-aottpwcbzzxrvbyy) has quit (Quit: Connection closed for inactivity)
+2019-04-06 20:01:03	<--	hashworks (~hashworks@unaffiliated/hashworks) has quit (Quit: Jack of all trades, master of none, certainly better than a master of one.)
+2019-04-06 20:01:24	-->	hashworks (~hashworks@unaffiliated/hashworks) has joined #archlinux
+2019-04-06 20:01:24	<--	kelnoky (~shao@31.18.184.189) has quit (Quit: WeeChat 2.4)
+2019-04-06 20:01:27	<--	Ruxnor (~ruxnor@lopez-snowhill.net) has quit (Client Quit)
+2019-04-06 20:01:47	-->	Ruxnor (~ruxnor@lopez-snowhill.net) has joined #archlinux
+2019-04-06 20:02:22	Plasma_000	im looking at the NM wiki page, but i cant really see how to set my dns using it...
+2019-04-06 20:02:30	-->	protosoul (~protosoul@host109-150-70-220.range109-150.btcentralplus.com) has joined #archlinux
+2019-04-06 20:02:31	-->	plusone (~plusone@176.27.20.105) has joined #archlinux
+2019-04-06 20:02:40	<--	Ruxnor (~ruxnor@lopez-snowhill.net) has quit (Client Quit)
+2019-04-06 20:02:59	-->	Ruxnor (~ruxnor@lopez-snowhill.net) has joined #archlinux
+2019-04-06 20:03:10	-->	charlie5 (~rod@pa49-181-249-135.pa.nsw.optusnet.com.au) has joined #archlinux
+2019-04-06 20:04:05	<--	tschan (~tschan@p549868C6.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-04-06 20:05:22	Plasma_000	also it has been working until very recently, and i think it was using systemd-resolved for the dns
+2019-04-06 20:05:35	Knova11	Did you disable systemd-resolved?
+2019-04-06 20:05:57	-->	kode54 (~chris@lopez-snowhill.net) has joined #archlinux
+2019-04-06 20:06:07	-->	kjdfs3 (bloodwire@gateway/vpn/privateinternetaccess/bloodwire) has joined #archlinux
+2019-04-06 20:07:04	<--	Tazmain (~Tazmain@unaffiliated/tazmain) has quit (Quit: Left)
+2019-04-06 20:07:29	Plasma_000	hmm, when i changed /etc/resolv.conf to  point to 1.1.1.1 instead of my router it started resolving hosts
+2019-04-06 20:08:06	yvyz	Thats because your dns resolving services look at /etc/resolv.conf or in some cases manage /etc/resolv.conf.
+2019-04-06 20:08:23	<--	plusone (~plusone@176.27.20.105) has quit (Quit: plusone)
+2019-04-06 20:08:24	<--	fyrgebraec (~enceladus@ppp-seco11pareq2-46-193-128-247.wb.wifirst.net) has quit (Ping timeout: 250 seconds)
+2019-04-06 20:08:33	yvyz	Plasma_000: Plz ref: https://wiki.archlinux.org/index.php/Domain_name_resolution
+2019-04-06 20:08:34	@phrik	Title: Domain name resolution - ArchWiki (at wiki.archlinux.org)
+2019-04-06 20:09:01	-->	tschan (~tschan@p57A86681.dip0.t-ipconnect.de) has joined #archlinux
+2019-04-06 20:09:37	yvyz	If you do not want to be dynamic about it, and just want to point to 1.1.1.1 or know it will never change after you set some dns record in /etc/resolv.conf excecute `sudo chattr +i /etc/resolv.conf`
+2019-04-06 20:10:11	Plasma_000	i was hoping for dynamic
+2019-04-06 20:10:28	Plasma_000	let me just find out for sure if im using networkmanager or systemd 1 sec
+2019-04-06 20:10:28	yvyz	That command will make /etc/resolv.conf unwriteable. 
+2019-04-06 20:10:28	-->	andyhoang1 (~andyhoang@2001:ee0:500f:3310:18d0:16ad:c813:b946) has joined #archlinux
+2019-04-06 20:10:51	yvyz	THen I suggest you use something along the lines of resolvconf so that dhcpcd/dhclient and nm can all write to it dynamically
+2019-04-06 20:10:53	<--	sudoforge (~sudoforge@c-73-71-179-96.hsd1.ca.comcast.net) has quit (Ping timeout: 245 seconds)
+2019-04-06 20:12:13	-->	sadmansk (~Thunderbi@toroon0335w-lp130-03-174-93-84-52.dsl.bell.ca) has joined #archlinux
+2019-04-06 20:14:04	Plasma_000	when i do nmcli it gives me: DNS configuration:
+2019-04-06 20:14:04	Plasma_000	        servers: 10.1.1.1
+2019-04-06 20:14:05	Plasma_000	        interface: enp6s0
+2019-04-06 20:14:13	Plasma_000	which is correctly pointing to my router
+2019-04-06 20:15:05	Prestige	Is there any way to globally source an .xprofile without restarting the x session?
+2019-04-06 20:18:47	<--	Plasma_000 (~textual@hassia.lnk.telstra.net) has quit (Ping timeout: 245 seconds)
+2019-04-06 20:19:57	-->	Scotty_Trees (~Scotty_Tr@user-24-96-5-46.knology.net) has joined #archlinux
+2019-04-06 20:19:58	<--	perrier-jouet (~perrier-j@modemcable012.251-130-66.mc.videotron.ca) has quit (Quit: WeeChat 2.4)
+2019-04-06 20:20:55	-->	Plasma_0_ (~textual@hassia.lnk.telstra.net) has joined #archlinux
+2019-04-06 20:21:01	Plasma_0_	test
+2019-04-06 20:21:20	Plasma_0_	sorry, tecnical problems
+2019-04-06 20:22:19	<--	Plasma_0_ (~textual@hassia.lnk.telstra.net) has left #archlinux
+2019-04-06 20:23:00	-->	Plasma_000 (~textual@hassia.lnk.telstra.net) has joined #archlinux
+2019-04-06 20:23:10	Plasma_000	whoops
+2019-04-06 20:23:52	<--	coldfish_ (~coldfish@c-d37ce655.027-26-74686e1.bbcust.telenor.se) has quit (Read error: Connection reset by peer)
+2019-04-06 20:23:58	-->	tassee (~tasse@55d46050.access.ecotel.net) has joined #archlinux
+2019-04-06 20:24:09	-->	dt23 (~horst@gateway/tor-sasl/dt23) has joined #archlinux
+2019-04-06 20:25:16	<--	tasse (~tasse@55d49652.access.ecotel.net) has quit (Ping timeout: 246 seconds)
+2019-04-06 20:25:16	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Read error: Connection reset by peer)
+2019-04-06 20:25:16		tassee is now known as tasse
+2019-04-06 20:26:20	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #archlinux
+2019-04-06 20:26:50	altgray	Prestige: . .xprofile
+2019-04-06 20:27:11	<--	rafasc (~rafasc@unaffiliated/rafasc) has quit (Quit: WeeChat 2.4)
+2019-04-06 20:27:39	<--	dt23_ (~horst@gateway/tor-sasl/dt23) has quit (Ping timeout: 256 seconds)
+2019-04-06 20:27:47	Prestige	Isn't that just for the current shell altgray ?
+2019-04-06 20:28:42	<--	himmijimmy (~himmijimm@2a02:560:424f:9d00:c5:9ff:fe81:6af3) has quit (Ping timeout: 264 seconds)
+2019-04-06 20:29:04	<--	Momentum (~flurt@unaffiliated/momentum) has quit (Ping timeout: 252 seconds)
+2019-04-06 20:29:28	yvyz	.xprofile is executed at the beginning of every xsession loaded by gdm, lightdm, lxdm, sddm, if you do no use xorg-xinit. They virtually serve the same function
+2019-04-06 20:29:34	-->	xirhtogal (~lagothrix@unaffiliated/lagothrix) has joined #archlinux
+2019-04-06 20:29:34	<--	lagothrix (~lagothrix@unaffiliated/lagothrix) has quit (Killed (kornbluth.freenode.net (Nickname regained by services)))
+2019-04-06 20:29:34		xirhtogal is now known as lagothrix
+2019-04-06 20:29:43	yvyz	Prestige: https://wiki.archlinux.org/index.php/xprofile
+2019-04-06 20:29:43	@phrik	Title: xprofile - ArchWiki (at wiki.archlinux.org)
+2019-04-06 20:29:51	Prestige	I read the wiki
+2019-04-06 20:30:24	yvyz	"Globally source an .xprofile without restarting your xsession" ?
+2019-04-06 20:30:26	-->	himmijimmy (~himmijimm@2a02:560:42c1:4e00:c5:9ff:fe81:6af3) has joined #archlinux
+2019-04-06 20:30:41	yvyz	You want a fixed session for all users?
+2019-04-06 20:30:46	yvyz	Or a fixed config for all users?
+2019-04-06 20:30:53	Prestige	I mean for the local user
+2019-04-06 20:31:20	-->	Momentum (~flurt@unaffiliated/momentum) has joined #archlinux
+2019-04-06 20:31:21	Prestige	I was adding an environment variable to .xprofile and didn't want to have to reload my session for it to take effect
+2019-04-06 20:31:51	Edu4rdSHL	Prestige, depend what do you have in .profile you can just `source .profile`
+2019-04-06 20:32:26	Edu4rdSHL	Prestige, export my_var="Test"
+2019-04-06 20:32:43	Prestige	and that would do it for all shells etc? Cuz I was having a config file reference the variable elsewhere
+2019-04-06 20:32:49	yvyz	Ya, if you are just setting environment or paths you can just export what you need
+2019-04-06 20:32:55	Edu4rdSHL	If you've something similar there just `source .profile`
+2019-04-06 20:32:58	yvyz	No exporting is only for the current session
+2019-04-06 20:33:06	-->	yuzhai_ (~yuzhai@140.207.236.66) has joined #archlinux
+2019-04-06 20:33:09	Plasma_000	so to set a dns using networkmanager, I would make a profile for both my interfaces and set the dns for each one?
+2019-04-06 20:33:33	-->	conyers (~conyers@c-73-114-163-201.hsd1.ma.comcast.net) has joined #archlinux
+2019-04-06 20:33:51	Edu4rdSHL	Prestige, well, if you've set it in .profile it will be set up the next time that you restart X, exporting it allow you to have and use the variable without restarting X
+2019-04-06 20:34:14	<--	CyberManifest (~CyberMani@r74-192-58-2.vctrcmta01.vctatx.tl.dh.suddenlink.net) has quit (Quit: Leaving)
+2019-04-06 20:34:14	yvyz	Note, exporting a var does not write it to your config
+2019-04-06 20:34:34	<--	Vonter (~Vonter@49.206.9.134) has quit (Ping timeout: 252 seconds)
+2019-04-06 20:34:38	-->	jalvarez (~josealvar@c-24-218-205-141.hsd1.ma.comcast.net) has joined #archlinux
+2019-04-06 20:34:40	Edu4rdSHL	He said that have set that in .profile.
+2019-04-06 20:34:42	jalvarez	hello
+2019-04-06 20:35:05	jalvarez	hows everyone
+2019-04-06 20:35:16	yvyz	Sup jalvarez, hows your new install coming along?
+2019-04-06 20:35:22	-->	mgnad78 (~mgnad78@dslb-088-068-106-222.088.068.pools.vodafone-ip.de) has joined #archlinux
+2019-04-06 20:35:33	-->	CyberManifest (~CyberMani@r74-192-58-2.vctrcmta01.vctatx.tl.dh.suddenlink.net) has joined #archlinux
+2019-04-06 20:36:28	jalvarez	I got it working after I believe around 19 hours
+2019-04-06 20:36:44	jalvarez	took a bit to figure out why the xorg wasnt working.
+2019-04-06 20:36:47	Prestige	Edu4rdSHL: yeah just meant w/o doing and restarting of the x session - guess there isn't a way but it's fine. Just didn't want to restart all my applications haha
+2019-04-06 20:36:47	yvyz	Ok now do it again. ;)
+2019-04-06 20:36:50	jalvarez	dont even know what it was lol
+2019-04-06 20:37:06	-->	Vonter (~Vonter@49.206.9.134) has joined #archlinux
+2019-04-06 20:37:18	jalvarez	me? do it again? nah lol
+2019-04-06 20:37:24	<--	mgnad78 (~mgnad78@dslb-088-068-106-222.088.068.pools.vodafone-ip.de) has left #archlinux
+2019-04-06 20:37:25	yvyz	Prestige: there does exist tons of different ways to autostart what you need ;)
+2019-04-06 20:37:27	BoBeR182	Hello
+2019-04-06 20:37:28	Edu4rdSHL	Prestige, well, you need to restart aplications in any case :p
+2019-04-06 20:37:30	yvyz	Prestige: I am the same way. 
+2019-04-06 20:37:52	jalvarez	Im resting for now. Drinking. Watching some videos. Just finished a documentary.
+2019-04-06 20:37:56	BoBeR182	I cannot get ulimit -Hn to be correct
+2019-04-06 20:38:06	BoBeR182	all my settings are set to the 524288 lmit
+2019-04-06 20:38:07	<--	licensed (~licensed@unaffiliated/licensed) has quit (Remote host closed the connection)
+2019-04-06 20:38:11	jalvarez	happy to have arch installed with awesome in it
+2019-04-06 20:38:11	BoBeR182	but it's not sticking
+2019-04-06 20:38:19	BoBeR182	https://github.com/lutris/lutris/wiki/How-to:-Esync
+2019-04-06 20:38:20	@phrik	Title: How to: Esync · lutris/lutris Wiki · GitHub (at github.com)
+2019-04-06 20:38:30	<--	aesculus (~aesculus@2804:7f2:2782:a38d:5556:8543:4873:64c5) has quit (Read error: Connection reset by peer)
+2019-04-06 20:38:39	Edu4rdSHL	BoBeR182, #lutris
+2019-04-06 20:38:43	jalvarez	Ill tweak it more tomorrow or starting this monday.
+2019-04-06 20:38:55	jalvarez	I need a little break
+2019-04-06 20:39:00	-->	phlym (~phlym@2a03:b0c0:0:1010::7e:d001) has joined #archlinux
+2019-04-06 20:39:03	yvyz	jalvarez: back up your configs now
+2019-04-06 20:39:32	jalvarez	how?
+2019-04-06 20:39:35	yvyz	jalvarez: make a github account or some git account somewhere, and git push your dotfiles. get used to it. never lose configs again
+2019-04-06 20:39:36	BoBeR182	Edu4rdSHL, it's a arch issue
+2019-04-06 20:39:38	jalvarez	didnt even thought about that
+2019-04-06 20:39:47	jalvarez	awwww
+2019-04-06 20:39:52	jalvarez	ahhhhh*
+2019-04-06 20:39:53	yvyz	ya, once you know you wont lose them... configuring everything is much more fun.
+2019-04-06 20:40:04	jalvarez	gotcha
+2019-04-06 20:40:05	<--	ulili (~quassel@p200300C96F377C00EA9A8FFFFEBD3E0F.dip0.t-ipconnect.de) has quit (Ping timeout: 250 seconds)
+2019-04-06 20:40:06	jalvarez	makes sense
+2019-04-06 20:40:08	yvyz	otherwise copy them to a tdrive
+2019-04-06 20:40:19	<--	Deide (~Deide@90.249.143.38) has quit (Quit: Seeee yaaaa)
+2019-04-06 20:40:21	yvyz	Trust, you are never done configuring your environment... ever
+2019-04-06 20:40:25	Edu4rdSHL	BoBeR182, i got 524288 with that command.
+2019-04-06 20:40:25	-->	intulor (chris@gateway/vpn/privateinternetaccess/intulor) has joined #archlinux
+2019-04-06 20:40:26	<--	phlym (~phlym@2a03:b0c0:0:1010::7e:d001) has left #archlinux ("Leaving...")
+2019-04-06 20:40:27	yvyz	and you DONT want to restart lol
+2019-04-06 20:40:31	jalvarez	cool. I didnt think about doing that. But yeah, makes sense lol
+2019-04-06 20:40:31	-->	ulili (~quassel@p200300C96F4DEC00EA9A8FFFFEBD3E0F.dip0.t-ipconnect.de) has joined #archlinux
+2019-04-06 20:40:35	-->	aesculus (~aesculus@2804:7f2:2782:a38d:5556:8543:4873:64c5) has joined #archlinux
+2019-04-06 20:40:49	yvyz	I use git becuase I can always go back to specific commits/times
+2019-04-06 20:40:50	Edu4rdSHL	>First step is to run the ulimit -Hn command. If the value printed is equal or greater to 524288 then you're all set, your system is ready to use Esync!
+2019-04-06 20:40:51	BoBeR182	Edu4rdSHL, I get 32768
+2019-04-06 20:40:53	Prestige	it's very useful
+2019-04-06 20:40:56	yvyz	And it takes 2 seconds to push
+2019-04-06 20:41:02	jalvarez	yup
+2019-04-06 20:41:06	jalvarez	I will do that
+2019-04-06 20:41:27	yvyz	Depending on what config files you choose to backup, you might want to consider using a private repo. 
+2019-04-06 20:41:27	Edu4rdSHL	BoBeR182, pacman -Q systemd
+2019-04-06 20:41:28	jalvarez	Just wanted to pop by and say thanks to everyone.
+2019-04-06 20:41:33	jalvarez	You all were a great help
+2019-04-06 20:41:39	yvyz	DO NOT push .ssh ;)
+2019-04-06 20:41:47	yvyz	I guess you can but I dont suggest it
+2019-04-06 20:41:49	<--	iam730 (~iam730@c-24-6-215-59.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2019-04-06 20:41:51	jalvarez	lol
+2019-04-06 20:41:52	BoBeR182	241.67
+2019-04-06 20:41:56	jalvarez	yeah. I wouldnt
+2019-04-06 20:42:05	jalvarez	I have manu storage devices 
+2019-04-06 20:42:12	Edu4rdSHL	BoBeR182, you tried the solutions posted there?
+2019-04-06 20:42:13	jalvarez	so I can always do it that way
+2019-04-06 20:42:18	Edu4rdSHL	And restarted your computer?
+2019-04-06 20:42:18	BoBeR182	I tried all of them
+2019-04-06 20:42:21	hagabaka	when a library is updated in [testing], is there an automatic rebuild of packages that link to it?
+2019-04-06 20:42:24	BoBeR182	they are all configured correctly
+2019-04-06 20:42:30	BoBeR182	and I restarted several times
+2019-04-06 20:42:42	yvyz	Good. Consider rclone, syncthing, for big/important/private stuff, and git for your dotifles.
+2019-04-06 20:42:45	jalvarez	yvyz: what I want now is to remotely log into my desktop pc from my mac laptop
+2019-04-06 20:42:51	BoBeR182	both /etc/systemd/system.conf /user.conf and the sycurity ones are set up like that
+2019-04-06 20:43:16	jalvarez	log into the aweomse DM
+2019-04-06 20:43:21	yvyz	jalvarez: Get rdy for pain. ;) Actually its not that bad. If you dont really need audio, I suggest VNC. 
+2019-04-06 20:43:24	jalvarez	but Ill research taht later
+2019-04-06 20:43:30	jamespharvey20	Edu4rdSHL: I think a while ago you said you ran android through QEMU.  What are you using as a system image?
+2019-04-06 20:43:30	Edu4rdSHL	hagabaka,what issue do you have?
+2019-04-06 20:43:46	jalvarez	yvyz: VNC?
+2019-04-06 20:44:11	hagabaka	icu was updated in [testing], and the package "code" still links to the previous version
+2019-04-06 20:44:13	jalvarez	is it like a vpn?
+2019-04-06 20:44:21	<--	tuerai (~tuerai@63.228.59.248) has quit (Read error: Connection reset by peer)
+2019-04-06 20:44:23	<--	arcsin (~alureon@unaffiliated/proxa) has quit (Ping timeout: 250 seconds)
+2019-04-06 20:44:23	yvyz	No: https://wiki.archlinux.org/index.php/X11vnc
+2019-04-06 20:44:24	@phrik	Title: X11vnc - ArchWiki (at wiki.archlinux.org)
+2019-04-06 20:44:32	Edu4rdSHL	jamespharvey20, http://www.android-x86.org/download
+2019-04-06 20:44:34	@phrik	Title: Download - Android-x86 - Porting Android to x86 (at www.android-x86.org)
+2019-04-06 20:44:34	hagabaka	*the package electron still links to the previous version
+2019-04-06 20:44:43	jamespharvey20	Edu4rdSHL: Thanks!
+2019-04-06 20:44:47	-->	tuerai (~tuerai@63.228.59.248) has joined #archlinux
+2019-04-06 20:44:47	yvyz	If you dont want to login to different xsessions remotely... x11vnc will log you into yoru current one. or whatever the machine is displaying
+2019-04-06 20:45:00	-->	arcsin (~alureon@unaffiliated/proxa) has joined #archlinux
+2019-04-06 20:45:03	yvyz	jalvarez: its good, its quick, its easy to config. 
+2019-04-06 20:45:06	hagabaka	and just days before this, electron was updated, and the code package was not updated
+2019-04-06 20:45:13	Edu4rdSHL	hagabaka, electron is also in testing, I though that you did partial upgrades.
+2019-04-06 20:45:18	yvyz	hagabaka: welcome to electrong ;)
+2019-04-06 20:45:23	hagabaka	I did not
+2019-04-06 20:45:28	jalvarez	OHhhh
+2019-04-06 20:45:35	-->	orivej (orivej@gateway/vpn/mullvad/orivej) has joined #archlinux
+2019-04-06 20:45:39	jalvarez	yvyz: you have saved me a lot of research
+2019-04-06 20:45:47	yvyz	jalvarez: *finger guns*
+2019-04-06 20:45:54	jalvarez	I saved that page. Wont read it tonight as I wont sleep again if I start lol
+2019-04-06 20:46:06	yvyz	i have the same problem. 
+2019-04-06 20:46:22	hagabaka	the current version of electron in [testing] still links to icu 63 rather than 64, and I'm just wondering if there's an automatic rebuild to prevent this kind of issues. I haven't had it before
+2019-04-06 20:46:34	jalvarez	literally, those 19 hours felt like 2 for me
+2019-04-06 20:46:44	jalvarez	but my body begs to differ lol
+2019-04-06 20:47:40	<--	sadmansk (~Thunderbi@toroon0335w-lp130-03-174-93-84-52.dsl.bell.ca) has quit (Ping timeout: 246 seconds)
+2019-04-06 20:47:54	yvyz	jalvarez: haha, yep. My body/brain cant handle it, but I still enjoy some 36hr sessions. You get that way once you realize how much faster you can do work when every machine you touch is either linux or unix. 
+2019-04-06 20:48:02	<--	flippy (~jerwin@2604:2d80:8418:8767::1000) has quit (Ping timeout: 258 seconds)
+2019-04-06 20:48:39	yvyz	jalvarez: unlike windows, spending hours navigating windows to config settings, or coming up with ridiculously over worked powershell scripts to get one thing done. 
+2019-04-06 20:48:57	Plasma_000	yvyz i am still unable to fix my dns issue. any more specific advice - i have NM configued to auto, so it should be getting the DNS from DHCP right?
+2019-04-06 20:49:41	jalvarez	yvyz: yeah, I use Macs at work. Have a windows pc for gaming and linux for learning and playing around with the terminal.
+2019-04-06 20:49:42	Edu4rdSHL	hagabaka, you're right
+2019-04-06 20:49:57	yvyz	Plasma_000: yes. Is your DHCP srevie offering the correct dns servers? Check that first.
+2019-04-06 20:50:07	<--	Xaphan (~marc@cunts.and.bewbies.org) has left #archlinux
+2019-04-06 20:50:17	Plasma_000	yvyz srevie?
+2019-04-06 20:50:28	hagabaka	I'm just wondering if it's something the maintainer have to take care of manually
+2019-04-06 20:50:34	yvyz	Plasma_000: service. Sorry. Make sure your router is offering the correct ip's
+2019-04-06 20:50:43	Edu4rdSHL	hagabaka, maintainer forget to rebuild.
+2019-04-06 20:50:53	<--	\\Mr_C\\ (~mrc@cpe-75-187-160-45.neo.res.rr.com) has quit (Ping timeout: 245 seconds)
+2019-04-06 20:51:02	Plasma_000	it definitely is, because other devices on the same network are resolving using the same router
+2019-04-06 20:51:04	yvyz	jalvarez: yep, ive got them all as well. Thankfully my mac with brew installed pretty much feels like unix
+2019-04-06 20:51:10	Plasma_000	eg i am using a mac to talk to you
+2019-04-06 20:51:22	yvyz	Plasma_000: ok. 
+2019-04-06 20:52:13	homerj	I haven't used a mac in ages
+2019-04-06 20:52:24	yvyz	Plasma_000: Do you get the correct DNS entries after you run dhcpcd ?
+2019-04-06 20:52:42	yvyz	homerj: I never touched a mac until two years ago. That retina display tho. amirite?
+2019-04-06 20:52:42	<--	rtypo (~alex@unaffiliated/rtypo) has quit (Ping timeout: 264 seconds)
+2019-04-06 20:53:03	Plasma_000	where would i find the entries?
+2019-04-06 20:53:33	homerj	the last I used, was a G4 iBook
+2019-04-06 20:53:41	yvyz	Plasma_000: It should update /etc/resolv.conf
+2019-04-06 20:53:48	jalvarez	yvyz: I do love Macs. But there is something beautiful about linux.
+2019-04-06 20:53:55	yvyz	homerj: oh man, they have come a long way since then. a loooong way.
+2019-04-06 20:54:24	homerj	the last time I touched it, was someone came into this channel a while back wanting to install Linux on one, and I was like "yeah, I did it"
+2019-04-06 20:54:34	Plasma_000	yvyz it gives the IP of my router in there
+2019-04-06 20:54:36	yvyz	still proprietary garbage fed to us to be the next coming of computing. but... still pretty slick. I must say that I wish I could get the macbooks touchpad feel on ALL of my devices.
+2019-04-06 20:55:13	<--	arcsin (~alureon@unaffiliated/proxa) has quit (Ping timeout: 250 seconds)
+2019-04-06 20:55:22	yvyz	Plasma_000: do you have the package bind-tools installed?
+2019-04-06 20:55:33	Plasma_000	nope
+2019-04-06 20:55:51	homerj	I had some sort of case especially for it, but the laptop my work gave me fit in it perfectly
+2019-04-06 20:55:53	-->	nackjicholson (~nackjicho@c-73-202-137-21.hsd1.ca.comcast.net) has joined #archlinux
+2019-04-06 20:55:58	yvyz	Install it, it will give you dig, nslookup, and a few other tools that will help diagnose.
+2019-04-06 20:56:27	yvyz	Plasma_000: also, have you tried a reboot?
+2019-04-06 20:56:40	yvyz	Plasma_000: its amazing how much stuff gets fixed with a reboot
+2019-04-06 20:56:50	Plasma_000	yep, a few times now
+2019-04-06 20:57:25	Plasma_000	everything was working fine until a few days ago when i did an update
+2019-04-06 20:57:41	<--	homerj (~homerj@april-fools/2013/second/homerj) has quit (Remote host closed the connection)
+2019-04-06 20:59:53	-->	quinoa42 (~quinoa42@unaffiliated/quinoa42) has joined #archlinux
+2019-04-06 21:00:36	<--	nackjicholson (~nackjicho@c-73-202-137-21.hsd1.ca.comcast.net) has quit (Ping timeout: 252 seconds)
+2019-04-06 21:00:47	<--	djapo (~archie@unaffiliated/djapo) has quit (Remote host closed the connection)
+2019-04-06 21:01:38	<--	segy (~segfault@pdpc/supporter/active/segy) has quit (Quit: ZNC - http://znc.in)
+2019-04-06 21:01:52	<--	altgray (~altgray@146.185.163.241) has quit (Quit: leaving)
+2019-04-06 21:02:44	-->	arcsin (~alureon@unaffiliated/proxa) has joined #archlinux
+2019-04-06 21:03:57	-->	luxeve (~luxeve@2001:8003:2355:7600:5c2e:7bd2:5fdb:bb9d) has joined #archlinux
+2019-04-06 21:04:47	<--	tim241 (~tim241@unaffiliated/electroid) has quit (Ping timeout: 250 seconds)
+2019-04-06 21:06:05	-->	altgray (~altgray@146.185.163.241) has joined #archlinux
+2019-04-06 21:06:10	<--	Plasma_000 (~textual@hassia.lnk.telstra.net) has quit (Ping timeout: 268 seconds)
+2019-04-06 21:08:01	<--	arcsin (~alureon@unaffiliated/proxa) has quit (Ping timeout: 268 seconds)
+2019-04-06 21:09:13	-->	appleclusters (uid197723@gateway/web/irccloud.com/x-ahybnffgcditedmv) has joined #archlinux
+2019-04-06 21:09:55	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Read error: Connection reset by peer)
+2019-04-06 21:11:24	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #archlinux
+2019-04-06 21:13:34	<--	yans (~yans@unaffiliated/yinsen) has quit (Ping timeout: 268 seconds)
+2019-04-06 21:15:52	<--	shibboleth (~shibbolet@gateway/tor-sasl/shibboleth) has quit (Quit: shibboleth)
+2019-04-06 21:17:56	-->	afos (~matt@n114-74-128-135.sbr2.nsw.optusnet.com.au) has joined #archlinux
+2019-04-06 21:21:27	<--	ubuntuxp (~user@2600:1702:24f0:7f90::11) has quit (Ping timeout: 240 seconds)
+2019-04-06 21:21:29	-->	segy (~segfault@pdpc/supporter/active/segy) has joined #archlinux
+2019-04-06 21:22:56	-->	ubuntuxp (~user@2600:1702:24f0:7f90::11) has joined #archlinux
+2019-04-06 21:24:39	-->	quequotion (~quequotio@i60-42-0-11.s02.a044.ap.plala.or.jp) has joined #archlinux
+2019-04-06 21:24:47	<--	orivej (orivej@gateway/vpn/mullvad/orivej) has quit (Ping timeout: 240 seconds)
+2019-04-06 21:25:18	-->	javashin (~javashin@unaffiliated/javashin) has joined #archlinux
+2019-04-06 21:25:48	-->	arescorpio (~Nicola_Te@201.178.32.235) has joined #archlinux
+2019-04-06 21:26:36	<--	dt23 (~horst@gateway/tor-sasl/dt23) has quit (Ping timeout: 256 seconds)
+2019-04-06 21:26:41	-->	dqsii (~dqsii@69.167.26.14) has joined #archlinux
+2019-04-06 21:26:42	<--	javashin (~javashin@unaffiliated/javashin) has quit (Remote host closed the connection)
+2019-04-06 21:26:51	<--	segy (~segfault@pdpc/supporter/active/segy) has quit (Ping timeout: 250 seconds)
+2019-04-06 21:27:06	-->	djapo (~archie@unaffiliated/djapo) has joined #archlinux
+2019-04-06 21:27:22	<--	soft_cement (uid323143@gateway/web/irccloud.com/x-zyqesbcgoiobygbe) has quit
+2019-04-06 21:27:41	<--	appleclusters (uid197723@gateway/web/irccloud.com/x-ahybnffgcditedmv) has quit
+2019-04-06 21:30:09	<--	Scotty_Trees (~Scotty_Tr@user-24-96-5-46.knology.net) has quit (Remote host closed the connection)
+2019-04-06 21:30:43	<--	Arcaelyx (~Arcaelyx@cpe-184-152-1-126.nyc.res.rr.com) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2019-04-06 21:35:00	-->	nackjich1lson (~nackjicho@c-73-202-137-21.hsd1.ca.comcast.net) has joined #archlinux
+2019-04-06 21:35:34	-->	arcsin (~alureon@unaffiliated/proxa) has joined #archlinux
+2019-04-06 21:36:28	-->	dt23 (~horst@gateway/tor-sasl/dt23) has joined #archlinux
+2019-04-06 21:39:01	<--	Momentum (~flurt@unaffiliated/momentum) has quit (Quit: WeeChat 2.4)
+2019-04-06 21:40:05	<--	nackjich1lson (~nackjicho@c-73-202-137-21.hsd1.ca.comcast.net) has quit (Ping timeout: 268 seconds)
+2019-04-06 21:43:57	h4rd3n3D	I took a girlfriend's slow-ass, overpriced Macbook Air and within a few hours of 'homebrewing' I turned it into a blazing fast Arch Linux/Unix computer  ;p
+2019-04-06 21:44:23	-->	segy (~segfault@pdpc/supporter/active/segy) has joined #archlinux
+2019-04-06 21:45:53	<--	Mart|n (~Mart|n@79-68-39-23.dynamic.dsl.as9105.com) has quit (Remote host closed the connection)
+2019-04-06 21:46:28	<--	seaglass (~seaglass@unaffiliated/seaglass) has quit (Ping timeout: 246 seconds)
+2019-04-06 21:46:34		Mode #archlinux [+o eir] by ChanServ
+2019-04-06 21:46:34		Mode #archlinux [-bo $a:GalzuFromQ eir] by eir
+2019-04-06 21:47:39	xulfer	why was it blazing fast?
+2019-04-06 21:49:06	-->	milkt (~debian@gateway/tor-sasl/milkt) has joined #archlinux
+2019-04-06 21:49:43	xulfer	You realize that macbooks use BSD which is also pretty nice/quick
+2019-04-06 21:50:40	<--	a-ng (~a-ng@106.215.105.6) has quit (Ping timeout: 246 seconds)
+2019-04-06 21:51:52	-->	a-ng (~a-ng@122.177.113.83) has joined #archlinux
+2019-04-06 21:52:22	-->	fc5dc9d4 (~quassel@p5B081D5E.dip0.t-ipconnect.de) has joined #archlinux
+2019-04-06 21:54:08	<--	cemotyz09 (~cemotyz09@cpe-70-121-128-59.satx.res.rr.com) has quit (Ping timeout: 250 seconds)
+2019-04-06 21:54:22	<--	andyrtr (~andyrtr@archlinux/developer/andyrtr) has quit (Read error: Connection reset by peer)
+2019-04-06 21:54:26	amosbird	hmm, intel_pstate=disable: force the usage of the ACPI CPU driver   what's the ACPI CPU driver?
+2019-04-06 21:54:58	-->	andyrtr (~andyrtr@archlinux/developer/andyrtr) has joined #archlinux
+2019-04-06 21:56:31	xulfer	You need to patch it 
+2019-04-06 21:56:35	<--	Knova11 (~knova11@72-48-181-28.dyn.grandenetworks.net) has quit (Remote host closed the connection)
+2019-04-06 21:56:54	<--	fc5dc9d4_ (~quassel@p5B3A833C.dip0.t-ipconnect.de) has quit (Ping timeout: 264 seconds)
+2019-04-06 21:58:14	Toxmi	I've "Possibly missing firmware for module: aic94xx and wd719x" warning...I've searched and there are such firmwares in AUR which I can isntall (Thanks!). But are these necessary? I'm newbie and as I've checked the system these two are related to western digital,... 
+2019-04-06 21:58:26	-->	seaglass (~seaglass@unaffiliated/seaglass) has joined #archlinux
+2019-04-06 21:58:42	yvyz	Toxmi: that is very common. 
+2019-04-06 21:58:48	Toxmi	Any input or recomendation from experienced users? I like to not have those warining but I think more packages means less security and more hassles
+2019-04-06 21:58:59	jamespharvey20	Edu4rdSHL: "qemu-system-x86_64 -soundhw es1370 -net nic -net user -cdrom /home/jamespharvey20/Downloads/android-x86_64-8.1-r1.iso -smp cpus=4 -m 4096M -drive format=raw,file=/dev/lvm/vm_android" and although I can install, I can't do much else.  Booting hd after install or cd in live mode just shows text screen eventually of "x86_64:/ #" and it reboots.  Debug mode kicks me out to "MirBSD Korn Shell", and
+2019-04-06 21:59:00	Toxmi	yvyz: yeah
+2019-04-06 21:59:01	jamespharvey20	typing exit twice to continue booting just reboots.  All attempts beyond install switch to a higher resolution before rebooting, showing something on there.  Tried debug nomodeset and it seems to get in a loop with avc denied errors, getting to 870 seconds.
+2019-04-06 21:59:10	jamespharvey20	Toxmi: that always shows up, ignore it
+2019-04-06 21:59:12	esph	Toxmi: it's a warning that basically everyone gets that applies to hardly anyone
+2019-04-06 21:59:14	yvyz	Toxmi: my mkinitcpio spits the same, there is an entry about it in the wiki.
+2019-04-06 21:59:29	esph	false positive
+2019-04-06 21:59:32	<--	andyhoang1 (~andyhoang@2001:ee0:500f:3310:18d0:16ad:c813:b946) has quit (Quit: WeeChat 2.4)
+2019-04-06 21:59:52	jamespharvey20	(after 870, I gave up and powered it off)
+2019-04-06 21:59:54	-->	andyhoang (~andyhoang@2001:ee0:500f:3310:18d0:16ad:c813:b946) has joined #archlinux
+2019-04-06 21:59:57	-->	doubtful (~abhigenie@2601:647:4c00:2345:489c:ab94:7327:40b9) has joined #archlinux
+2019-04-06 22:00:07	Toxmi	Ok, so I'll choose the lazy attitude. No problem, no pain.
+2019-04-06 22:00:38	<--	andyhoang (~andyhoang@2001:ee0:500f:3310:18d0:16ad:c813:b946) has quit (Client Quit)
+2019-04-06 22:00:45	esph	tbh it's kinda annoying because other warnings from pacman are usually more meaningful
+2019-04-06 22:00:49	esph	those are just noise
+2019-04-06 22:00:52	<--	a-ng (~a-ng@122.177.113.83) has quit (Ping timeout: 258 seconds)
+2019-04-06 22:00:56	-->	andyhoang (~andyhoang@2001:ee0:500f:3310:18d0:16ad:c813:b946) has joined #archlinux
+2019-04-06 22:01:11	-->	TimeTrap (~TimeTrap@2601:44:c500:65f4:4014:8b35:e626:b6b2) has joined #archlinux
+2019-04-06 22:02:47	-->	a-ng (~a-ng@122.177.109.79) has joined #archlinux
+2019-04-06 22:02:47	<--	RendySurvage (~RendySurv@64.72.216.225) has quit (Remote host closed the connection)
+2019-04-06 22:03:03	Edu4rdSHL	jamespharvey20, works with `qemu-system-x86_64 -soundhw es1370 -net nic -net user -cdrom /home/jamespharvey20/Downloads/android-x86_64-8.1-r1.iso` ?
+2019-04-06 22:05:54	<--	ubuntuxp (~user@2600:1702:24f0:7f90::11) has quit (Ping timeout: 264 seconds)
+2019-04-06 22:06:18	<--	leopard (~leopard@unaffiliated/leopard) has quit (Ping timeout: 245 seconds)
+2019-04-06 22:07:10	jamespharvey20	Edu4rdSHL: strange, using that with booting live off cd option just goes to a black screen so far.  I'll keep letting it go, but I don't remember it taking this long to get to "x86_64: / #" and rebooting.
+2019-04-06 22:08:22	<--	arcsin (~alureon@unaffiliated/proxa) has quit (Ping timeout: 245 seconds)
+2019-04-06 22:08:25	-->	nackjicholson (~nackjicho@c-73-202-137-21.hsd1.ca.comcast.net) has joined #archlinux
+2019-04-06 22:08:26	<--	quequotion (~quequotio@i60-42-0-11.s02.a044.ap.plala.or.jp) has quit (Remote host closed the connection)
+2019-04-06 22:08:50	jamespharvey20	oh well, was hoping you had ran into that.  something i'll have to look into tomorrow.
+2019-04-06 22:08:56	jamespharvey20	i'll blame amd in the meantime
+2019-04-06 22:10:10	jamespharvey20	oh theres the "x86_64:/ #" prompt, maybe low mem makes it run this much slower
+2019-04-06 22:10:57	jamespharvey20	oh yeah, qemu default is 128MB, didn't remember it was that low, always specify it
+2019-04-06 22:13:12	<--	nackjicholson (~nackjicho@c-73-202-137-21.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2019-04-06 22:13:16	Edu4rdSHL	jamespharvey20, tbh I don't run it in Live mode any time, I installed it from first time, installation should be fine
+2019-04-06 22:13:29	Edu4rdSHL	Probably live CD issues.
+2019-04-06 22:14:12	-->	quequotion (~quequotio@i60-42-0-11.s02.a044.ap.plala.or.jp) has joined #archlinux
+2019-04-06 22:18:13	<--	Vonter (~Vonter@49.206.9.134) has quit (Quit: WeeChat 2.4)
+2019-04-06 22:18:35	-->	Vonter (~Vonter@49.206.9.134) has joined #archlinux
+2019-04-06 22:18:43	<--	dre_ (~dre_@115-188-135-215-adsl.sparkbb.co.nz) has quit (Remote host closed the connection)
+2019-04-06 22:22:07	-->	FedeV (~yaaic@113.210.118.186) has joined #archlinux
+2019-04-06 22:23:46	<--	doubtful (~abhigenie@2601:647:4c00:2345:489c:ab94:7327:40b9) has quit (Quit: Going going gone....)
+2019-04-06 22:25:12	<--	FedeV (~yaaic@113.210.118.186) has quit (Client Quit)
+2019-04-06 22:25:26	<--	NoobAlice (~NoobAlice@cpe-74-69-10-59.rochester.res.rr.com) has left #archlinux
+2019-04-06 22:27:58	<--	quequotion (~quequotio@i60-42-0-11.s02.a044.ap.plala.or.jp) has quit (Quit: quequotion)
+2019-04-06 22:29:48	-->	User_Land_ (~userland@207-119-203-138.dyn.centurytel.net) has joined #archlinux
+2019-04-06 22:30:04	User_Land_	hello
+2019-04-07 05:37:31		irc: disconnected from server

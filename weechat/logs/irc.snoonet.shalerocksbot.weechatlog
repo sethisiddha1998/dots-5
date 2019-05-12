@@ -1,0 +1,301 @@
+2018-03-04 20:44:50	ShaleRocksBot	zzzeyez: Your badges: On day 29 with a nicotine free life.  On day 22 with an alcohol free life.
+2018-03-04 20:45:04	zzzeyez	;badge -help
+2018-03-04 20:45:05	ShaleRocksBot	zzzeyez: Command help: Use ;badge to list your badges. Flags: -add -delete -update -cost, with -name="Badge Name" -date="a date string".  Use -all to see all users' badges, use -all -name="Badge Name" to see all badges of a particular type for all users. Use -nick=SomeGuy to see SomeGuy's badges • Use ;help badge --info for general plugin information.
+2018-03-12 22:15:43	ShaleRocksBot	Usage: help [<plugin name>] [<command>] [<-flag>].  Use ;plugins to get a list of installed plugins.  Use help --info <plugin name> to get general plugin information.  Use the ;allhelp command to view an HTML help file for this bot.
+2018-03-12 22:15:53	zzzeyez	;plugins
+2018-03-12 22:15:54	ShaleRocksBot	My Plugins: Admin Alias Badges Countdown Counter CryptoCurrency Diss DuckHunt Games Google GoogleFight HelloWorld Help Imgur Is LastFM Lyrics MasterMind More NFLFF News Notes OPWarnings Points Reddit RedditAnnounce Seen Sleep SportsScores TFW TextUtils Time Translate Twitter UrbanDictionary UrlTranslate UserOptions Weather Welcome Wolfram WordScramble
+2018-03-12 22:16:12	zzzeyez	;lastfm help
+2018-03-12 22:16:13	ShaleRocksBot	Configuration error.  The bot owner needs to specify an API Key in the config file.
+2018-03-12 22:16:33	zzzeyez	;LastFM help
+2018-03-12 22:16:57	zzzeyez	;LastFM -name="em3i3mei"
+2018-03-12 22:17:10	zzzeyez	;badge help
+2018-03-12 22:17:12	ShaleRocksBot	zzzeyez: You don't have a badge by that name. Use ;badge to list your badges. Flags: -add -delete -update -cost, with -name="Badge Name" -date="a date string".  Use -all to see all users' badges, use -all -name="Badge Name" to see all badges of a particular type for all users. Use -nick=SomeGuy to see SomeGuy's badges
+2018-03-14 13:58:38	ShaleRocksBot	zzzeyez: Your badges: On day 38 with a nicotine free life.  On day 4 with an alcohol free life.  On day 32 with irc participation.
+2018-03-17 17:44:49	ShaleRocksBot	Usage: help [<plugin name>] [<command>] [<-flag>].  Use ;plugins to get a list of installed plugins.  Use help --info <plugin name> to get general plugin information.  Use the ;allhelp command to view an HTML help file for this bot.
+2018-03-17 17:44:56	zzzeyez	;badge -help
+2018-03-17 17:44:57	ShaleRocksBot	zzzeyez: Command help: Use ;badge to list your badges. Flags: -add -delete -update -cost, with -name="Badge Name" -date="a date string".  Use -all to see all users' badges, use -all -name="Badge Name" to see all badges of a particular type for all users. Use -nick=SomeGuy to see SomeGuy's badges • Use ;help badge --info for general plugin information.
+2018-03-18 02:54:05	ShaleRocksBot	zzzeyez: Command help: Use ;badge to list your badges. Flags: -add -delete -update -cost, with -name="Badge Name" -date="a date string".  Use -all to see all users' badges, use -all -name="Badge Name" to see all badges of a particular type for all users. Use -nick=SomeGuy to see SomeGuy's badges • Use ;help badge --info for general plugin information.
+2018-03-18 09:18:14		irc: disconnected from server
+2018-03-20 19:25:52	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:29:47	zzzeyez	;badge
+2018-03-20 19:29:48	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:30:10	zzzeyez	;badge
+2018-03-20 19:30:10	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:35:06	zzzeyez	;badge
+2018-03-20 19:35:06	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:36:17	zzzeyez	;badge
+2018-03-20 19:36:18	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:36:59	zzzeyez	;badge
+2018-03-20 19:36:59	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:38:07	zzzeyez	;badge
+2018-03-20 19:38:08	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:38:43	zzzeyez	;badge
+2018-03-20 19:38:43	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:39:17	zzzeyez	;badge
+2018-03-20 19:39:18	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:39:48	zzzeyez	;badge
+2018-03-20 19:39:49	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:45:55	zzzeyez	;badge
+2018-03-20 19:45:55	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:46:44	zzzeyez	;badge
+2018-03-20 19:46:45	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:49:03	zzzeyez	;badge
+2018-03-20 19:49:03	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:49:37	zzzeyez	;badge
+2018-03-20 19:49:38	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:51:24	zzzeyez	;badge
+2018-03-20 19:51:24	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:52:51	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:54:10	zzzeyez	;badge
+2018-03-20 19:54:10	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:55:39	zzzeyez	;badge
+2018-03-20 19:55:40	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 19:56:21	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:21:37	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:21:37		exec: end of command 0 ("notify-send Weechat alert"), return code: 0
+2018-03-20 20:23:10	zzzeyez	;badge
+2018-03-20 20:23:10	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:23:10		exec: end of command 0 ("notify-send hi"), return code: 0
+2018-03-20 20:24:26	zzzeyez	;badge
+2018-03-20 20:24:26	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:24:26		exec: end of command 0 ("notify-send 'Weechat highlight'"), return code: 0
+2018-03-20 20:26:27	zzzeyez	;badge
+2018-03-20 20:26:27	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:26:27		exec: end of command 0 ("notify-send ''"), return code: 0
+2018-03-20 20:30:17	zzzeyez	;badge
+2018-03-20 20:30:18	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:30:18		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-20 20:42:57	zzzeyez	;badge
+2018-03-20 20:42:58	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:42:58		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-20 20:48:37	zzzeyez	;badge
+2018-03-20 20:48:37	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:48:37		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-20 20:49:31	zzzeyez	;badge
+2018-03-20 20:49:31	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:49:31		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-20 20:59:48	zzzeyez	;badge
+2018-03-20 20:59:49	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 20:59:49		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-20 21:05:51	zzzeyez	;badge
+2018-03-20 21:05:52	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 21:05:52		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-20 21:09:59	zzzeyez	;badge
+2018-03-20 21:10:00	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-20 21:10:00		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-21 02:29:16	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-21 02:29:16		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-21 02:31:57	zzzeyez	;badge
+2018-03-21 02:31:58	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-21 02:32:59	zzzeyez	;badge
+2018-03-21 02:33:00	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-21 02:33:45	zzzeyez	;badge
+2018-03-21 02:33:46	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-21 02:34:56	zzzeyez	;badge
+2018-03-21 02:34:57	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-21 02:34:57		exec: end of command 0 ("notify-send 'ShaleRocksBot: zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.'"), return code: 0
+2018-03-21 02:42:50	ShaleRocksBot	zzzeyez: Your badges: On day 45 with a nicotine free life.  4 days with an alcohol free life.  On day 39 with irc participation.
+2018-03-22 00:49:07	ShaleRocksBot	zzzeyez: Your badges: On day 46 with a nicotine free life.  5 days with an alcohol free life.  On day 40 with irc participation.
+2018-04-17 18:12:24	ShaleRocksBot	zzzeyez: Usage: register -password=<password>. Register your current nick using supplied password. Your password will be hashed before being saved.
+2018-04-17 18:13:09	zzzeyez	register -password=kaleidoscope
+2018-04-17 18:13:09	ShaleRocksBot	zzzeyez: Success! Your password is kaleidoscope.  As long as you keep coming from user/zzzeyez using the nick zzzeyez, you won't have to login again. If you don't want that to happen, logout when you're done here.
+2018-04-17 18:13:47	zzzeyez	;logout
+2018-04-17 18:13:48	ShaleRocksBot	zzzeyez: Success!
+2018-04-17 18:13:51	zzzeyez	;help
+2018-04-17 18:13:51	ShaleRocksBot	Usage: help [<plugin name>] [<command>] [<-flag>].  Use ;plugins to get a list of installed plugins.  Use help --info <plugin name> to get general plugin information.  Use the ;allhelp command to view an HTML help file for this bot.
+2018-04-17 18:13:56	zzzeyez	;plugins
+2018-04-17 18:13:56	ShaleRocksBot	My Plugins: Admin Alias Badges Countdown Counter CryptoCurrency Diss DuckHunt Games Google GoogleFight HelloWorld Help Imgur Is LastFM Lyrics MasterMind More NFLFF News Notes OPWarnings Points Reddit RedditAnnounce Seen Sleep SportsScores TFW TextUtils Time Translate Twitter UrbanDictionary UrlTranslate UserOptions Weather Welcome Wolfram WordScramble
+2018-04-17 18:21:14	zzzeyez	;help googlefight
+2018-04-17 18:21:15	ShaleRocksBot	I'd love to help you, but couldn't find that command (googlefight) in any plugin.
+2018-04-17 18:21:22	zzzeyez	;help duckhunt
+2018-04-17 18:21:22	ShaleRocksBot	I'd love to help you, but couldn't find that command (duckhunt) in any plugin.
+2018-04-17 18:21:36	zzzeyez	;allhelp
+2018-04-17 18:21:36	ShaleRocksBot	Help file generated: http://ShaleRocksBot.us.to/7C6sm68sUCJxP5ZeRl8zQ.html
+2018-04-17 18:24:38	zzzeyez	;8ball does this work?
+2018-04-17 18:24:39	ShaleRocksBot	zzzeyez: ➇ My sources say no
+2018-04-17 18:25:40	zzzeyez	;counter -nick=zzzeyez
+2018-04-17 18:25:40	ShaleRocksBot	zzzeyez: You don't have permission to do that.
+2018-04-17 18:26:24	zzzeyez	;totalscore
+2018-04-17 18:26:25	ShaleRocksBot	zzzeyez: No one has saved or shot any animals in zzzeyez... yet.
+2018-04-17 18:27:40	zzzeyez	;listcolors
+2018-04-17 18:27:40	ShaleRocksBot	WHITE • BLACK • BLUE • GREEN • RED • BROWN • PURPLE • ORANGE • YELLOW • LIGHT_GREEN • TEAL • LIGHT_CYAN • LIGHT_BLUE • PINK • GREY • LIGHT_GREY
+2018-04-17 18:28:14	zzzeyez	;echo $user
+2018-04-17 18:28:14	ShaleRocksBot	$user
+2018-04-17 18:28:46	zzzeyez	;moon 94123
+2018-04-17 18:28:49	ShaleRocksBot	zzzeyez: Sunrise in 94123 at 6:31 AM local time.  Sunset in 94123 at 19:47 PM local time.  The moon is 5% illuminated. Moonrise: 7:55 AM PDT (4/17). Moonset: 9:48 PM PDT (4/17).
+2018-04-17 18:29:30	zzzeyez	;lyrics vamos by pixies
+2018-04-17 18:30:30	zzzeyez	;gg  poststructuralism
+2018-04-17 18:30:31	ShaleRocksBot	zzzeyez: The Google Web Search API is no longer available. Please migrate to the Google Custom Search API (https://developers.google.com/custom-search/)
+2018-04-17 18:31:19	zzzeyez	;pig
+2018-04-17 18:31:19	ShaleRocksBot	oink
+2018-04-18 16:13:22	ShaleRocksBot	zzzeyez: ForDB2's badges: On day 11 with Sobriety.
+2018-04-18 18:25:19	ShaleRocksBot	zzzeyez: The Google Web Search API is no longer available. Please migrate to the Google Custom Search API (https://developers.google.com/custom-search/)
+2018-04-19 20:24:35	ShaleRocksBot	No users have herald messages in zzzeyez.
+2018-04-19 20:24:46	zzzeyez	;herald -list -nick=zzzeyez
+2018-04-19 20:24:47	ShaleRocksBot	zzzeyez has no welcome messages in zzzeyez
+2018-04-20 00:32:15	ShaleRocksBot	zzzeyez: yftm's badges: On day 61 with sobriety.
+2018-04-20 00:49:15	zzzeyez	;badge -nick=random-42
+2018-04-20 00:49:16	ShaleRocksBot	zzzeyez: random-42's badges: On day 245 with No Drinking ($12,740 saved). On day 551 with this chat. On day 2 with Beast Mode (0.0054757015742642 sexies saved). 5 days with No Smoking ($114.95 saved). On day 5 with No Energy Drinks ($52.45 saved).
+2018-04-24 12:06:40	ShaleRocksBot	zzzeyez: Batmanuel's badges: On day 88 with Batmanuel. On day 88 with got sober. On day 80 with Catmanuella.
+2018-05-03 02:52:39	ShaleRocksBot	I'd love to help you, but couldn't find that command (list) in any plugin.
+2018-05-03 02:52:44	zzzeyez	;help
+2018-05-03 02:52:44	ShaleRocksBot	Usage: help [<plugin name>] [<command>] [<-flag>].  Use ;plugins to get a list of installed plugins.  Use help --info <plugin name> to get general plugin information.  Use the ;allhelp command to view an HTML help file for this bot.
+2018-05-03 02:52:54	zzzeyez	;allhelp
+2018-05-03 02:52:55	ShaleRocksBot	Help file generated: http://ShaleRocksBot.us.to/xLYTybeYJFVkrEenP7xLsg.html
+2018-05-03 03:02:07	zzzeyez	;lastfm -nick=em3i3mei -recent | rainbow -w
+2018-05-03 03:02:07	ShaleRocksBot	Configuration error.  The bot owner needs to specify an API Key in the config file.
+2018-05-03 03:03:32	zzzeyez	;miss zzzeyez | rainbow -c 3
+2018-05-03 03:03:32	ShaleRocksBot	3 writes poetry in zzzeyez's honor
+2018-05-03 03:04:08	zzzeyez	;miss zzzeyez | rainbow -c hello world
+2018-05-03 03:04:08	ShaleRocksBot	hello world keeps checking zzzeyez's Facebook page for new activity
+2018-05-03 03:04:57	zzzeyez	;miss zzzeyez | rainbow -c hello world | echo
+2018-05-03 03:04:57	ShaleRocksBot	hello world  composes a poem for zzzeyez and sends it via SMS.
+2018-05-03 03:06:53	zzzeyez	;badge | rainbow
+2018-05-03 03:06:53	ShaleRocksBot	Your badges: On day 5 with it.
+2018-05-03 03:08:48	zzzeyez	;which
+2018-05-03 03:08:48	ShaleRocksBot	Usage: help [<plugin name>] [<command>] [<-flag>].  Use ;plugins to get a list of installed plugins.  Use help --info <plugin name> to get general plugin information.  Use the ;allhelp command to view an HTML help file for this bot.
+2018-05-03 03:09:43	zzzeyez	;fortune
+2018-05-03 03:09:43	ShaleRocksBot	zzzeyez: Sorry, fortune is not installed on this machine.
+2018-05-03 03:10:04	zzzeyez	;rand
+2018-05-03 03:10:04	ShaleRocksBot	zzzeyez: 8
+2018-05-03 03:10:33	zzzeyez	;rand | rainbow
+2018-05-03 03:10:33	ShaleRocksBot	5
+2018-05-03 03:11:48	zzzeyez	;weather 94123 grep *,
+2018-05-03 03:11:49	ShaleRocksBot	zzzeyez: Thursday: Sunshine along with some cloudy intervals. High 58F. Winds WSW at 10 to 20 mph.• Thursday Night: Partly cloudy. Low 49F. Winds WSW at 10 to 20 mph.• Friday: Sunshine and clouds mixed. High 61F. Winds WSW at 10 to 20 mph.• Friday Night: Partly cloudy in the evening with more clouds for later at night. Low near 50F. Winds WSW at 10 to 20 mph.• Saturday: Mainly {1 ;more line}
+2018-05-03 03:12:09	zzzeyez	;weather 94123 | grep *F
+2018-05-03 03:12:10	ShaleRocksBot	not found
+2018-05-03 03:12:19	zzzeyez	;weather 94123 | grep Thursday
+2018-05-03 03:12:19	ShaleRocksBot	Thursday: Sunshine along with some cloudy intervals. High 58F. Winds WSW at 10 to 20 mph.• Thursday Night: Partly cloudy. Low 49F. Winds WSW at 10 to 20 mph.• Friday: Sunshine and clouds mixed. High 61F
+2018-05-03 03:13:11	zzzeyez	;weather 94123 | grep High *F
+2018-05-03 03:13:12	ShaleRocksBot	*F Thursday: Sunshine along with some cloudy intervals. High 58F. Winds WSW at 10 to 20 mph.• Thursday Night: Partly cloudy. Low 49F. Winds WSW at 10 to 20 mph.• Friday: Sunshine and clouds mixed. H
+2018-05-03 03:14:50	zzzeyez	;weather 94123 | scramble
+2018-05-03 03:14:50	ShaleRocksBot	ahou   W rg6h  yhslWndyyylw8o5tu h0  nPg N0t2m ahp9isiiys h 6eioco  ttd aWSld0 .nih m euat xd5a•0pe cni.  hm•:o hF•nLhoTiaW.. H. nmw.stti  tiaNtaym .yhu .uWunnv 2s oi noc:t .0aSln0enSsli  udc rhFeo2aa   adW•saytg  a u0 1st0r hrrin F• iS rts:re1tmodeny2teudghods   1e.ogno voudFWPm  hF i1..wsf0hr  We2 y  cnnWW oMga dd tduttp d1lhrw4aFtWl eti idH i a.tyhy li Wd srSr .diiaigom S0 {1 ;more line}
+2018-05-03 03:15:06	zzzeyez	;badge | rainbow | scramble
+2018-05-03 03:15:07	ShaleRocksBot	u 315 0101e4:bi0o25ta0r020Oh1n09 2y5013 Y 2d0113w10s5id1.2at07g51 1
+2018-05-03 03:16:00	zzzeyez	;echo *
+2018-05-03 03:16:01	ShaleRocksBot	*
+2018-05-03 03:16:08	zzzeyez	;echo $2
+2018-05-03 03:16:08	ShaleRocksBot	$2
+2018-05-03 03:17:01	zzzeyez	;badge | grep #
+2018-05-03 03:17:01	ShaleRocksBot	not found
+2018-05-03 03:17:47	zzzeyez	;badge | grep -o '[0-9]*
+2018-05-03 03:17:47	ShaleRocksBot	not found
+2018-05-03 03:17:50	zzzeyez	;badge | grep -o '[0-9]*'
+2018-05-03 03:17:50	ShaleRocksBot	not found
+2018-05-03 03:17:55	zzzeyez	;badge | grep -o '[0-9]'
+2018-05-03 03:17:55	ShaleRocksBot	not found
+2018-05-03 03:18:06	zzzeyez	;badge | grep -o 5
+2018-05-03 03:18:06	ShaleRocksBot	Your badges: On day 5 with it.
+2018-05-03 03:39:18	zzzeyez	;news kanye
+2018-05-03 03:39:21	ShaleRocksBot	zzzeyez: This RSS feed URL is deprecated https://is.gd/JD7ja4 • #IfSlaveryWasAChoice marks bad week for Kanye West - CNN https://is.gd/V4AJon • Chris Brown tears Kanye West to shreds over slavery comments: 'This man is a clown!' - USA TODAY https://is.gd/stekDO • What The Uproar Over Kanye West Might Reveal About Black Voters - NPR https://is.gd/ruJPgs • Roots Star LeVar Burton Says {1 ;more line}
+2018-05-03 03:41:16	zzzeyez	;news australia
+2018-05-03 03:41:19	ShaleRocksBot	zzzeyez: This RSS feed URL is deprecated https://is.gd/JD7ja4 • Australia's First Lady Was 'Flattered' by French President Emmanuel Macron's Unusual Compliment - TIME https://is.gd/7WgXx5 • Ex-Lobbyist for Foreign Governments Helped Plan Pruitt Trip to Australia - New York Times https://is.gd/7xAEy1 • Australia's Commonwealth Bank says records of nearly 20 mln accounts lost - Reuters {1 ;more line}
+2018-05-03 03:41:30	zzzeyez	;news colorado
+2018-05-03 03:41:32	ShaleRocksBot	zzzeyez: This RSS feed URL is deprecated https://is.gd/JD7ja4 • A Transgender Inmate Says She Was Raped in a 'Discriminatory and Dangerous' Colorado Men's Prison - TIME https://is.gd/hqZx6Z • Bill to create fund for Colorado families of fallen first responders passes house committee - FOX31 Denver https://is.gd/dxCUZI • Colorado State University investigates after two Native American {1 ;more line}
+2018-05-03 03:42:06	zzzeyez	;news alcoholism
+2018-05-03 03:42:08	ShaleRocksBot	zzzeyez: This RSS feed URL is deprecated https://is.gd/JD7ja4 • I Loved My Baby Girl Fiercely as a New Mom—But I Couldn't Get Through the Day Without Alcohol - Health.com https://is.gd/XTBM16 • Teen kills self over father's alcoholism - Deccan Herald https://is.gd/4gXl9b • Can MDMA Treat Alcoholism? Scientists Begin First Clinical Trials - Newsweek https://is.gd/T58N4M • {1 ;more line}
+2018-05-03 03:43:18	zzzeyez	;news fake news
+2018-05-03 03:43:20	ShaleRocksBot	zzzeyez: This RSS feed URL is deprecated https://is.gd/JD7ja4 • Mahathir Probed Under Malaysia Fake News Law for Sabotage Claim - Bloomberg https://is.gd/d5dVFi • Billboards warn of 'fake' health centers - FOX31 Denver https://is.gd/m3z279 • Facebook Brings in Fake News Huckster to Conduct Conservative Bias Probe - Gizmodo https://is.gd/7ofIMt • Fake news has always existed, but {1 ;more line}
+2018-05-07 20:02:15	ShaleRocksBot	zzzeyez: Your badges: On day 10 with it.
+2018-05-11 17:04:01	ShaleRocksBot	Rory36 is now worth 3 in zzzeyez's eyes.
+2018-05-11 17:04:08	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:08	ShaleRocksBot	Rory36 is now worth 4 in zzzeyez's eyes.
+2018-05-11 17:04:09	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:10	ShaleRocksBot	Rory36 is now worth 5 in zzzeyez's eyes.
+2018-05-11 17:04:11	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:12	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:12	ShaleRocksBot	Rory36 is now worth 6 in zzzeyez's eyes.
+2018-05-11 17:04:14	ShaleRocksBot	Rory36 is now worth 7 in zzzeyez's eyes.
+2018-05-11 17:04:14	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:16	ShaleRocksBot	Rory36 is now worth 8 in zzzeyez's eyes.
+2018-05-11 17:04:17	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:18	ShaleRocksBot	Rory36 is now worth 9 in zzzeyez's eyes.
+2018-05-11 17:04:19	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:20	ShaleRocksBot	Rory36 is now worth 10 in zzzeyez's eyes.
+2018-05-11 17:04:21	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:22	ShaleRocksBot	Rory36 is now worth 11 in zzzeyez's eyes.
+2018-05-11 17:04:23	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:24	ShaleRocksBot	Rory36 is now worth 12 in zzzeyez's eyes.
+2018-05-11 17:04:26	zzzeyez	;addpoint Rory36
+2018-05-11 17:04:26	ShaleRocksBot	Rory36 is now worth 13 in zzzeyez's eyes.
+2018-05-12 12:26:34		irc: disconnected from server
+2018-05-12 13:08:01		irc: disconnected from server
+2018-05-12 16:36:31		irc: disconnected from server
+2018-06-07 16:09:27	ShaleRocksBot	incert is now worth 7 in zzzeyez's eyes.
+2018-06-07 16:09:37	zzzeyez	;addoing incert
+2018-06-07 16:09:44	zzzeyez	;addpoing incert
+2018-06-07 16:09:44	ShaleRocksBot	incert is now worth 8 in zzzeyez's eyes.
+2018-06-07 16:09:46	zzzeyez	;addpoing incert
+2018-06-07 16:09:47	ShaleRocksBot	incert is now worth 9 in zzzeyez's eyes.
+2018-06-07 16:09:47	zzzeyez	;addpoing incert
+2018-06-07 16:09:49	ShaleRocksBot	incert is now worth 10 in zzzeyez's eyes.
+2018-06-07 16:09:50	zzzeyez	;addpoing incert
+2018-06-07 16:09:50	ShaleRocksBot	incert is now worth 11 in zzzeyez's eyes.
+2018-06-07 16:09:51	zzzeyez	;addpoing incert
+2018-06-07 16:09:53	ShaleRocksBot	incert is now worth 12 in zzzeyez's eyes.
+2018-06-07 16:09:54	zzzeyez	;addpoing incert
+2018-06-07 16:09:54	ShaleRocksBot	incert is now worth 13 in zzzeyez's eyes.
+2018-06-07 16:09:55	zzzeyez	;addpoing incert
+2018-06-07 16:09:57	ShaleRocksBot	incert is now worth 14 in zzzeyez's eyes.
+2018-06-07 16:09:57	zzzeyez	;addpoing incert
+2018-06-07 16:09:59	ShaleRocksBot	incert is now worth 15 in zzzeyez's eyes.
+2018-06-07 16:09:59	zzzeyez	;addpoing incert
+2018-06-07 16:10:01	ShaleRocksBot	incert is now worth 16 in zzzeyez's eyes.
+2018-06-07 16:10:01	zzzeyez	;addpoing incert
+2018-06-07 16:10:03	ShaleRocksBot	incert is now worth 17 in zzzeyez's eyes.
+2018-06-07 16:10:04	zzzeyez	;addpoing incert
+2018-06-07 16:10:05	ShaleRocksBot	incert is now worth 18 in zzzeyez's eyes.
+2018-06-07 16:10:05	zzzeyez	;addpoing incert
+2018-06-07 16:10:07	ShaleRocksBot	incert is now worth 19 in zzzeyez's eyes.
+2018-06-07 16:10:08	zzzeyez	;addpoing incert
+2018-06-07 16:10:08	ShaleRocksBot	incert is now worth 20 in zzzeyez's eyes.
+2018-06-07 16:10:09	zzzeyez	;addpoing incert
+2018-06-07 16:10:11	ShaleRocksBot	zzzeyez: You've sent me more than 15 commands in the past 60 seconds. Don't do that.
+2018-06-27 08:52:11	ShaleRocksBot	zzzeyez: Your badges: On day 3 with Sobriety.
+2019-02-08 16:59:09	ShaleRocksBot	incert is now worth 24 in zzzeyez's eyes.
+2019-02-08 16:59:20	zzzeyez	;addpoing incert
+2019-02-08 16:59:20	ShaleRocksBot	incert is now worth 25 in zzzeyez's eyes.
+2019-02-08 16:59:23	zzzeyez	;addpoing incert
+2019-02-08 16:59:23	ShaleRocksBot	incert is now worth 26 in zzzeyez's eyes.
+2019-02-08 16:59:24	zzzeyez	;addpoing incert
+2019-02-08 16:59:25	ShaleRocksBot	incert is now worth 27 in zzzeyez's eyes.
+2019-02-08 16:59:25	zzzeyez	;addpoing incert
+2019-02-08 16:59:27	ShaleRocksBot	incert is now worth 28 in zzzeyez's eyes.
+2019-02-08 16:59:27	zzzeyez	;addpoing incert
+2019-02-08 16:59:28	zzzeyez	;addpoing incert
+2019-02-08 16:59:29	ShaleRocksBot	incert is now worth 29 in zzzeyez's eyes.
+2019-02-08 16:59:31	ShaleRocksBot	incert is now worth 30 in zzzeyez's eyes.
+2019-02-20 11:17:43	ShaleRocksBot	zzzeyez: Your badges: On day 3 with Sobriety.
+2019-02-20 11:18:25	zzzeyez	;badge
+2019-02-20 11:18:26	ShaleRocksBot	zzzeyez: Your badges: On day 3 with Sobriety.
+2019-02-20 11:19:06	zzzeyez	;badge
+2019-02-20 11:19:07	ShaleRocksBot	zzzeyez: Your badges: On day 3 with Sobriety.
+2019-02-20 11:19:37	zzzeyez	;echo sdfsds'sdfsd'fsd'f'sdf'
+2019-02-20 11:19:37	ShaleRocksBot	sdfsds'sdfsd'fsd'f'sdf'
+2019-02-20 11:20:03	zzzeyez	;echo "D"D"D""D
+2019-02-20 11:20:03	ShaleRocksBot	Repeat something. Usage: echo <text> [-channel=<#channel>] [-action]
+2019-02-20 11:20:22	zzzeyez	;echo dssdfsdfsd"dsfsdf
+2019-02-20 11:20:23	ShaleRocksBot	Repeat something. Usage: echo <text> [-channel=<#channel>] [-action]
+2019-02-20 11:23:07	ShaleRocksBot	sdfsds'sdfsd'fsd'f'sdf'
+2019-03-24 12:19:21	ShaleRocksBot	Usage: help [<plugin name>] [<command>] [<-flag>].  Use ;plugins to get a list of installed plugins.  Use help --info <plugin name> to get general plugin information.  Use the ;allhelp command to view an HTML help file for this bot.
+2019-03-24 12:19:21		27:41: syntax error: A identifier can’t go after this identifier. (-2740)
+2019-03-24 12:19:28	zzzeyez	;plugins
+2019-03-24 12:19:28	ShaleRocksBot	My Plugins: Admin Alias Badges Countdown Counter CryptoCurrency Diss DuckHunt Games Google GoogleFight HelloWorld Help Imgur Is LastFM Lyrics MasterMind More NFLFF News Notes Points Reddit RedditAnnounce Seen Sleep SportsScores TFW TextUtils Time Translate Twitter UrlTranslate UserOptions Weather Welcome Wolfram WordScramble
+2019-03-24 12:19:28		27:41: syntax error: A identifier can’t go after this identifier. (-2740)
+2019-03-24 12:19:49	zzzeyez	;help --info DuckHunt
+2019-03-24 12:19:49	ShaleRocksBot	Plugin name: DuckHunt. Goose Game
+2019-03-24 12:19:49		27:41: syntax error: A identifier can’t go after this identifier. (-2740)
+2019-03-24 12:19:56	zzzeyez	;help DuckHunt
+2019-03-24 12:19:56	ShaleRocksBot	Commands in DuckHunt: bang, befriend, clear_scores, friends, monsters, scoretotal, start, stop
+2019-03-24 12:19:56		27:41: syntax error: A identifier can’t go after this identifier. (-2740)
+2019-04-08 20:54:29	ShaleRocksBot	zzzeyez: Your badges: On day 10 with Sobriety.  On day 80 with nicotine.
+2019-04-25 10:18:39	ShaleRocksBot	zzzeyez: Your badges: On day 26 with Sobriety.  On day 96 with nicotine.
+2019-04-25 10:19:53	zzzeyez	;badge
+2019-04-25 10:19:53	ShaleRocksBot	zzzeyez: Your badges: On day 26 with Sobriety.  On day 96 with nicotine.
+2019-04-25 10:20:51	zzzeyez	;badge
+2019-04-25 10:20:51	ShaleRocksBot	zzzeyez: Your badges: On day 26 with Sobriety.  On day 96 with nicotine.
+2019-04-25 10:21:47	zzzeyez	;badge
+2019-04-25 10:21:48	ShaleRocksBot	zzzeyez: Your badges: On day 26 with Sobriety.  On day 96 with nicotine.
+2019-05-10 00:15:46	ShaleRocksBot	zzzeyez: Your badges: On day 111 with nicotine.  2 days, 14 hours with Sobriety.
+2019-05-10 00:16:58	zzzeyez	;badge
+2019-05-10 00:16:59	ShaleRocksBot	zzzeyez: Your badges: On day 111 with nicotine.  2 days, 14 hours with Sobriety.

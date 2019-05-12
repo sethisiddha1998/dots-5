@@ -1,0 +1,470 @@
+2018-02-24 01:21:13	-->	zzzeyez (~zzzeyez@2001:5b0:49c9:6a68:b49b:b4d6:cab4:4bae) has joined ##apple
+2018-02-24 01:21:13		Topic for ##apple is "Ask your question, please be patient | High Sierra 10.13.3 [ http://support.apple.com/downloads/DL1953/ ] | Sierra 10.12.6 | El Capitan 10.11.6 | Supplemental update for 10.13.3 [ http://support.apple.com/downloads/DL1957/ ] | iOS 11.2.6 | Breaking NDA, warez, hackintoss, unsupported VMs = kickban | Dev: #macdev #iphonedev #swift-lang"
+2018-02-24 01:21:13		Topic set by Branes (~Branes@unaffiliated/branes) on Mon, 19 Feb 2018 15:44:18
+2018-02-24 01:21:13		Channel ##apple: 204 nicks (2 ops, 0 voices, 202 normals)
+2018-02-24 01:21:15		Channel created on Sat, 25 Nov 2006 23:42:45
+2018-02-24 01:27:53	<--	Atque (~Atque@unaffiliated/atque) has quit (Quit: ...)
+2018-02-24 01:37:00	-->	erasmus (~erasmus@unaffiliated/erasmus) has joined ##apple
+2018-02-24 02:00:22	-->	mihaele (~mihaele@ip145-42.pris.ca) has joined ##apple
+2018-02-24 02:00:33	<--	DLSteve (~DLSteve@2601:601:1301:40a8:8cf0:81d3:ce02:7ab0) has quit (Ping timeout: 240 seconds)
+2018-02-24 02:01:55	-->	macxim (~macxim@90.170.202.59) has joined ##apple
+2018-02-24 02:09:08	<--	Rashad (~Rashad@37.202.66.204) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-24 02:11:28	<--	macxim (~macxim@90.170.202.59) has quit (Ping timeout: 248 seconds)
+2018-02-24 02:18:45	-->	Rashad (~Rashad@212.34.12.181) has joined ##apple
+2018-02-24 02:35:07	-->	CryptoManiac (~MeGa@unaffiliated/cryptomaniac) has joined ##apple
+2018-02-24 02:44:58	<--	mihaele (~mihaele@ip145-42.pris.ca) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-24 02:47:23	-->	mihaele (~mihaele@ip145-42.pris.ca) has joined ##apple
+2018-02-24 03:02:04	<--	mihaele (~mihaele@ip145-42.pris.ca) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-24 03:04:14	-->	mihaele (~mihaele@ip145-42.pris.ca) has joined ##apple
+2018-02-24 03:07:51	<--	mihaele (~mihaele@ip145-42.pris.ca) has quit (Client Quit)
+2018-02-24 03:50:25	<--	davr0s (~textual@host81-147-72-121.range81-147.btcentralplus.com) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2018-02-24 04:03:34	-->	davr0s (~textual@host81-147-72-121.range81-147.btcentralplus.com) has joined ##apple
+2018-02-24 04:04:45	-->	Suchorski (~regex@unaffiliated/suchorski) has joined ##apple
+2018-02-24 04:50:09	<--	BobbyJr (~BobbyJr@robsworld.plus.com) has quit (Ping timeout: 264 seconds)
+2018-02-24 05:03:03	-->	Snircle (~textual@2600:8801:c404:7900:300b:8e85:6d20:198) has joined ##apple
+2018-02-24 05:06:26	<--	trn (jhj@prone.ws) has quit (Read error: Connection reset by peer)
+2018-02-24 05:06:33	<--	dystopia_ (~mehhhhh@unaffiliated/dystopia/x-1544343) has quit (Remote host closed the connection)
+2018-02-24 05:28:32	<--	Rashad (~Rashad@212.34.12.181) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-24 05:29:21	-->	h12o (~h12o@103.5.140.151) has joined ##apple
+2018-02-24 05:31:02	-->	trn (jhj@prone.ws) has joined ##apple
+2018-02-24 05:35:55	-->	Rashad (~Rashad@212.34.12.181) has joined ##apple
+2018-02-24 05:42:19	-->	exad (~exad@modemcable234.187-179-173.mc.videotron.ca) has joined ##apple
+2018-02-24 05:44:39	<--	h12o (~h12o@103.5.140.151) has quit (Ping timeout: 252 seconds)
+2018-02-24 06:00:01	<--	exad (~exad@modemcable234.187-179-173.mc.videotron.ca) has quit (Quit: Lost terminal)
+2018-02-24 06:02:45	<--	Snircle (~textual@2600:8801:c404:7900:300b:8e85:6d20:198) has quit (Ping timeout: 276 seconds)
+2018-02-24 06:03:59	-->	Snircle (~textual@2600:8801:c404:7900:300b:8e85:6d20:198) has joined ##apple
+2018-02-24 06:08:59	-->	macxim (~macxim@90.170.202.59) has joined ##apple
+2018-02-24 06:10:19	<--	Mr_Keyser_Soze (~Mr_Keyser@c-69-246-32-17.hsd1.la.comcast.net) has quit (Ping timeout: 252 seconds)
+2018-02-24 06:14:13	<--	Rashad (~Rashad@212.34.12.181) has quit (Ping timeout: 240 seconds)
+2018-02-24 06:14:33	<--	macxim (~macxim@90.170.202.59) has quit (Ping timeout: 240 seconds)
+2018-02-24 06:15:23	-->	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has joined ##apple
+2018-02-24 06:17:55	-->	Rashad (~Rashad@213.139.53.42) has joined ##apple
+2018-02-24 06:23:55	<--	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-24 06:55:40	<--	instantp10neer (~instantp1@unaffiliated/instantp10neer) has quit (Read error: Connection reset by peer)
+2018-02-24 06:55:48	<--	Suchorski (~regex@unaffiliated/suchorski) has quit (Read error: Connection reset by peer)
+2018-02-24 06:56:06	-->	instantp10neer (~instantp1@unaffiliated/instantp10neer) has joined ##apple
+2018-02-24 06:56:47	-->	Kasm279 (~frozen@unaffiliated/kasm279) has joined ##apple
+2018-02-24 06:57:21	<--	shortdudey123 (~shortdude@chunk01.ridderg.com) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:02	-->	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has joined ##apple
+2018-02-24 06:59:10	<--	captain42 (~captain42@unaffiliated/captain42) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:10	<--	s4y (~s4y@pdpc/supporter/professional/sidney) has quit (Ping timeout: 264 seconds)
+2018-02-24 06:59:37	-->	shortdudey123 (~shortdude@chunk01.ridderg.com) has joined ##apple
+2018-02-24 07:01:08	-->	s4y (~s4y@pdpc/supporter/professional/sidney) has joined ##apple
+2018-02-24 07:01:16	<--	ninja111 (uid264544@gateway/web/irccloud.com/x-ahcomndpgmnvhsaj) has quit (Quit: Connection closed for inactivity)
+2018-02-24 07:02:47	-->	captain42 (~captain42@unaffiliated/captain42) has joined ##apple
+2018-02-24 07:04:42	-->	techietrash_ (~techietra@unaffiliated/techietrash) has joined ##apple
+2018-02-24 07:05:18	-->	Wurstsalat (~WURST@unaffiliated/gottkanzler) has joined ##apple
+2018-02-24 07:06:04	-->	weez17_ (~isaac@unaffiliated/weez17) has joined ##apple
+2018-02-24 07:08:54	-->	bray90820_ (~bray90820@173-25-193-72.client.mchsi.com) has joined ##apple
+2018-02-24 07:09:40	-->	gpolitis- (~gpolitis@cpe-24-242-81-140.austin.res.rr.com) has joined ##apple
+2018-02-24 07:09:59	<--	Ziginox (~frozen@unaffiliated/kasm279) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:09:59	<--	abyxcos (~abyxcos@mnetic.ch) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:09:59	<--	GottKanzler (~WURST@unaffiliated/gottkanzler) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:09:59	<--	x-fak (~jul54@reactos/tester/x-fak) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:00	<--	BeamWatcher (~gashead76@208.117.74.236) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	Haxxa (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:01	<--	techietrash (~techietra@unaffiliated/techietrash) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:02		techietrash_ is now known as techietrash
+2018-02-24 07:10:27	<--	bray90820 (~bray90820@173-25-193-72.client.mchsi.com) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:27	<--	Rashad (~Rashad@213.139.53.42) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	gpolitis (~gpolitis@cpe-24-242-81-140.austin.res.rr.com) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:28	<--	weez17 (~isaac@unaffiliated/weez17) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:10:32	-->	Hazza (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has joined ##apple
+2018-02-24 07:16:01	-->	abyxcos (~abyxcos@mnetic.ch) has joined ##apple
+2018-02-24 07:17:54	-->	Rashad (~Rashad@213.139.53.42) has joined ##apple
+2018-02-24 07:23:09	<--	abyxcos (~abyxcos@mnetic.ch) has quit (Ping timeout: 264 seconds)
+2018-02-24 07:23:14	<--	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-24 07:33:45	-->	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has joined ##apple
+2018-02-24 07:33:51	-->	Ussat (~Ussat@pdpc/supporter/active/ussat) has joined ##apple
+2018-02-24 07:58:52	<--	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has quit (*.net *.split)
+2018-02-24 08:14:48	-->	DLSteve (~DLSteve@2601:601:1301:40a8:6060:659a:1853:4e96) has joined ##apple
+2018-02-24 08:19:58	-->	PowerPCMac (~textual@2601:83:8100:42cf:3983:2ff8:e360:51c0) has joined ##apple
+2018-02-24 08:26:28	<--	Rashad (~Rashad@213.139.53.42) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-24 08:27:43	-->	chrispratt (chrispratt@gateway/vpn/privateinternetaccess/chrispratt) has joined ##apple
+2018-02-24 08:29:23	<--	PowerPCMac (~textual@2601:83:8100:42cf:3983:2ff8:e360:51c0) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-24 08:39:53	<--	davr0s (~textual@host81-147-72-121.range81-147.btcentralplus.com) has quit (Ping timeout: 240 seconds)
+2018-02-24 08:47:08	-->	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has joined ##apple
+2018-02-24 08:47:32	<--	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has quit (Client Quit)
+2018-02-24 08:56:23	-->	Cirrus_Minor (~Cirrus_Mi@CAcert/Cirrus-Minor) has joined ##apple
+2018-02-24 09:00:32	THE_GFR|WORK	hey everyone I have a late 2011 macbook pro 17" i7 2.4GHz logic board the video is messed up, I got a replacement but it's not working either currently.  Any thoughts on the GPU Replacement services listed on ebay?
+2018-02-24 09:03:41	<--	macdude22 (~macdude22@50-83-104-223.client.mchsi.com) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-24 09:05:43	-->	davr0s (~textual@host81-155-66-141.range81-155.btcentralplus.com) has joined ##apple
+2018-02-24 09:06:18	<--	erasmus (~erasmus@unaffiliated/erasmus) has quit (Quit: END702)
+2018-02-24 09:10:31	-->	jfcaron (~jfcaron@unaffiliated/jfcaron) has joined ##apple
+2018-02-24 09:11:02	-->	quackgyver (uid11872@gateway/web/irccloud.com/x-hqjqgttjxmtfdaom) has joined ##apple
+2018-02-24 09:15:55	-->	SeepingN (~CPngN@unaffiliated/cpngn/x-6985199) has joined ##apple
+2018-02-24 09:17:46	-->	erasmus (~erasmus@unaffiliated/erasmus) has joined ##apple
+2018-02-24 09:39:37	<--	cuebix (~cuebix@pool-72-76-103-135.nwrknj.fios.verizon.net) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2018-02-24 09:56:44	-->	Rashad (~Rashad@213.139.53.42) has joined ##apple
+2018-02-24 10:04:20	-->	Aherin (~Aherin@92-111-239-66.static.v4.ziggozakelijk.nl) has joined ##apple
+2018-02-24 10:09:10	<--	Ussat (~Ussat@pdpc/supporter/active/ussat) has quit (Remote host closed the connection)
+2018-02-24 10:13:33	<--	_CLDZ_ (~CLDZ@unaffiliated/cldz) has quit (Quit: Narf ...)
+2018-02-24 10:13:57	-->	CLDZ (~CLDZ@unaffiliated/cldz) has joined ##apple
+2018-02-24 10:17:02	-->	Mr_Keyser_Soze (~Mr_Keyser@c-69-246-32-17.hsd1.la.comcast.net) has joined ##apple
+2018-02-24 10:18:21	-->	redstarcomrade (~quassel@2600:1700:e050:5340:406e:f36d:8167:f004) has joined ##apple
+2018-02-24 10:18:26	<--	Aherin (~Aherin@92-111-239-66.static.v4.ziggozakelijk.nl) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-24 10:24:19	-->	cuebix (~cuebix@pool-72-76-103-135.nwrknj.fios.verizon.net) has joined ##apple
+2018-02-24 10:45:53	<--	erasmus (~erasmus@unaffiliated/erasmus) has quit (Read error: Connection reset by peer)
+2018-02-24 10:46:20	-->	erasmus (~erasmus@unaffiliated/erasmus) has joined ##apple
+2018-02-24 10:49:53	<--	jfcaron (~jfcaron@unaffiliated/jfcaron) has quit (Ping timeout: 240 seconds)
+2018-02-24 10:50:50	<--	cuebix (~cuebix@pool-72-76-103-135.nwrknj.fios.verizon.net) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2018-02-24 10:51:29	<--	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has quit (Remote host closed the connection)
+2018-02-24 10:52:19	-->	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has joined ##apple
+2018-02-24 10:54:37	-->	cuebix (~cuebix@pool-72-76-103-135.nwrknj.fios.verizon.net) has joined ##apple
+2018-02-24 10:55:12	<--	tobsterius (~tobsteriu@tobsteri.us) has quit (Quit: ZNC - http://znc.in)
+2018-02-24 10:57:22	-->	tobsterius (~tobsteriu@tobsteri.us) has joined ##apple
+2018-02-24 11:01:33	<--	tobsterius (~tobsteriu@tobsteri.us) has quit (Ping timeout: 240 seconds)
+2018-02-24 11:04:51	-->	tobsterius (~tobsteriu@tobsteri.us) has joined ##apple
+2018-02-24 11:14:32	-->	BobbyJr (~BobbyJr@robsworld.plus.com) has joined ##apple
+2018-02-24 11:19:51	-->	jfcaron (~jfcaron@unaffiliated/jfcaron) has joined ##apple
+2018-02-24 11:21:02	<--	BobbyJr (~BobbyJr@robsworld.plus.com) has quit (Ping timeout: 245 seconds)
+2018-02-24 11:21:22	<--	shortdudey123 (~shortdude@chunk01.ridderg.com) has quit (Ping timeout: 248 seconds)
+2018-02-24 11:25:32	-->	Atque (~Atque@unaffiliated/atque) has joined ##apple
+2018-02-24 11:26:41	<--	Rashad (~Rashad@213.139.53.42) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-24 11:34:48		irc: disconnected from server
+2018-02-24 11:36:25		##apple: Cannot join channel (+r) - you need to be identified with services
+2018-02-24 11:44:20		irc: disconnected from server
+2018-02-24 11:44:43		##apple: Cannot join channel (+r) - you need to be identified with services
+2018-02-24 14:08:27	-->	zzzeyez (~zzzeyez@2001:5b0:49c9:6a68:28f3:2795:a1cf:f135) has joined ##apple
+2018-02-24 14:08:27		Topic for ##apple is "Ask your question, please be patient | High Sierra 10.13.3 [ http://support.apple.com/downloads/DL1953/ ] | Sierra 10.12.6 | El Capitan 10.11.6 | Supplemental update for 10.13.3 [ http://support.apple.com/downloads/DL1957/ ] | iOS 11.2.6 | Breaking NDA, warez, hackintoss, unsupported VMs = kickban | Dev: #macdev #iphonedev #swift-lang"
+2018-02-24 14:08:27		Topic set by Branes (~Branes@unaffiliated/branes) on Mon, 19 Feb 2018 15:44:18
+2018-02-24 14:08:27		Channel ##apple: 203 nicks (2 ops, 0 voices, 201 normals)
+2018-02-24 14:08:29		Channel created on Sat, 25 Nov 2006 23:42:45
+2018-02-24 14:19:47	<--	redstarcomrade (~quassel@2600:1700:e050:5340:406e:f36d:8167:f004) has quit (Read error: Connection reset by peer)
+2018-02-24 14:44:48	-->	obihann (~obihann@142.166.63.89) has joined ##apple
+2018-02-24 14:45:27	-->	Noldorin (~noldorin@unaffiliated/noldorin) has joined ##apple
+2018-02-24 14:47:17	<--	obihann (~obihann@142.166.63.89) has quit (Client Quit)
+2018-02-24 14:51:03	-->	Caine (~caine@161.97.213.11) has joined ##apple
+2018-02-24 15:02:15	-->	eHAPPY (~V1CE@ip70-180-87-103.no.no.cox.net) has joined ##apple
+2018-02-24 15:08:41	<--	macxim (~macxim@90.170.202.59) has quit (Remote host closed the connection)
+2018-02-24 15:20:42	-->	cuebix (~cuebix@pool-72-76-103-135.nwrknj.fios.verizon.net) has joined ##apple
+2018-02-24 15:31:26	-->	PowerPCMac (~textual@2601:83:8100:42cf:5423:ac9a:cf9:78ee) has joined ##apple
+2018-02-24 15:39:22	<--	LucaTM (~LucaTM@unaffiliated/lucatm) has quit (Quit: To infinity and beyond...)
+2018-02-24 15:48:58	<--	davr0s (~textual@host81-155-66-141.range81-155.btcentralplus.com) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2018-02-24 16:03:17	<--	SeepingN (~CPngN@unaffiliated/cpngn/x-6985199) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-24 16:17:41	<--	jfcaron (~jfcaron@unaffiliated/jfcaron) has quit (Quit: jfcaron)
+2018-02-24 16:22:09	<--	cuebix (~cuebix@pool-72-76-103-135.nwrknj.fios.verizon.net) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2018-02-24 16:25:38	-->	mihaele (~mihaele@ip145-42.pris.ca) has joined ##apple
+2018-02-26 17:44:39	-->	zzzeyez (~zzzeyez@2001:5b0:49c9:6a68:6de5:cd42:4de9:cc4) has joined ##apple
+2018-02-26 17:44:39		Topic for ##apple is "Ask your question, please be patient | High Sierra 10.13.3 [ http://support.apple.com/downloads/DL1953/ ] | Sierra 10.12.6 | El Capitan 10.11.6 | Supplemental update for 10.13.3 [ http://support.apple.com/downloads/DL1957/ ] | iOS 11.2.6 | Breaking NDA, warez, hackintoss, unsupported VMs = kickban | Dev: #macdev #iphonedev #swift-lang"
+2018-02-26 17:44:39		Topic set by Branes (~Branes@unaffiliated/branes) on Mon, 19 Feb 2018 15:44:18
+2018-02-26 17:44:39		Channel ##apple: 213 nicks (2 ops, 0 voices, 211 normals)
+2018-02-26 17:44:41		Channel created on Sat, 25 Nov 2006 23:42:45
+2018-02-26 17:52:33	SeepingN	shame on you
+2018-02-26 17:53:30	-->	andlabs (~pietro@184-207-51-162.pools.spcsdns.net) has joined ##apple
+2018-02-26 17:54:40	-->	AfroThundr (~AfroThund@h122.170.135.40.static.ip.windstream.net) has joined ##apple
+2018-02-26 17:56:59	-->	Smallville (uid279440@gateway/web/irccloud.com/x-bmqqemqsyedfqzmf) has joined ##apple
+2018-02-26 17:57:13	Smallville	Hi
+2018-02-26 17:58:05	Smallville	My iPhone se is not downloading pictures from iCloud...
+2018-02-26 17:59:23	Smallville	I synced my 4S to iCloud. And checked iCloud.com my pics are uploaded
+2018-02-26 18:00:06	Smallville	But my SE is not syncing with iCloud photos.
+2018-02-26 18:01:27	<--	davr0s (~textual@host86-147-196-30.range86-147.btcentralplus.com) has quit (Ping timeout: 252 seconds)
+2018-02-26 18:01:57	<--	andlabs (~pietro@184-207-51-162.pools.spcsdns.net) has quit (Ping timeout: 256 seconds)
+2018-02-26 18:02:25	SeepingN	you can view photos from icloud.com now?
+2018-02-26 18:02:40	Smallville	Yes
+2018-02-26 18:02:44	SeepingN	is it a good viewer with editing abilites or just some garbage?
+2018-02-26 18:02:59	<--	Suchorski (~regex@unaffiliated/suchorski) has quit
+2018-02-26 18:03:20	Smallville	Its ok I guess.
+2018-02-26 18:06:23	Smallville	The 4S is syncing perfectly with iCloud. But the iPhone Se is ignoring my iCloud account
+2018-02-26 18:10:56	Smallville	I'm going to wipe / reset the 4s to try to make the SE sync
+2018-02-26 18:11:37	Smallville	Does iTunes back up text messages?
+2018-02-26 18:24:58	<--	PowerPCMac (~textual@2601:83:8100:42cf:9:ae89:1fc6:5cd5) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-26 18:27:27	-->	PowerPCMac (~textual@2601:83:8100:42cf:9:ae89:1fc6:5cd5) has joined ##apple
+2018-02-26 18:42:27	<--	SeepingN (~CPngN@unaffiliated/cpngn/x-6985199) has quit (Quit: The system is going down for reboot NOW!)
+2018-02-26 18:43:03	<--	Flynnn (~textual@unaffiliated/flynnn) has quit (Quit: Auf Wiedersehen!)
+2018-02-26 18:43:04	mwilson	Why would erasing phone (A) make phone (B) perform differently?
+2018-02-26 18:57:22	-->	nshirelaptop (~nealshire@unaffiliated/nealshire) has joined ##apple
+2018-02-26 19:02:01	<--	sach (~sach@unaffiliated/sach) has quit (Quit: sach)
+2018-02-26 19:08:53	-->	nshirelaptopsgho (~nealshire@unaffiliated/nealshire) has joined ##apple
+2018-02-26 19:09:48	occupant	icloud is going to sync texts in 11.3
+2018-02-26 19:10:37	<--	nshirelaptop (~nealshire@unaffiliated/nealshire) has quit (Ping timeout: 245 seconds)
+2018-02-26 19:13:44	jrg	i’ve been using pages
+2018-02-26 19:13:49	jrg	and it’s actually....... pretty good
+2018-02-26 19:13:56	jrg	once you get past the fact it isn’t excel
+2018-02-26 19:14:39	Juesto	lol
+2018-02-26 19:14:50	Juesto	jrg: pages is the equivalent of word
+2018-02-26 19:14:53	Juesto	you mean numbers
+2018-02-26 19:14:57	jrg	yeah i’m sorry
+2018-02-26 19:14:59	jrg	i meant numbers
+2018-02-26 19:15:11	jrg	although.. pages isn’t bad either heh
+2018-02-26 19:15:23	Juesto	and keynote :)
+2018-02-26 19:15:37	jrg	i was going to try to make something with keynote soon for something
+2018-02-26 19:15:46	jrg	but i need to get the hdmi adapter for my iPhone
+2018-02-26 19:16:05	jrg	figure it would be a bit more special if i used my Apple Watch to move slides
+2018-02-26 19:19:22	jrg	but yeah. numbers is actually pretty neat
+2018-02-26 19:22:38	mwilson	Why do people care about syncing text messages?
+2018-02-26 19:25:15	<--	Ussat (~Ussat@pdpc/supporter/active/ussat) has quit (Remote host closed the connection)
+2018-02-26 19:29:36	<--	jfcaron (~jfcaron@unaffiliated/jfcaron) has quit (Quit: jfcaron)
+2018-02-26 19:33:01	Smallville	mwilson: I care because I have important conversations over text. It's job related
+2018-02-26 19:34:17	Smallville	mwilson: I ended up doing full backup of 4s on iTunes, and restoring the backup on the SE
+2018-02-26 19:34:37	Smallville	Now iCloud is syncing on both phones
+2018-02-26 19:36:02	<--	shortdudey123 (~shortdude@chunk01.ridderg.com) has quit (Ping timeout: 245 seconds)
+2018-02-26 19:36:52	<--	FrostCyborg (~FrostCybo@unaffiliated/frostcyborg) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-26 19:39:03	-->	shortdudey123 (~shortdude@chunk01.ridderg.com) has joined ##apple
+2018-02-26 19:40:21	Smallville	Dammit why is apple so unnecessarily complicated? Now iCloud on windows has 2. Separate folders for uploads and downloads
+2018-02-26 19:41:20	Smallville	Why isn't it just 1folder that syncs
+2018-02-26 19:45:35	Smallville	I'm just going to use Google drive. Its more usable and makes more sense
+2018-02-26 19:45:54	Juesto	dropbox makes more sense
+2018-02-26 19:46:03	Tachoh	i use synology Drive
+2018-02-26 19:46:06	Juesto	drive doesnt show you shared folders unless you add them to my drive, Smallville
+2018-02-26 19:48:42	<--	jeezy (~xz@bitchx/apple/jeezy) has quit (Ping timeout: 256 seconds)
+2018-02-26 19:51:38	-->	BobbyJr (~BobbyJr@robsworld.plus.com) has joined ##apple
+2018-02-26 19:53:42	jrg	anybody know if it is possible to select a group of cells with comments and copy the comments to a clipboard?
+2018-02-26 19:53:55	jrg	in numbers
+2018-02-26 19:58:57	<--	BobbyJr (~BobbyJr@robsworld.plus.com) has quit (Ping timeout: 245 seconds)
+2018-02-26 20:01:33	-->	Flynnn (~textual@unaffiliated/flynnn) has joined ##apple
+2018-02-26 20:05:28	-->	jeezy (~xz@bitchx/apple/jeezy) has joined ##apple
+2018-02-26 20:06:23	mwilson	Smallville: Everyone is whining about messages in iCloud.  There must be something special about it... my messages seem to make it fine to both my Mac(s) and my iOS devices.
+2018-02-26 20:06:53	mwilson	Smallville: Or is it just clueless people who can't deal with backups?
+2018-02-26 20:07:47	Smallville	Calling me clueless?
+2018-02-26 20:08:03	<--	nshirelaptopsgho (~nealshire@unaffiliated/nealshire) has quit (Read error: Connection reset by peer)
+2018-02-26 20:09:10	Smallville	I'm not super familiar with iPhones even though I had a 4s. I didn't use anywhere near its full capabilities
+2018-02-26 20:09:23	mwilson	No, I'm asking why people think it's somehow meaningful.  If test message (A) is important, that's what backups are for.  The *device* should *never* be authoritative.
+2018-02-26 20:11:24	-->	dave0x6d (uid190567@gateway/web/irccloud.com/x-tkwthmknuapukmde) has joined ##apple
+2018-02-26 20:11:42	mwilson	I was just reading an article about it that compares it to iCloud Photo Library.  If that's the case, why in the world would you want that?
+2018-02-26 20:11:59	-->	jfcaron (~jfcaron@unaffiliated/jfcaron) has joined ##apple
+2018-02-26 20:13:01	arahael	Perhaps because that's how most text apps work today.  Eg, WhatsApp, Facebook Messenger, Skype, Telegram, Signal...
+2018-02-26 20:13:59	jaybe	multi device users. travelers. families.
+2018-02-26 20:14:15	zchrykng	Currently each iOS device holds their own copy of all messages and sometimes not everything ends up in every location in the same order.
+2018-02-26 20:14:38	arahael	Right. That's a technical detail.  The user doesn't care.
+2018-02-26 20:14:51	zchrykng	Until it doesn't work right.
+2018-02-26 20:14:52	mwilson	Yes, and apparently the world is ending because of it, if you believe the clueless.
+2018-02-26 20:15:05	arahael	zchrykng: Exactly. :/
+2018-02-26 20:15:15	-->	nshirelaptopsgho (~nealshire@unaffiliated/nealshire) has joined ##apple
+2018-02-26 20:15:32	-->	saint_dogbert (~Ident@unaffiliated/phobos-anomaly/x-6744724) has joined ##apple
+2018-02-26 20:15:36	mwilson	It's hilarious sometimes to read the whiners who are just thunderstruck at the idea that sometimes things might be out of order.
+2018-02-26 20:15:43	zchrykng	I am mostly want it so I can setup my next iPhone as a new device, not restoring from backup, and still have all my messages.
+2018-02-26 20:16:16	zchrykng	mwilson: Which whiners? I feel like I missed part of the conversation.
+2018-02-26 20:16:17	mwilson	I have all of mine, too, but that doesn't mean they need to be on the device.
+2018-02-26 20:16:57	mwilson	zchrykng: Oh, there are fools every day who are about to lose their water because imessage might be out of order.
+2018-02-26 20:17:44	zchrykng	Oh... I don't particularly care if it is out of order, I just want to make sure I have everything. Which I sometimes don't comparing my iPhone, iPad, and MacBook Pro.
+2018-02-26 20:18:47	mwilson	Why compare?  If the information is important, you save it.  Otherwise, who cares?  Obviously some people do.  Myself, I don't see why people have such a problem with saving what's important.
+2018-02-26 20:19:52	zchrykng	It isn't so much that I am sitting down and comparing everything. It is more that I go looking for a conversation and can't find it, but switch devices and can.
+2018-02-26 20:20:18	mwilson	If the conversation is important, why isn't it backed up?
+2018-02-26 20:20:32	zchrykng	I make backups.
+2018-02-26 20:20:50	mwilson	But you can't find things?
+2018-02-26 20:21:23	zchrykng	The point isn't if it exists *somewhere*, the point is if it exists in a way that is actually useful.
+2018-02-26 20:21:38	zchrykng	I'm not talking about historical conversations.
+2018-02-26 20:22:41	<--	Praxi (uid44918@gateway/web/irccloud.com/x-qpmlmkygtappobto) has quit (Quit: Connection closed for inactivity)
+2018-02-26 20:22:45	mwilson	What else are there?
+2018-02-26 20:25:07	zchrykng	I'm not sure if I am doing a really bad job explaining, or if you are missing the point entirely.
+2018-02-26 20:25:27	mwilson	Like I said, if conversation <X> is somehow important, the last place it belongs is on the phone.
+2018-02-26 20:25:58	zchrykng	I don't think you understand how iMessage works.
+2018-02-26 20:26:19	mwilson	Oh?  Educate me.
+2018-02-26 20:28:00	zchrykng	You really can't use iMessage if the messages never show up on any of your devices.
+2018-02-26 20:28:33	zchrykng	I'm not saying that should be the only place they exist.
+2018-02-26 20:28:48	arahael	When my wife needed to keep a record of a conversation, she took screenshots and put them into dropbox.
+2018-02-26 20:28:56	mwilson	Who said they don't?  I pick up the phone, I message someone.  Oh, that's important, better save that.
+2018-02-26 20:30:05	mwilson	arahael: I used to use phoneview to pull out what was worth backing up.  Now I do the same thing with iMazing.
+2018-02-26 20:30:21	arahael	Yeah, well she has an Android phone, so... :)
+2018-02-26 20:30:32	arahael	As for me, I don't tend to look back on my old messages.
+2018-02-26 20:30:54	arahael	I just send my messages.  Then it's sent...  Done...  I move on.
+2018-02-26 20:31:02	<--	nshirelaptopsgho (~nealshire@unaffiliated/nealshire) has quit (Ping timeout: 245 seconds)
+2018-02-26 20:31:52	zchrykng	I think we are arguing about completely different use cases. I'm not talking about being able to go back and retreive old conversations, I want to be able to switch devices mid conversation and still have the complete context on the new devices. Or to be able to setup a new device have the previous conversations with various contacts. I make backup
+2018-02-26 20:31:52	zchrykng	s, but in this case I think if you are having to restore from a backup, your system has already failed.
+2018-02-26 20:31:54	mwilson	arahael: Isn't backing up SMS to Calendar still a thing on Android?  When I was an Android user, I had some app, I disremember the name, that would insert SMS's into a calendar you told it to use.  Then you could go to that day, and see all the messages.  Used to do the same thing with the call log.  I admit I haven't been an Android user for a few years, is that no longer a thing?
+2018-02-26 20:32:09	jfcaron	How can I make OSX recognize my external USB numpad?  The keyboard identification wizard wants me to press buttons not present on the numpad.  Can I just set it to "generic keyboard" in Terminal or something?
+2018-02-26 20:32:38	mwilson	zchrykng: Oh, you think Continuity and Handoff are good ideas, then.  I make sure to disable them on any device.
+2018-02-26 20:32:58	zchrykng	jfcaron: Just press them on whatever full keyboard you have. It should work.
+2018-02-26 20:33:22	jfcaron	On the MBP?
+2018-02-26 20:33:25	jfcaron	Ok.
+2018-02-26 20:33:30	mwilson	Sounds like a poor USB numberpad, if it's not correctly identifying itself.
+2018-02-26 20:33:31	zchrykng	mwilson: Eh, I don't use hand off at all basically. If they worked seamlessly I might feel better about it.
+2018-02-26 20:33:58	zchrykng	mwilson: Most external keyboards do this on macOS in my limited experience.
+2018-02-26 20:34:31	jfcaron	Ah cool.  And whoever coded Caves of Qud makes proper use of how OSX interprets a numpad.
+2018-02-26 20:34:41	jfcaron	I.e. numbers instead of arrow keys and such.
+2018-02-26 20:34:48	mwilson	Yes, but this isn't a keyboard, it's a number pad.  OS X asks you to do things like press the shift key to the left of the Z and other silly things, number pads don't have shift keys.
+2018-02-26 20:35:17	mwilson	arahael: So, no longer a thing, then?
+2018-02-26 20:37:55	<--	Juesto (~LimeC@unaffiliated/juest) has quit
+2018-02-26 20:40:25	mwilson	zchrykng: IN the end, iMessage is just SMS you don't have to pay for.  The idea that people would lose their water over the idea that SMS would arrive out of order, or at all, is amusing.  Expecting anything else is ludicrous.  It's a free service, you get what you pay for.
+2018-02-26 20:42:37	-->	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has joined ##apple
+2018-02-26 20:43:26	jrg	arahael: how do you expect to win an argument with your ex doing that?
+2018-02-26 20:43:30	jrg	it’s madness
+2018-02-26 20:44:39	mwilson	I was reading this reddit thread today where all these people were talking about getting hold of their SO's phone and finding out $RANDOM_THING by looking in their messages.
+2018-02-26 20:44:41	jrg	zchrykng: i don’t understand your problem. you probably can’t sync back in time but once the thing is connected to your iAccount you pretty much are synced from that point forward unless you recover from the same device and rename it ?
+2018-02-26 20:45:23	jrg	not really sure about that though. I’ve never really restored from a device I’m currently using onto another one.
+2018-02-26 20:45:34	mwilson	And all I could think was, "howinhell are they getting into the device in the first place?"  Whoinhell cares what's in the messages?
+2018-02-26 20:46:35	mwilson	All I can say is that if this becomes a feature, I'll be immediately disabling it, and if you can't disable it, it's back to regular SMS
+2018-02-26 20:46:42	jrg	zchrykng: but personally i think the across devices iMessage works pretty well.. once i open my mbp you can see the messages all syncing.
+2018-02-26 20:47:46	<--	Dr_Coke (~Dr_Coke@unaffiliated/dr-coke/x-0875422) has quit (Quit: Leaving)
+2018-02-26 20:49:28	jrg	wow. Mac mini is kind of expensive for 8GB and a dual core i5
+2018-02-26 20:49:35	jrg	i get that it’s small but still
+2018-02-26 20:49:54	jrg	I’m guessing that’s 2 core 4 thread?
+2018-02-26 20:51:31	zchrykng	jrg: Not when it fails to work, which is infrequent, but still annoying.
+2018-02-26 20:52:07	jrg	i suppose. i haven’t really ran into that issue tbh .. it usually just works. and all the devices sync up
+2018-02-26 20:52:18	jrg	and when one device isn’t online .. it syncs up when it is
+2018-02-26 20:52:24	jrg	but I’m sure it can happen
+2018-02-26 20:52:42	<--	erasmus (~erasmus@unaffiliated/erasmus) has quit (Read error: Connection reset by peer)
+2018-02-26 20:54:19	zchrykng	mwilson: Yeah, I understand that, but if Apple isn't going to invest in iMessage more than just glorified SMS, I will be attempting to find a better solution. I have been resisting Whatsapp, et al, but features like this are really useful in my opinion. And I am paying for it, iMessage is the single biggest reason I haven't tried switching to Andro
+2018-02-26 20:54:19	zchrykng	id. I don't think it is that great, but /all/ my family and friends thinks it is.
+2018-02-26 20:54:54	jrg	i wonder how much apple saves using a “fusion” drive
+2018-02-26 20:55:16	jrg	vs just opting for a legit SSD
+2018-02-26 20:55:57	zchrykng	jrg: Probably nothing, since they would just pass the cost along to the customer. They probably make more sales though because of the lower entry price.
+2018-02-26 20:56:06	zchrykng	cost + markup
+2018-02-26 20:56:19	jrg	I guess. they don’t have anything for SSD other than the 256GB pcie nand
+2018-02-26 20:56:58	zchrykng	jrg: Looking at the Mac Mini?
+2018-02-26 20:57:05	jrg	just doesn’t make sense to use a fusion drive. for that they might as well just throw in a 32GB nand with zfs on it heh
+2018-02-26 20:57:13	jrg	just looking at it to see if it’s worth it.
+2018-02-26 20:57:15	jrg	it’s not
+2018-02-26 20:57:29	jrg	too expensive for what it is.. although the size is nice
+2018-02-26 20:57:45	zchrykng	jrg: Check out the Intel NUCs, are basically mac minis.
+2018-02-26 20:58:31	-->	andlabs (~pietro@ool-44c6612e.dyn.optonline.net) has joined ##apple
+2018-02-26 20:58:32	jrg	I’d rather not fight with something to run macos on it
+2018-02-26 20:58:49	<--	jaelae (uid177201@gateway/web/irccloud.com/x-gaxkyrkcopaxafgc) has quit (Quit: Connection closed for inactivity)
+2018-02-26 20:58:55	zchrykng	From what I have read there is little fighting required, but I understand.
+2018-02-26 20:58:59	jrg	so there is no normal mac nowadays huh? just the imac Mac Pro and Mac mini
+2018-02-26 20:59:13	jrg	zchrykng: i hear that too. but updating a fake box is a pain from what i hear
+2018-02-26 20:59:27	jrg	I’d rather not even deal with that headache
+2018-02-26 20:59:35	zchrykng	The iMac and iMac Pro are the only things that are close to up to date.
+2018-02-26 20:59:46	zchrykng	Don't burn money on the other ones.
+2018-02-26 20:59:56	jrg	yeah. imac pro is interesting.. but that built in screen
+2018-02-26 21:00:09	jrg	too bad there isn’t a mid level mac without the built in screen nowadays
+2018-02-26 21:00:09	zchrykng	That is my position also.
+2018-02-26 21:00:22	 *	jrg busts out the G5
+2018-02-26 21:00:22	zchrykng	I am hoping a reasonable Mac Pro comes out this year.
+2018-02-26 21:00:34	jrg	yeah. Mac Pro way too expensive
+2018-02-26 21:00:39	zchrykng	I just want an updated cheese grater.
+2018-02-26 21:00:46	jrg	surprised apple doesn’t have a typical mac
+2018-02-26 21:00:54	jrg	zchrykng: i wish. they’d sell out on the first day
+2018-02-26 21:01:07	jrg	no idea wtf they’re thinking with that cylinder design.. guess they wanted to be different bad
+2018-02-26 21:01:16	zchrykng	They might learn something from that, not that I would count on it.
+2018-02-26 21:01:19	jrg	G5 was the prettiest mac they ever made
+2018-02-26 21:01:49	jrg	the Mac mini would be worth it if it were a bit more powerful
+2018-02-26 21:02:26	zchrykng	I have a big windows desktop I'm not willing to replace unless I can get something close to the same power. :/
+2018-02-26 21:02:45	jrg	or at least had some sort of 500-1TB SSD option.. that l2arc platter makes me kind of sick
+2018-02-26 21:02:49	jrg	and 256 is too small
+2018-02-26 21:03:08	jrg	i just use my late 2013 mbp heh
+2018-02-26 21:03:24	jrg	the thing is still a trooper.. i have an imac that I’m waiting on an SSD for that should show tomorrow
+2018-02-26 21:03:30	jrg	the platter is ass slow
+2018-02-26 21:03:58	jrg	I’d have rather had a 128GB SSD than this disgusting platter apple used in this late 2013 imac i have
+2018-02-26 21:05:08	jrg	at least make the damn thing easy to swap apple :)
+2018-02-26 21:05:14	jrg	guess those days are over now tho
+2018-02-26 21:09:48	zchrykng	jrg: Supposedly an updated Mac Pro is coming, probably this year, that will be "modular" whatever that means in Apple marketing speak.
+2018-02-26 21:10:37	jrg	pay to play I’m sure.
+2018-02-26 21:16:09	<--	Haxxa (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has quit (Remote host closed the connection)
+2018-02-26 21:25:40	-->	snowkidind (~textual@216.15.40.124) has joined ##apple
+2018-02-26 21:26:25	<--	methamp (mh@haxing.org) has quit (Ping timeout: 252 seconds)
+2018-02-26 21:28:01	<--	Snircle (~textual@2600:8801:c404:7900:f9e2:ba09:500e:8a5d) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-26 21:35:17	<--	electro33 (uid613@gateway/web/irccloud.com/x-xkulemotwctjkseb) has quit (Quit: Connection closed for inactivity)
+2018-02-26 21:35:28	<--	scientes (~shawn@unaffiliated/scientes) has quit (Ping timeout: 240 seconds)
+2018-02-26 21:38:18	<--	snowkidind (~textual@216.15.40.124) has quit (Quit: See Ya Later Alligator!)
+2018-02-26 21:40:45	<--	alleyrat (~alleyrat@li584-173.members.linode.com) has quit (Remote host closed the connection)
+2018-02-26 21:41:11	-->	alleyrat (~alleyrat@li584-173.members.linode.com) has joined ##apple
+2018-02-26 21:41:33	arahael	Pretty sure that "modular" means "has a separate keyboard and monitor".
+2018-02-26 21:44:31	-->	allizom (~Thunderbi@host121-113-dynamic.104-80-r.retail.telecomitalia.it) has joined ##apple
+2018-02-26 21:51:54	<--	gueriLLaPunK (~hi@37.48.94.152) has quit (Ping timeout: 276 seconds)
+2018-02-26 21:57:44	<--	allizom (~Thunderbi@host121-113-dynamic.104-80-r.retail.telecomitalia.it) has quit (Quit: allizom)
+2018-02-26 21:59:45		chris_partt is now known as chrispratt
+2018-02-26 22:05:35	<--	butterthebuddha (~butterthe@ec2-13-228-73-171.ap-southeast-1.compute.amazonaws.com) has quit (Ping timeout: 240 seconds)
+2018-02-26 22:07:19	<--	Versed (~Versed@2601:84:303:430e:ac43:3d6d:8b6c:69d9) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-26 22:10:53	-->	butterthebuddha (~butterthe@ec2-13-228-73-171.ap-southeast-1.compute.amazonaws.com) has joined ##apple
+2018-02-26 22:13:01	-->	BytesAndCoffee (~yazdmich@bytes.coffee) has joined ##apple
+2018-02-26 22:20:59	-->	redstonehelper_ (~redstoneh@unaffiliated/redstonehelper) has joined ##apple
+2018-02-26 22:22:03	<--	erRANTego (~ErrantEgo@freenode/jester/errantego) has quit (Ping timeout: 256 seconds)
+2018-02-26 22:23:44	<--	redstonehelper (~redstoneh@unaffiliated/redstonehelper) has quit (Ping timeout: 248 seconds)
+2018-02-26 22:23:44		redstonehelper_ is now known as redstonehelper
+2018-02-26 22:24:26	-->	Haxxa (~Harrison@180-150-30-18.NBN.mel.aussiebb.net) has joined ##apple
+2018-02-26 22:37:54	-->	ErrantEgo (~ErrantEgo@freenode/jester/errantego) has joined ##apple
+2018-02-26 22:41:04	<--	jfcaron (~jfcaron@unaffiliated/jfcaron) has quit (Quit: jfcaron)
+2018-02-26 22:42:44	-->	gueriLLaPunK (~hi@37.48.94.152) has joined ##apple
+2018-02-26 22:57:04	<--	butterthebuddha (~butterthe@ec2-13-228-73-171.ap-southeast-1.compute.amazonaws.com) has quit (Max SendQ exceeded)
+2018-02-26 22:58:20	-->	butterthebuddha (~butterthe@ec2-13-228-73-171.ap-southeast-1.compute.amazonaws.com) has joined ##apple
+2018-02-26 23:03:43	 *	blocky prays to steve's ghost for a top-specced mbp 13" without a touchbar and a keyboard that is as reliable as the 2015
+2018-02-26 23:04:22	<--	saint_dogbert (~Ident@unaffiliated/phobos-anomaly/x-6744724) has quit (Ping timeout: 245 seconds)
+2018-02-26 23:07:30	eHAPPY	so are going we going to see a new ipad soon?
+2018-02-26 23:19:38	<--	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has quit (Remote host closed the connection)
+2018-02-26 23:20:30	-->	topdownjimmy (topdownjim@gateway/vpn/privateinternetaccess/topdownjimmy) has joined ##apple
+2018-02-26 23:21:06	-->	Versed (~Versed@c-24-0-51-52.hsd1.nj.comcast.net) has joined ##apple
+2018-02-26 23:24:30	<--	Ziginox (~frozen@unaffiliated/kasm279) has quit (Read error: Connection reset by peer)
+2018-02-26 23:25:21	-->	Ziginox (~frozen@unaffiliated/kasm279) has joined ##apple
+2018-02-26 23:28:30	<--	PaulCape_ (~PaulCapes@ip72-209-228-50.dc.dc.cox.net) has quit (Read error: Connection reset by peer)
+2018-02-26 23:30:00	<--	Anrky (~Anrky@CPE1422db4fdb20-CM84948cd85220.cpe.net.cable.rogers.com) has quit (Read error: Connection reset by peer)
+2018-02-26 23:30:27	-->	PaulCapestany (~PaulCapes@ip72-209-228-50.dc.dc.cox.net) has joined ##apple
+2018-02-26 23:30:56	<--	jrg (~jrg@unaffiliated/jrg) has quit (Ping timeout: 248 seconds)
+2018-02-26 23:32:49	<--	Versed (~Versed@c-24-0-51-52.hsd1.nj.comcast.net) has quit (Quit: Leaving)
+2018-02-26 23:33:29	-->	jrg (~jrg@unaffiliated/jrg) has joined ##apple
+2018-02-26 23:33:47	-->	Anrky (~Anrky@CPE1422db4fdb20-CM84948cd85220.cpe.net.cable.rogers.com) has joined ##apple
+2018-02-26 23:37:02	<--	Tachoh (uid260492@gateway/web/irccloud.com/x-eykqitkirzjqemhc) has quit
+2018-02-26 23:37:48	-->	Tachoh (~pi@d50-92-125-114.bchsia.telus.net) has joined ##apple
+2018-02-26 23:41:26	-->	lpin (~textual@212-124-190-143.v4.ngi.it) has joined ##apple
+2018-02-27 00:05:30	<--	shortdudey123 (~shortdude@chunk01.ridderg.com) has quit (Ping timeout: 260 seconds)
+2018-02-27 00:08:25	-->	shortdudey123 (~shortdude@chunk01.ridderg.com) has joined ##apple
+2018-02-27 00:09:59	-->	electro33 (uid613@gateway/web/irccloud.com/x-gkwdrlayxkcbogbn) has joined ##apple
+2018-02-27 00:12:24	-->	LucaTM (~LucaTM@unaffiliated/lucatm) has joined ##apple
+2018-02-27 00:23:50	<--	Smallville (uid279440@gateway/web/irccloud.com/x-bmqqemqsyedfqzmf) has quit (Quit: Connection closed for inactivity)
+2018-02-27 00:46:09	-->	Theodo (~MacPro@unaffiliated/theodore) has joined ##apple
+2018-02-27 00:51:43	-->	JoyStick (~JoyCitico@unaffiliated/joyciticonti) has joined ##apple
+2018-02-27 00:52:42	<--	jrg (~jrg@unaffiliated/jrg) has quit (Ping timeout: 245 seconds)
+2018-02-27 00:54:38	-->	jrg (~jrg@unaffiliated/jrg) has joined ##apple
+2018-02-27 00:59:09	<--	Branes (~Branes@unaffiliated/branes) has quit (Quit: Heavens to Murgatroyd! Exit, stage left!)
+2018-02-27 01:00:34	<--	neonpastor (~admin@ns501885.ip-192-99-201.net) has quit (Quit: ZNC 1.6.1 - http://znc.in)
+2018-02-27 01:02:10	-->	neonpastor (~admin@ns501885.ip-192-99-201.net) has joined ##apple
+2018-02-27 01:04:53	<--	redstonehelper (~redstoneh@unaffiliated/redstonehelper) has quit (Read error: Connection reset by peer)
+2018-02-27 01:05:01	-->	redstonehelper (~redstoneh@unaffiliated/redstonehelper) has joined ##apple
+2018-02-27 01:10:14	<--	Theodo (~MacPro@unaffiliated/theodore) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2018-02-27 01:15:50	<--	Kocho (~Kocho@unaffiliated/kocho) has quit (Max SendQ exceeded)
+2018-02-27 01:18:11	-->	Kocho (~Kocho@unaffiliated/kocho) has joined ##apple
+2018-02-27 01:31:05	<--	PowerPCMac (~textual@2601:83:8100:42cf:9:ae89:1fc6:5cd5) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-27 01:36:21	-->	zwitterion (~zwitterio@global-5-132.nat-2.net.cam.ac.uk) has joined ##apple
+2018-02-27 01:51:39	<--	bomb-on (~bomb-on@139-142-17-89.fiber.hringdu.is) has quit (Quit: SO LONG, SUCKERS!)
+2018-02-27 01:51:41	<--	zwitterion (~zwitterio@global-5-132.nat-2.net.cam.ac.uk) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-27 02:00:47	<--	gueriLLaPunK (~hi@37.48.94.152) has quit (Ping timeout: 256 seconds)
+2018-02-27 02:06:12	-->	gueriLLaPunK (~hi@37.48.94.152) has joined ##apple
+2018-02-27 02:06:30	-->	shodan` (~textual@37.153.215.145) has joined ##apple
+2018-02-27 02:13:07	<--	Caine (~caine@161.97.213.11) has quit (Ping timeout: 245 seconds)
+2018-02-27 02:13:12	-->	zwitterion (~zwitterio@global-5-161.nat-2.net.cam.ac.uk) has joined ##apple
+2018-02-27 02:23:47	-->	BobbyJr (~BobbyJr@robsworld.plus.com) has joined ##apple
+2018-02-27 02:25:26	<--	paladox (paladox@wikimedia/paladox) has quit (Quit: Free irc bouncer xshellz)
+2018-02-27 02:26:46	-->	bomb-on (~bomb-on@adsl74-86.du.heimsnet.is) has joined ##apple
+2018-02-27 02:30:12	<--	BobbyJr (~BobbyJr@robsworld.plus.com) has quit (Ping timeout: 245 seconds)
+2018-02-27 02:37:37	<--	Kocho (~Kocho@unaffiliated/kocho) has quit (Quit: Sippin' wine by the beach like a mafugin bawse.)
+2018-02-27 02:47:59	<--	MuffinMedic (Evan@unaffiliated/muffinmedic) has quit (Ping timeout: 252 seconds)
+2018-02-27 02:48:25	-->	zen2 (~zen1@unaffiliated/zen1) has joined ##apple
+2018-02-27 02:48:35	<--	zen1 (~zen1@unaffiliated/zen1) has quit (Ping timeout: 256 seconds)
+2018-02-27 02:51:28	<--	Zialus (~RMF@174.203.60.94.rev.vodafone.pt) has quit (Ping timeout: 240 seconds)
+2018-02-27 02:59:09	-->	MuffinMedic (Evan@unaffiliated/muffinmedic) has joined ##apple
+2018-02-27 03:04:25	-->	Zialus (~RMF@174.203.60.94.rev.vodafone.pt) has joined ##apple
+2018-02-27 03:14:58	<--	zwitterion (~zwitterio@global-5-161.nat-2.net.cam.ac.uk) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-27 03:21:32	-->	SadStick (~JoyCitico@unaffiliated/joyciticonti) has joined ##apple
+2018-02-27 03:22:21	-->	JoyStick_ (~JoyCitico@unaffiliated/joyciticonti) has joined ##apple
+2018-02-27 03:24:28	<--	JoyStick (~JoyCitico@unaffiliated/joyciticonti) has quit (Ping timeout: 240 seconds)
+2018-02-27 03:26:08	<--	SadStick (~JoyCitico@unaffiliated/joyciticonti) has quit (Ping timeout: 248 seconds)
+2018-02-27 03:38:40	-->	zwitterion (~zwitterio@global-5-161.nat-2.net.cam.ac.uk) has joined ##apple
+2018-02-27 03:46:52	<--	quackgyver (uid11872@gateway/web/irccloud.com/x-gvtbuzbdtbvwpwsy) has quit (Quit: Connection closed for inactivity)
+2018-02-27 03:56:54	-->	Chinesium (~ER_nesto@unaffiliated/funk) has joined ##apple
+2018-02-27 04:00:15	-->	AlphaXder (~AlphaX@unaffiliated/alphaxder) has joined ##apple
+2018-02-27 04:10:22	<--	BeamWatcher (~gashead76@208.117.74.236) has quit (Ping timeout: 268 seconds)
+2018-02-27 04:19:47	<--	AlphaXder (~AlphaX@unaffiliated/alphaxder) has quit (Read error: Connection reset by peer)
+2018-02-27 04:21:06	-->	nindustries (~nindustri@unaffiliated/nindustries) has joined ##apple
+2018-02-27 04:32:16	<--	Chinesium (~ER_nesto@unaffiliated/funk) has quit (Quit: I probably fell asleep again)
+2018-02-27 04:45:16	-->	paladox (paladox@wikimedia/paladox) has joined ##apple
+2018-02-27 04:54:04	<--	redstonehelper (~redstoneh@unaffiliated/redstonehelper) has quit (Read error: Connection reset by peer)
+2018-02-27 04:54:24	-->	redstonehelper (~redstoneh@unaffiliated/redstonehelper) has joined ##apple
+2018-02-27 04:57:10	<--	paladox (paladox@wikimedia/paladox) has quit (Quit: Free irc bouncer xshellz)
+2018-02-27 04:58:40	-->	paladox (paladox@wikimedia/paladox) has joined ##apple
+2018-02-27 05:02:46	-->	Snircle (~textual@2600:8801:c404:7900:f900:d413:21e4:64a8) has joined ##apple
+2018-02-27 05:03:12	<--	apetresc (~apetresc@CPEbc4dfb720b93-CMbc4dfb720b90.cpe.net.cable.rogers.com) has quit (Ping timeout: 248 seconds)
+2018-02-27 05:07:04	-->	apetresc (~apetresc@CPEbc4dfb720b93-CMbc4dfb720b90.cpe.net.cable.rogers.com) has joined ##apple
+2018-02-27 05:11:01	<--	zwitterion (~zwitterio@global-5-161.nat-2.net.cam.ac.uk) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-27 05:11:29	<--	alleyrat (~alleyrat@li584-173.members.linode.com) has quit
+2018-02-27 05:21:35	-->	BeamWatcher (~gashead76@208.117.74.236) has joined ##apple
+2018-02-27 05:43:49	-->	jaelae (uid177201@gateway/web/irccloud.com/x-bdqqsdmhqsotwtau) has joined ##apple
+2018-02-27 05:45:10	<--	Flynnn (~textual@unaffiliated/flynnn) has quit (Quit: Auf Wiedersehen!)
+2018-02-27 05:45:42	<--	JoyStick_ (~JoyCitico@unaffiliated/joyciticonti) has quit (Quit: ╯°□°)╯︵ ┻━┻)
+2018-02-27 05:53:23	-->	zwitterion (~zwitterio@global-5-161.nat-2.net.cam.ac.uk) has joined ##apple
+2018-02-27 05:58:30	<--	andlabs (~pietro@ool-44c6612e.dyn.optonline.net) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-27 06:02:17	-->	obihann (~obihann@142.166.63.89) has joined ##apple
+2018-02-27 06:02:20	<--	zwitterion (~zwitterio@global-5-161.nat-2.net.cam.ac.uk) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-27 06:08:22	-->	Ussat (~Ussat@pdpc/supporter/active/ussat) has joined ##apple
+2018-02-27 06:25:52	<--	TReK (~UnFaQ@unaffiliated/trek) has quit (Read error: Connection reset by peer)
+2018-02-27 06:26:22	-->	TReK (~UnFaQ@unaffiliated/trek) has joined ##apple
+2018-02-27 06:31:08	<--	obihann (~obihann@142.166.63.89) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2018-02-27 06:41:02	-->	erasmus (~erasmus@unaffiliated/erasmus) has joined ##apple
+2018-02-27 07:07:55	-->	jfcaron (~jfcaron@unaffiliated/jfcaron) has joined ##apple
+2018-02-27 07:16:43	jrg	lol
+2018-02-27 07:16:53	jrg	blocky: never going to happen
+2018-02-27 07:18:57	<--	DLSteve (~DLSteve@2601:601:1301:40a8:4d81:855a:95af:7c72) has quit (Quit: All rise, the honorable DLSteve has left the channel.)
+2018-02-27 07:19:16	-->	DLSteve (~DLSteve@2601:601:1301:40a8:202e:517c:4548:a18e) has joined ##apple
+2018-02-27 07:21:07	-->	zwitterion (~zwitterio@global-5-147.nat-2.net.cam.ac.uk) has joined ##apple
+2018-02-27 07:50:24		irc: disconnected from server
+2018-02-27 10:23:08		irc: disconnected from server
