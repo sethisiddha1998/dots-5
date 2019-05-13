@@ -320,7 +320,7 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 #defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Show the ~/Library folder
-chflags nohidden ~/Library
+# chflags nohidden ~/Library
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes

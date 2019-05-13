@@ -50,6 +50,8 @@ brew install irssi
 brew install ncmpcpp
 brew install ranger
 brew install htop
+brew tap cjbassi/gotop
+brew install gotop
 brew install neofetch
 
 # Install other useful binaries.
@@ -62,6 +64,7 @@ brew tap mopidy/mopidy
 brew install mopidy
 brew install mpc
 brew install sassc
+brew install wget
 
 # fonts
 brew tap caskroom/fonts

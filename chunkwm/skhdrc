@@ -2,17 +2,17 @@
 cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "t" using command down'
 
 # colorlovers
-lcmd + shift - e : colorlovers -n && wal-set && darkmode true
-lcmd + shift - w : colorlovers -nl && wal-set && darkmode false
+lcmd + shift - e : colorlovers -n & darkmode true 
+lcmd + shift - w : colorlovers -nl & darkmode false 
 lcmd + shift - s : colorlovers -ns
-lcmd + shift - r : colorlovers -nr && wal-set
+lcmd + shift - r : colorlovers -nr & darkmode true 
 
 # wallpaper
-rcmd + shift - e : wal -i ~/Pictures/Wallpapers -q -e -o wal-set --saturate 0.3 --backend wal & darkmode true
-rcmd + shift - w : wal -i ~/Pictures/Wallpapers -l -q -e -o wal-set --saturate 0.4 --backend wal & darkmode false
-rcmd + shift - s : new-roses -ns ~/Pictures/Wallpapers
+rcmd + shift - e : new-roses -n gray
+rcmd + shift - w : new-roses -n flowers
+rcmd + shift - s : new-roses -ns ~/pictures/wallpapers
 rcmd + shift - r : wallpaper ~/pictures/wallpapers
-cmd + shift - 0 : new-roses
+cmd + shift - 0 : wallpaper 8 
 cmd - 0 : wallpaper 2
 
 # focus window
