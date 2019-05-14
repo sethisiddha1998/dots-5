@@ -1,19 +1,23 @@
 # new terminal
 cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "t" using command down'
 
-# colorlovers
-lcmd + shift - e : colorlovers -n & darkmode true 
-lcmd + shift - w : colorlovers -nl & darkmode false 
-lcmd + shift - s : colorlovers -ns
-lcmd + shift - r : colorlovers -nr & darkmode true 
+# darkmode
+cmd + shift - e : colorlovers -n && darkmode true 
+cmd + shift - w : colorlovers -nl && darkmode false
 
 # wallpaper
-rcmd + shift - e : new-roses -n gray
-rcmd + shift - w : new-roses -n flowers
-rcmd + shift - s : new-roses -ns ~/pictures/wallpapers
-rcmd + shift - r : wallpaper ~/pictures/wallpapers
-cmd + shift - 0 : wallpaper 8 
+cmd + shift - 0 : wallpaper ~/pictures/wallpapers
 cmd - 0 : wallpaper 2
+
+# palette
+cmd + shift - r : colorlovers -nr
+
+# bar
+cmd + shift - h : togglebar
+
+# seriously evrysing
+cmd + shift - x : wallpaper ~/pictures/wallpapers & pecan-style -l & colorlovers -r
+
 
 # focus window
 cmd - left : chunkc tiling::window --focus west

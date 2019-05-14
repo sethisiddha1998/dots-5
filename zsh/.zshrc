@@ -99,10 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# feh
-function feh() {
-    open -b "drabweb.macfeh" "$@"
-}
-
 # wal
 (cat ~/.cache/wal/sequences &)
