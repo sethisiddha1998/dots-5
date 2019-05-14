@@ -2,7 +2,7 @@
 
 **macos.sh** macos system settings
 
-**colors.json** color scheme (load it with `wal --theme colors.json`
+**colors.json** color scheme (load it with `wal --theme colors.json`)
 
 **dots.sh** tool to save dotfiles
 
