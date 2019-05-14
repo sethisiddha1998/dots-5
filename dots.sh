@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# copy macOS dots
+# update dotfiles
 
 dots="${HOME}/scripts/dotfiles_macos"
 wallpaper="/tmp/wallpaper.png"

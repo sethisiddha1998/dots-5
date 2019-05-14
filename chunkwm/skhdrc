@@ -18,6 +18,13 @@ cmd + shift - h : togglebar
 # seriously evrysing
 cmd + shift - x : wallpaper ~/pictures/wallpapers & pecan-style -l & colorlovers -r
 
+# screenshot
+cmd + shift - p : scr -n
+cmd - p : scr -nu
+
+# save dotfiles
+cmd + shift - z : dots.sh
+
 # focus window
 cmd - left : chunkc tiling::window --focus west
 cmd - down : chunkc tiling::window --focus south
@@ -55,12 +62,4 @@ cmd - tab : skhd -k "ctrl - right"
 cmd - 0x32 : skhd -k "ctrl - left"
 #cmd - tab : chunkc tiling::window --focus next
 
-# Screenshot
-cmd + shift - p : scr -n
-cmd - p : scr -u -n
 
-# Dots
-cmd + shift - z : dots
-
-# toggle bar
-cmd + shift - h : togglebar

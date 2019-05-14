@@ -4,6 +4,8 @@
 
 **colors.json** color scheme (load it with `wal --theme colors.json`
 
+**dots.sh** tool to save dotfiles
+
 ![screenshot](screenshot.jpg)
 
 ![wallpaper](wallpaper.png)
