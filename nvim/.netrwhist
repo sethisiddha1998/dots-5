@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/zzzeyez/scripts/albumart'
 let g:netrw_dirhist_2='/Users/zzzeyez/scripts/Xanthia'
 let g:netrw_dirhist_3='/usr/local/Cellar/skhd'
 let g:netrw_dirhist_4='/usr/local/lib/python3.7/site-packages/pywal'
 let g:netrw_dirhist_5='/Users/behaviors/.config/wal'
+let g:netrw_dirhist_6='/Users/behaviors/.cache/wal'
+let g:netrw_dirhist_7='/Users/behaviors/.cache'
+let g:netrw_dirhist_8='/Users/behaviors'
+let g:netrw_dirhist_9='/Users/behaviors/.cache/wal'

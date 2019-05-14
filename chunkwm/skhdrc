@@ -1,16 +1,14 @@
 # new terminal
 cmd - return : osascript -e 'tell application "iTerm" to activate' -e 'tell application "System Events" to tell process "iTerm" to keystroke "t" using command down'
 
-# darkmode
-cmd + shift - e : colorlovers -n && darkmode true 
-cmd + shift - w : colorlovers -nl && darkmode false
-
 # wallpaper
-cmd + shift - 0 : wallpaper ~/pictures/wallpapers
-cmd - 0 : wallpaper 2
+cmd + shift - 0 : wallpaper -n ~/pictures/wallpapers
+cmd - 0 : wallpaper -n 2
 
 # palette
 cmd + shift - r : colorlovers -nr
+cmd + shift - e : wal -i ~/pictures/wallpapers -o wal-set
+cmd + shift - w : wal -i ~/pictures/wallpapers -l -o wal-set
 
 # bar
 cmd + shift - h : togglebar
