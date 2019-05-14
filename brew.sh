@@ -65,6 +65,7 @@ brew install mopidy
 brew install mpc
 brew install sassc
 brew install wget
+brew install pidof
 
 # fonts
 brew tap caskroom/fonts

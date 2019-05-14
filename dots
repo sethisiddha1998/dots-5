@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # copy macOS dots
 
-dots="$HOME/scripts/dotfiles_macos"
+dots="${HOME}/scripts/dotfiles_macos"
 wallpaper="/tmp/wallpaper.png"
 
 # screenshot
@@ -10,6 +10,9 @@ screencapture "$dots/screenshot.jpg"
 
 # wallpaper
 cp "$wallpaper" "$dots/wallpaper.png"
+
+# wal colors
+cp "${HOME}/.cache/wal/colors.json" "$dots/colors.json"
 
 # notify
 notify-send "dotfiles updated"

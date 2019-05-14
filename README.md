@@ -1,4 +1,6 @@
-`brew.sh` constains my homebrew packages, `macos.sh` contains my macos system settings
+**brew.sh** homebrew packages
+**macos.sh** macos system settings
+**colors.json** color scheme (load it with `wal --theme colors.json`
 
 ![screenshot](screenshot.jpg)
 
