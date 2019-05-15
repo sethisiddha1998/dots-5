@@ -12,9 +12,8 @@ cmd + shift - w : wal -i ~/pictures/wallpapers -l -o wal-set
 
 # bar
 cmd + shift - h : togglebar
-
-# seriously evrysing
-cmd + shift - x : wallpaper ~/pictures/wallpapers & pecan-style -l & colorlovers -r
+cmd + shift - x : pecan-style -l && wal-set
+cmd + shift - s : pecan-style -s
 
 # screenshot
 cmd + shift - p : scr -n
